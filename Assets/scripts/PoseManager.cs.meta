@@ -1,0 +1,21 @@
+using UnityEngine;
+
+public class PoseManager : MonoBehaviour
+{
+    public Transform hmd;            // assign your VR Camera here
+    public float neckAngle;         // debug angle reading
+
+    void Update()
+    {
+        // head forward direction (blue axis)
+        Vector3 headForward = hmd.forward;
+
+        // compare to horizontal plane
+        Vector3 projectedForward = Vector3.ProjectOnPlane(headForward, Vector3.up);
+
+        // calculate angle between projected forward and actual forward
+        neckAngle = Vector3.SignedAngle(projectedForward, headForward, hmd.right);
+
+        Debug.Log("Neck Pitch Angle: " + neckAngle.ToString("F2"));
+    }
+}
