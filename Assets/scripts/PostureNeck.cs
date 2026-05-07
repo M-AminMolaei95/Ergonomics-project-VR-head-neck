@@ -5,8 +5,15 @@ using System.Collections;
 
 public class PostureNeck : MonoBehaviour
 {
+    public enum FeedbackDisplayMode
+    {
+        ForwardAndSlouchOnly,
+        ForwardSlouchBackwardTilt
+    }
+
     [Header("References")]
     public PoseManager1 poseManager;
+    public Transform headTransform;
 
     [Header("UI Elements")]
     public TextMeshProUGUI feedbackText;
@@ -14,243 +21,401 @@ public class PostureNeck : MonoBehaviour
     public Image feedbackIcon;
     public CanvasGroup iconGroup;
 
-    [Header("Sprites for each posture")]
-    public Sprite forwardSprite;
-    public Sprite backwardSprite;
-    public Sprite slouchSprite;
-    public Sprite lateralLeftSprite;
-    public Sprite lateralRightSprite;
+    [Header("Display Mode")]
+    public FeedbackDisplayMode displayMode = FeedbackDisplayMode.ForwardAndSlouchOnly;
 
-    [Header("Angle thresholds (degrees)")]
-    public float forwardThreshold = 20f;
-    public float backwardThreshold = 15f;
-    public float lateralThreshold = 20f;   
+    [Header("Mode 1 Sprites (Forward + Neutral + Slouch only)")]
+    public Sprite mode1ForwardHighSprite;
+    public Sprite mode1ForwardMidSprite;
+    public Sprite mode1ForwardLowSprite;
+    public Sprite mode1NeutralSprite;
+    public Sprite mode1SlouchSprite;
 
-    [Header("Neutral band for slouch (degrees)")]
-    public float pitchNeutralBand = 12f;
+    [Header("Mode 2 Sprites (Forward + Neutral + Slouch + Backward + Tilt)")]
+    public Sprite mode2ForwardHighSprite;
+    public Sprite mode2ForwardMidSprite;
+    public Sprite mode2ForwardLowSprite;
+    public Sprite mode2NeutralSprite;
+    public Sprite mode2BackwardSprite;
+    public Sprite mode2LateralRightSprite;
+    public Sprite mode2LateralLeftSprite;
+    public Sprite mode2LateralNeutralSprite;
+    public Sprite mode2SlouchSprite;
 
-    [Header("Height threshold (meters)")]
-    public float slouchThreshold = 0.03f;
+    [Header("Display thresholds (degrees)")]
+    public float forwardHighMin = 20f;
+    public float forwardMidMin = 10f;
+    public float forwardLowMin = 5f;
+    public float neutralMin = -10f;
+    public float neutralMax = 3f;
+    public float lateralDisplayThreshold = 5f;
+    public float lateralNeutralHoldSeconds = 1.5f;
 
-    [Header("Hold time (seconds)")]
-    public float holdTime = 3f;
+    [Header("Neutral display hold (forward/backward return)")]
+    public float neutralHoldSeconds = 1.5f;
 
-    [Header("Fade settings")]
-    public float fadeDuration = 0.5f;
+    [Header("Slouch detection (meters)")]
+    public float slouchHeightDropThreshold = 0.03f;
+    public float slouchMaxPitchForDisplay = 5f;
 
-    [HideInInspector] public string CurrentPosture = "Neutral";
-    [HideInInspector] public int currentRulaScore = 1;
+    [Header("Text (optional)")]
+    public bool showText = false;
 
-    private float tForward, tBackward, tSlouch, tLateral;
-    private bool feedbackVisible = false;
+    [Header("Fade Settings")]
+    public float fadeDuration = 0.15f;
+
     private Coroutine fadeTextCoroutine;
     private Coroutine fadeIconCoroutine;
+    private bool feedbackVisible = false;
 
-    void Update()
+    private string _lastMessage = null;
+    private Sprite _lastSprite = null;
+
+    private bool _wasLateral = false;
+    private float _lateralNeutralUntil = 0f;
+
+    private bool _wasCalibratedLastFrame = false;
+    private bool _hasBaselineHeadHeight = false;
+    private float _baselineHeadHeight = 0f;
+
+    private bool _wasInPitchNeutral = false;
+    private float _pitchNeutralUntil = 0f;
+
+    public void SetDisplayMode(FeedbackDisplayMode mode)
     {
-        if (!poseManager) return;
+        displayMode = mode;
 
-        float pitch = poseManager.normalizedPitch;
-        float height = poseManager.normalizedHeight;
-        float roll = poseManager.normalizedRoll;
+        _wasLateral = false;
+        _lateralNeutralUntil = 0f;
+        _wasInPitchNeutral = false;
+        _pitchNeutralUntil = 0f;
+        _wasCalibratedLastFrame = false;
+        _hasBaselineHeadHeight = false;
 
-        bool isBackward = pitch < -backwardThreshold;
-        bool isForward = pitch > forwardThreshold;
-        bool isWithinNeutral = Mathf.Abs(pitch) <= pitchNeutralBand;
-
-        bool isLateralLeft =
-            (roll < -lateralThreshold) &&
-            Mathf.Abs(pitch) < 15f;
-
-        bool isLateralRight =
-            (roll > +lateralThreshold) &&
-            Mathf.Abs(pitch) < 15f;
-
-        bool isLateral = isLateralLeft || isLateralRight;
-
-        bool isSlouch =
-            (height < -slouchThreshold) &&
-            Mathf.Abs(pitch) <= pitchNeutralBand &&
-            Mathf.Abs(roll) < lateralThreshold * 0.5f;
-
-        if (isLateral)
-            isSlouch = false;   
-  
-        int baseScore = 1;
-
-        if (isBackward) baseScore = 4;
-        else if (pitch > forwardThreshold) baseScore = 3;
-        else if (pitch > pitchNeutralBand) baseScore = 2;
-
-        if (isSlouch && baseScore < 3)
-            baseScore = 3;
-
-        int adjust = isLateral ? 1 : 0;
-
-        currentRulaScore = Mathf.Clamp(baseScore + adjust, 1, 7);
-
-        CurrentPosture = "Neutral";
-
-        if (isBackward)
-        {
-            CurrentPosture = "Backward";
-            tBackward += Time.deltaTime;
-            ResetTimersExcept("Backward");
-
-            if (tBackward >= holdTime)
-                ShowSpecificFeedback("Backward", currentRulaScore);
-            else HideFeedback();
-            return;
-        }
-
-        if (isForward)
-        {
-            CurrentPosture = "Forward";
-            tForward += Time.deltaTime;
-            ResetTimersExcept("Forward");
-
-            if (tForward >= holdTime)
-                ShowSpecificFeedback("Forward", currentRulaScore);
-            else HideFeedback();
-            return;
-        }
-
-        if (isSlouch)
-        {
-            CurrentPosture = "Slouch";
-            tSlouch += Time.deltaTime;
-            ResetTimersExcept("Slouch");
-
-            if (tSlouch >= holdTime)
-                ShowSpecificFeedback("Slouch", currentRulaScore);
-            else HideFeedback();
-            return;
-        }
-
-        if (isLateral)
-        {
-            tLateral += Time.deltaTime;
-            ResetTimersExcept("Lateral");
-
-            if (isLateralLeft) CurrentPosture = "LateralLeft";
-            if (isLateralRight) CurrentPosture = "LateralRight";
-
-            if (tLateral >= holdTime)
-                ShowSpecificFeedback(CurrentPosture, currentRulaScore);
-            else HideFeedback();
-            return;
-        }
-
-        ResetAllTimers();
         HideFeedback();
     }
 
-
-    void ResetTimersExcept(string active)
+    private void Update()
     {
-        if (active != "Forward") tForward = 0f;
-        if (active != "Backward") tBackward = 0f;
-        if (active != "Slouch") tSlouch = 0f;
-        if (active != "Lateral") tLateral = 0f;
-    }
-
-    void ResetAllTimers()
-    {
-        tForward = tBackward = tSlouch = tLateral = 0f;
-    }
-
-
-    void ShowSpecificFeedback(string cause, int rula)
-    {
-        string msg = "";
-        Sprite icon = null;
-
-        switch (cause)
+        if (poseManager == null || !poseManager.IsCalibrated)
         {
-            case "Forward":
-                msg = $"Neck too far forward!\nRelax your posture.";
-                icon = forwardSprite;
-                break;
-
-            case "Backward":
-                msg = $"Neck too far backward!\nReturn to neutral.";
-                icon = backwardSprite;
-                break;
-
-            case "Slouch":
-                msg = $"Head lowered (possible slouch).\nStraighten up.";
-                icon = slouchSprite;
-                break;
-
-            case "LateralLeft":
-                msg = $"Neck tilted LEFT!";
-                icon = lateralLeftSprite;
-                break;
-
-            case "LateralRight":
-                msg = $"Neck tilted RIGHT!";
-                icon = lateralRightSprite;
-                break;
+            HideFeedback();
+            _wasLateral = false;
+            _lateralNeutralUntil = 0f;
+            _wasCalibratedLastFrame = false;
+            _hasBaselineHeadHeight = false;
+            _wasInPitchNeutral = false;
+            _pitchNeutralUntil = 0f;
+            return;
         }
 
-        ShowFeedback(msg, icon);
+        if (!_wasCalibratedLastFrame)
+        {
+            CaptureBaselineHeadHeight();
+            _wasCalibratedLastFrame = true;
+        }
+
+        float pitch = poseManager.normalizedPitch;
+        float roll = poseManager.normalizedRoll;
+
+        bool modeHasTiltAndBackward = (displayMode == FeedbackDisplayMode.ForwardSlouchBackwardTilt);
+
+        bool isLateralRight = roll > lateralDisplayThreshold;
+        bool isLateralLeft = roll < -lateralDisplayThreshold;
+        bool isPitchNeutral = (pitch >= neutralMin && pitch <= neutralMax) || (pitch > neutralMax && pitch < forwardLowMin);
+
+        if (modeHasTiltAndBackward && isLateralRight)
+        {
+            _wasLateral = true;
+            _lateralNeutralUntil = 0f;
+            _wasInPitchNeutral = false;
+            _pitchNeutralUntil = 0f;
+
+            Sprite lateralRight = GetLateralRightSprite();
+            if (lateralRight != null)
+            {
+                ShowIfChanged(lateralRight, showText ? "" : "");
+                return;
+            }
+        }
+
+        if (modeHasTiltAndBackward && isLateralLeft)
+        {
+            _wasLateral = true;
+            _lateralNeutralUntil = 0f;
+            _wasInPitchNeutral = false;
+            _pitchNeutralUntil = 0f;
+
+            Sprite lateralLeft = GetLateralLeftSprite();
+            if (lateralLeft != null)
+            {
+                ShowIfChanged(lateralLeft, showText ? "" : "");
+                return;
+            }
+        }
+
+        if (_wasLateral)
+        {
+            _wasLateral = false;
+            _lateralNeutralUntil = Time.time + Mathf.Max(0f, lateralNeutralHoldSeconds);
+            _wasInPitchNeutral = isPitchNeutral;
+            _pitchNeutralUntil = 0f;
+        }
+
+        if (IsSlouching(pitch))
+        {
+            _wasInPitchNeutral = false;
+            _pitchNeutralUntil = 0f;
+
+            Sprite slouch = GetSlouchSprite();
+            if (slouch != null)
+            {
+                ShowIfChanged(slouch, showText ? "Slouching!!!" : "");
+                return;
+            }
+        }
+
+        if (modeHasTiltAndBackward &&
+            _lateralNeutralUntil > 0f &&
+            Time.time < _lateralNeutralUntil)
+        {
+            Sprite lateralNeutral = GetLateralNeutralSprite();
+            if (lateralNeutral != null)
+            {
+                _wasInPitchNeutral = isPitchNeutral;
+                _pitchNeutralUntil = 0f;
+
+                ShowIfChanged(lateralNeutral, showText ? "" : "");
+                return;
+            }
+        }
+
+        if (isPitchNeutral && !_wasInPitchNeutral)
+        {
+            _pitchNeutralUntil = Time.time + Mathf.Max(0f, neutralHoldSeconds);
+        }
+
+        _wasInPitchNeutral = isPitchNeutral;
+
+        Sprite sprite = null;
+        string msg = "";
+
+        if (pitch > forwardHighMin)
+        {
+            _pitchNeutralUntil = 0f;
+            sprite = GetForwardHighSprite();
+        }
+        else if (pitch >= forwardMidMin)
+        {
+            _pitchNeutralUntil = 0f;
+            sprite = GetForwardMidSprite();
+        }
+        else if (pitch >= forwardLowMin)
+        {
+            _pitchNeutralUntil = 0f;
+            sprite = GetForwardLowSprite();
+        }
+        else if (pitch < neutralMin)
+        {
+            _pitchNeutralUntil = 0f;
+
+            if (modeHasTiltAndBackward)
+                sprite = GetBackwardSprite();
+        }
+        else if (isPitchNeutral)
+        {
+            if (_pitchNeutralUntil > 0f && Time.time < _pitchNeutralUntil)
+                sprite = GetNeutralSprite();
+        }
+
+        if (sprite != null || (feedbackText != null && showText))
+            ShowIfChanged(sprite, msg);
+        else
+            HideFeedback();
     }
 
-
-    void ShowFeedback(string message, Sprite iconSprite)
+    private Sprite GetForwardHighSprite()
     {
-        if (feedbackText)
+        return displayMode == FeedbackDisplayMode.ForwardAndSlouchOnly
+            ? mode1ForwardHighSprite
+            : mode2ForwardHighSprite;
+    }
+
+    private Sprite GetForwardMidSprite()
+    {
+        return displayMode == FeedbackDisplayMode.ForwardAndSlouchOnly
+            ? mode1ForwardMidSprite
+            : mode2ForwardMidSprite;
+    }
+
+    private Sprite GetForwardLowSprite()
+    {
+        return displayMode == FeedbackDisplayMode.ForwardAndSlouchOnly
+            ? mode1ForwardLowSprite
+            : mode2ForwardLowSprite;
+    }
+
+    private Sprite GetNeutralSprite()
+    {
+        return displayMode == FeedbackDisplayMode.ForwardAndSlouchOnly
+            ? mode1NeutralSprite
+            : mode2NeutralSprite;
+    }
+
+    private Sprite GetBackwardSprite()
+    {
+        return displayMode == FeedbackDisplayMode.ForwardSlouchBackwardTilt
+            ? mode2BackwardSprite
+            : null;
+    }
+
+    private Sprite GetLateralRightSprite()
+    {
+        return displayMode == FeedbackDisplayMode.ForwardSlouchBackwardTilt
+            ? mode2LateralRightSprite
+            : null;
+    }
+
+    private Sprite GetLateralLeftSprite()
+    {
+        return displayMode == FeedbackDisplayMode.ForwardSlouchBackwardTilt
+            ? mode2LateralLeftSprite
+            : null;
+    }
+
+    private Sprite GetLateralNeutralSprite()
+    {
+        return displayMode == FeedbackDisplayMode.ForwardSlouchBackwardTilt
+            ? mode2LateralNeutralSprite
+            : null;
+    }
+
+    private Sprite GetSlouchSprite()
+    {
+        return displayMode == FeedbackDisplayMode.ForwardAndSlouchOnly
+            ? mode1SlouchSprite
+            : mode2SlouchSprite;
+    }
+
+    private void CaptureBaselineHeadHeight()
+    {
+        if (headTransform == null)
         {
-            feedbackText.text = message;
+            _hasBaselineHeadHeight = false;
+            Debug.LogWarning("PostureNeck: headTransform is not assigned. Slouch feedback cannot be computed.");
+            return;
+        }
+
+        _baselineHeadHeight = headTransform.position.y;
+        _hasBaselineHeadHeight = true;
+    }
+
+    private bool IsSlouching(float pitch)
+    {
+        if (!_hasBaselineHeadHeight || headTransform == null)
+            return false;
+
+        float currentHeadHeight = headTransform.position.y;
+        float heightDrop = _baselineHeadHeight - currentHeadHeight;
+
+        bool enoughHeightDrop = heightDrop > slouchHeightDropThreshold;
+        bool pitchStillNearNeutral = pitch <= slouchMaxPitchForDisplay;
+
+        return enoughHeightDrop && pitchStillNearNeutral;
+    }
+
+    private void ShowIfChanged(Sprite sprite, string message)
+    {
+        if (_lastSprite == sprite && _lastMessage == message && feedbackVisible)
+            return;
+
+        _lastSprite = sprite;
+        _lastMessage = message;
+
+        ShowFeedback(message, sprite);
+    }
+
+    private void ShowFeedback(string message, Sprite iconSprite)
+    {
+        if (feedbackText != null)
+        {
+            feedbackText.text = message ?? "";
             feedbackText.gameObject.SetActive(true);
 
-            if (fadeTextCoroutine != null) StopCoroutine(fadeTextCoroutine);
-            fadeTextCoroutine = StartCoroutine(FadeCanvasGroup(textGroup, 1f, fadeDuration));
+            if (fadeTextCoroutine != null)
+                StopCoroutine(fadeTextCoroutine);
+
+            float targetTextAlpha = (showText && !string.IsNullOrEmpty(message)) ? 1f : 0f;
+            fadeTextCoroutine = StartCoroutine(Fade(textGroup, targetTextAlpha, fadeDuration));
         }
 
-        if (feedbackIcon)
+        if (feedbackIcon != null)
         {
-            if (iconSprite != null)
-                feedbackIcon.sprite = iconSprite;
+            feedbackIcon.sprite = iconSprite;
+            feedbackIcon.gameObject.SetActive(iconSprite != null);
 
-            feedbackIcon.gameObject.SetActive(true);
+            if (fadeIconCoroutine != null)
+                StopCoroutine(fadeIconCoroutine);
 
-            if (fadeIconCoroutine != null) StopCoroutine(fadeIconCoroutine);
-            fadeIconCoroutine = StartCoroutine(FadeCanvasGroup(iconGroup, 1f, fadeDuration));
+            float targetIconAlpha = iconSprite != null ? 1f : 0f;
+            fadeIconCoroutine = StartCoroutine(Fade(iconGroup, targetIconAlpha, fadeDuration));
         }
 
         feedbackVisible = true;
     }
 
-
-    void HideFeedback()
+    private void HideFeedback()
     {
-        if (!feedbackVisible) return;
+        if (fadeTextCoroutine != null)
+            StopCoroutine(fadeTextCoroutine);
 
-        if (fadeTextCoroutine != null) StopCoroutine(fadeTextCoroutine);
-        fadeTextCoroutine = StartCoroutine(FadeCanvasGroup(textGroup, 0f, fadeDuration));
+        if (fadeIconCoroutine != null)
+            StopCoroutine(fadeIconCoroutine);
 
-        if (fadeIconCoroutine != null) StopCoroutine(fadeIconCoroutine);
-        fadeIconCoroutine = StartCoroutine(FadeCanvasGroup(iconGroup, 0f, fadeDuration));
+        if (textGroup != null)
+            textGroup.alpha = 0f;
 
+        if (iconGroup != null)
+            iconGroup.alpha = 0f;
+
+        if (feedbackText != null)
+        {
+            feedbackText.text = "";
+            feedbackText.gameObject.SetActive(false);
+        }
+
+        if (feedbackIcon != null)
+        {
+            feedbackIcon.sprite = null;
+            feedbackIcon.gameObject.SetActive(false);
+        }
+
+        _lastSprite = null;
+        _lastMessage = null;
         feedbackVisible = false;
     }
 
-
-    IEnumerator FadeCanvasGroup(CanvasGroup group, float targetAlpha, float duration)
+    private IEnumerator Fade(CanvasGroup group, float target, float duration)
     {
-        if (group == null) yield break;
+        if (group == null)
+            yield break;
 
-        float startAlpha = group.alpha;
+        float start = group.alpha;
         float t = 0f;
+
+        if (duration <= 0f)
+        {
+            group.alpha = target;
+            yield break;
+        }
 
         while (t < duration)
         {
             t += Time.deltaTime;
-            group.alpha = Mathf.Lerp(startAlpha, targetAlpha, t / duration);
+            group.alpha = Mathf.Lerp(start, target, t / duration);
             yield return null;
         }
 
-        group.alpha = targetAlpha;
+        group.alpha = target;
     }
 }

@@ -1,143 +1,137 @@
-﻿using UnityEngine;
-using UnityEngine.InputSystem;
-using TMPro;
-using System.Collections;
+﻿using System.Collections;
+using UnityEngine;
 
 public class PoseManager1 : MonoBehaviour
 {
     [Header("References")]
-    public Transform hmd;
-    public TextMeshProUGUI countdownText;
+    public Transform headTransform;
+    public HeadHeightTracker heightTracker; // required for height baseline pipeline
 
-    [Header("Calibration Settings")]
-    public float calibrationTime = 5f;
-
-    [Header("Live values")]
-    public float pitch;
-    public float normalizedPitch;
-    public float roll;
-    public float normalizedRoll;
+    [Header("Runtime Posture (relative to baseline)")]
+    public float currentPitch;
+    public float currentRoll;
     public float normalizedHeight;
+    public bool isSlouching;
 
-    float baselinePitch;
-    float baselineRoll;
-    bool calibrated = false;
-    bool isCalibrating = false;
+    // Compatibility for PostureNeck fields
+    public float normalizedPitch;
+    public float normalizedRoll;
 
-    HeadHeightTracker heightTracker;
-    SetManager setManager;
-    public VRPostureLogger logger;
+    [Header("Slouch Detection (simple fallback for logger)")]
+    public float slouchHeightThreshold = 0.03f;   // meters (height drop)
+    public float slouchPitchNeutralBand = 12f;    // degrees
+    public float slouchRollLimit = 10f;           // degrees
 
-    void Awake()
+    private float baselinePitch;
+    private float baselineRoll;
+
+    private bool calibrated = false;
+    public bool IsCalibrated => calibrated;
+
+    // For logs
+    public float BaselinePitch => baselinePitch;
+    public float BaselineRoll => baselineRoll;
+    public float BaselineHeight => heightTracker != null ? heightTracker.baselineHeight : 0f;
+
+    private void Update()
     {
-        heightTracker = FindFirstObjectByType<HeadHeightTracker>();
-        setManager = FindFirstObjectByType<SetManager>();
-    }
+        if (!headTransform) return;
 
-    void Update()
-    {
-        if (!calibrated && !isCalibrating &&
-            OVRInput.GetDown(OVRInput.Button.Two))
+        Vector3 localEuler = headTransform.localEulerAngles;
+        float rawPitch = NormalizeAngle(localEuler.x);
+        float rawRoll = NormalizeAngle(localEuler.z);
+
+        if (!calibrated)
         {
-            StartCalibration();
+            normalizedPitch = rawPitch;
+            normalizedRoll = rawRoll;
+
+            currentPitch = 0f;
+            currentRoll = 0f;
+
+            normalizedHeight = 0f;
+            isSlouching = false;
+            return;
         }
 
-        CalculatePitch();
-        CalculateRoll();
+        currentPitch = rawPitch - baselinePitch;
+        currentRoll = rawRoll - baselineRoll;
 
-        if (calibrated)
+        normalizedPitch = currentPitch;
+        normalizedRoll = currentRoll;
+
+        if (heightTracker != null)
+            normalizedHeight = heightTracker.normalizedHeight;
+        else
+            normalizedHeight = 0f;
+
+        isSlouching =
+            (normalizedHeight < -slouchHeightThreshold) &&
+            Mathf.Abs(currentPitch) <= slouchPitchNeutralBand &&
+            Mathf.Abs(currentRoll) < slouchRollLimit;
+    }
+
+    // Keep old call so SetManager or old code won't break
+    public void CalibrateNow()
+    {
+        StartCoroutine(CalibrateBaselinePipeline(10f));
+    }
+
+    // Clean single baseline pipeline: averages pitch/roll + height over 'seconds'
+    public IEnumerator CalibrateBaselinePipeline(float seconds)
+    {
+        if (seconds <= 0f) seconds = 1f;
+
+        if (!headTransform)
         {
-            normalizedPitch = pitch - baselinePitch;
-            normalizedRoll = roll - baselineRoll;
-            normalizedHeight = heightTracker ? heightTracker.normalizedHeight : 0f;
+            Debug.LogError("PoseManager1: headTransform missing.");
+            yield break;
         }
-    }
 
-    void CalculatePitch()
-    {
-        Vector3 fwd = hmd.forward;
-        Vector3 horiz = Vector3.ProjectOnPlane(fwd, Vector3.up);
-        pitch = Vector3.SignedAngle(horiz, fwd, hmd.right);
-    }
-
-    void CalculateRoll()
-    {
-        roll = Vector3.SignedAngle(hmd.up, Vector3.up, hmd.forward);
-    }
-
-    public void StartCalibration()
-    {
-        if (isCalibrating) return;
-        StopAllCoroutines();
-        StartCoroutine(CalibrationRoutine());
-    }
-
-    IEnumerator CalibrationRoutine()
-    {
-        isCalibrating = true;
-
-        float timer = calibrationTime;
-
-        float sumPitch = 0f;
-        float sumHeight = 0f;
-        float sumRoll = 0f;
-        int samples = 0;
-
-        if (countdownText) countdownText.gameObject.SetActive(true);
-
-        while (timer > 0f)
+        if (heightTracker == null)
         {
-            if (countdownText)
-                countdownText.text = Mathf.Ceil(timer).ToString();
+            Debug.LogError("PoseManager1: heightTracker is not assigned (needed for height baseline).");
+            yield break;
+        }
 
-            CalculatePitch();
-            CalculateRoll();
+        calibrated = false;
 
-            sumPitch += pitch;
-            sumRoll += roll;
-            if (heightTracker) sumHeight += heightTracker.hmd.position.y;
+        float sumPitch = 0f, sumRoll = 0f, sumH = 0f;
+        int count = 0;
+        float t = 0f;
 
-            samples++;
+        // ensure tracker has at least one update
+        yield return null;
 
-            timer -= Time.deltaTime;
+        while (t < seconds)
+        {
+            Vector3 localEuler = headTransform.localEulerAngles;
+
+            sumPitch += NormalizeAngle(localEuler.x);
+            sumRoll += NormalizeAngle(localEuler.z);
+
+            sumH += heightTracker.currentHeight; // requires HeadHeightTracker update below
+
+            count++;
+            t += Time.deltaTime;
             yield return null;
         }
 
-        if (samples > 0)
-        {
-            baselinePitch = sumPitch / samples;
-            baselineRoll = sumRoll / samples;
+        if (count <= 0) count = 1;
 
-            if (heightTracker)
-                heightTracker.SetBaselineHeight(sumHeight / samples);
+        baselinePitch = sumPitch / count;
+        baselineRoll = sumRoll / count;
 
-            calibrated = true;
-        }
-        else
-        {
-            Debug.LogError("Calibration failed: no samples collected.");
-            calibrated = false;
-        }
+        heightTracker.SetBaselineHeight(sumH / count);
 
-        if (setManager)
-            setManager.CaptureCameraZero();
+        calibrated = true;
 
-        if (countdownText)
-        {
-            countdownText.text = "START TASK";
-            countdownText.fontSize = 30;
-        }
+        Debug.Log($"Calibrated AVG({seconds:F1}s) ✅ pitch0={baselinePitch:F2}, roll0={baselineRoll:F2}, height0={heightTracker.baselineHeight:F3}, n={count}");
+    }
 
-        yield return new WaitForSeconds(1.5f);
-
-        if (countdownText)
-            countdownText.gameObject.SetActive(false);
-
-        if (logger != null)
-            logger.StartLogging();
-
-        isCalibrating = false;
-
-        Debug.Log($"Baseline Pitch: {baselinePitch:F2}, Baseline Roll: {baselineRoll:F2}");
+    private float NormalizeAngle(float angle)
+    {
+        if (angle > 180f) angle -= 360f;
+        return angle;
     }
 }

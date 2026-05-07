@@ -2,23 +2,38 @@
 
 public class HeadHeightTracker : MonoBehaviour
 {
-    public Transform hmd;
-    public float headHeight;
+    public Transform headTransform;
+
+    [Header("Runtime")]
+    public float currentHeight;
+
+    [Header("Baseline")]
     public float baselineHeight;
     public float normalizedHeight;
-    public bool calibrated = false;
 
-    public void SetBaselineHeight(float value)
-    {
-        baselineHeight = value;
-        calibrated = true;
-        Debug.Log($"Baseline head height set: {baselineHeight:F3}");
-    }
+    private bool baselineSet = false;
 
     void Update()
     {
-        if (!calibrated) return;
-        headHeight = hmd.position.y;
-        normalizedHeight = headHeight - baselineHeight;
+        if (headTransform == null) return;
+
+        currentHeight = headTransform.position.y;
+
+        if (!baselineSet) return;
+
+        normalizedHeight = currentHeight - baselineHeight;
+    }
+
+    public void SetBaselineFromCurrent()
+    {
+        if (headTransform == null) return;
+        baselineHeight = headTransform.position.y;
+        baselineSet = true;
+    }
+
+    public void SetBaselineHeight(float h)
+    {
+        baselineHeight = h;
+        baselineSet = true;
     }
 }

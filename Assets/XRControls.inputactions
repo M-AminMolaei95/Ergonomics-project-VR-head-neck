@@ -1,0 +1,55 @@
+{
+    "version": 1,
+    "name": "XRControls",
+    "maps": [
+        {
+            "name": "Player",
+            "id": "afaa17d9-fda8-417d-b862-a903d8698033",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "8f574ae9-89b3-4566-8901-ff3f1a1cda3b",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "PressB",
+                    "type": "Button",
+                    "id": "e3c93a02-d269-44be-969e-9941c4aa786c",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "7e8665ee-0372-4b2c-9ab7-e84fd9c93bd7",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "239a7a93-be1a-4a05-9834-9e23ef991980",
+                    "path": "<XRController>{RightHand}/{SecondaryButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PressB",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
