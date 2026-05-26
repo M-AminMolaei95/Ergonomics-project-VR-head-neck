@@ -9,9 +9,13 @@ public class CountdownGate : MonoBehaviour
     public TMP_Text countdownText;
     public GameObject countdownRoot;
 
-    [Header("Optional posture guide (shown only during baseline countdown)")]
-    public Image postureGuideImage;          // assign an Image under countdownRoot
-    public Sprite postureGuideSprite;        // assign your schematic sprite here
+    [Header("Optional posture guide")]
+    [Tooltip("Optional posture guide image. It can be shown before baseline and during baseline countdown.")]
+    public Image postureGuideImage;
+
+    [Tooltip("Sprite used for the optimal baseline / posture guide image.")]
+    public Sprite postureGuideSprite;
+
     public bool showPostureGuide = true;
 
     [Header("Countdown")]
@@ -19,18 +23,23 @@ public class CountdownGate : MonoBehaviour
 
     public void ShowReadyMessage()
     {
-        if (countdownRoot != null)
-            countdownRoot.SetActive(true);
-
-        // IMPORTANT: user asked to show the schematic during the countdown only.
-        // So we keep it hidden here by default.
-        SetPostureGuideVisible(false);
+        SetReadyPostureGuideVisible(true);
     }
 
-    private void SetPostureGuideVisible(bool visible)
+    public void SetReadyPostureGuideVisible(bool visible)
     {
-        if (!showPostureGuide)
-            visible = false;
+        if (countdownRoot != null)
+            countdownRoot.SetActive(visible);
+
+        if (countdownText != null)
+            countdownText.text = "";
+
+        SetPostureGuideVisible(visible);
+    }
+
+    public void SetPostureGuideVisible(bool visible)
+    {
+        bool shouldShow = visible && showPostureGuide;
 
         if (postureGuideImage == null)
             return;
@@ -38,10 +47,19 @@ public class CountdownGate : MonoBehaviour
         if (postureGuideSprite != null)
             postureGuideImage.sprite = postureGuideSprite;
 
-        postureGuideImage.enabled = visible;
+        postureGuideImage.enabled = shouldShow;
+        postureGuideImage.gameObject.SetActive(shouldShow);
+    }
 
-        // In case you prefer toggling the whole GameObject:
-        // postureGuideImage.gameObject.SetActive(visible);
+    public void HideAll()
+    {
+        if (countdownText != null)
+            countdownText.text = "";
+
+        SetPostureGuideVisible(false);
+
+        if (countdownRoot != null)
+            countdownRoot.SetActive(false);
     }
 
     public IEnumerator RunCountdownImmediate()
@@ -49,13 +67,13 @@ public class CountdownGate : MonoBehaviour
         if (countdownRoot != null)
             countdownRoot.SetActive(true);
 
-        // Show schematic during the actual baseline countdown
+        // Show schematic during the actual baseline countdown.
         SetPostureGuideVisible(true);
 
         for (int t = countdownSeconds; t > 0; t--)
         {
             if (countdownText != null)
-                countdownText.text = $"\n\n Stand straight and comfortably \nBaseline is now recording...\nTask starting in: {t}";
+                countdownText.text = $"\n\n Keep a comfortable, straight, and upright posture \nBaseline is now recording...\nTask starting in: {t}";
 
             yield return new WaitForSeconds(1f);
         }
@@ -63,10 +81,11 @@ public class CountdownGate : MonoBehaviour
         if (countdownText != null)
             countdownText.text = "Starting...";
 
-        // Hide after countdown
-        SetPostureGuideVisible(false);
+        HideAll();
+    }
 
-        if (countdownRoot != null)
-            countdownRoot.SetActive(false);
+    private void OnDisable()
+    {
+        SetPostureGuideVisible(false);
     }
 }

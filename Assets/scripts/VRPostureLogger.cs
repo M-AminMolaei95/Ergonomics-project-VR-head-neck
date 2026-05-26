@@ -37,9 +37,23 @@ public class VRPostureLogger : MonoBehaviour
     private string currentPhase = "None";
     private string currentCondition = "None";
     private int currentBlockIndex = 0;
+
+    private int currentViewArc = 0;
+    private int currentViewArcSegment = 0;
+    private int currentBlockInViewArc = 0;
+    private int currentBlocksPerViewArc = 0;
+    private int currentConditionTotalBlocks = 0;
+
+    private int currentTargetTemplateIndex = 0;
+    private string currentTargetTemplateName = "None";
+    private int currentTargetBallOneBased = 0;
+
+    private int currentPatternIndex = 0;
+    private string currentPatternName = "None";
+    private int currentTrialInPattern = 0;
+
     private int correctTargetPulse = 0;
 
-    // Matches the latest SetManager_targetsAndColors.cs
     private string currentTaskSequenceSource = "Manual";
     private string currentTaskPreset = "None";
     private string currentTaskOrder = "";
@@ -71,6 +85,7 @@ public class VRPostureLogger : MonoBehaviour
         currentPhase = "None";
         currentCondition = "None";
         currentBlockIndex = 0;
+        ResetTaskDetailMeta();
         correctTargetPulse = 0;
 
         LogEvent("PROTOCOL_BEGIN", "");
@@ -131,7 +146,6 @@ public class VRPostureLogger : MonoBehaviour
         WriteFrameSnapshot();
     }
 
-    // Signature updated to match latest SetManager_targetsAndColors.cs
     public void SetTaskSequenceMeta(string sequenceSource, string presetName, string orderText)
     {
         currentTaskSequenceSource = sequenceSource;
@@ -144,11 +158,11 @@ public class VRPostureLogger : MonoBehaviour
         );
     }
 
-    // Main signature used by latest SetManager_targetsAndColors.cs
     public void SetCondition(string conditionName, string postureMode, bool feedbackOn, string presetSlot)
     {
         currentCondition = BuildConditionLabel(postureMode, feedbackOn, presetSlot);
         currentBlockIndex = 0;
+        ResetTaskDetailMeta();
         correctTargetPulse = 0;
 
         ResetBreakTimerState();
@@ -159,7 +173,6 @@ public class VRPostureLogger : MonoBehaviour
         );
     }
 
-    // Backward-compatible overload in case another SetManager version is used later.
     public void SetCondition(string conditionName, string postureMode, string presetSlot)
     {
         bool inferredFeedbackOn = presetSlot != "XA" && presetSlot != "YA" && presetSlot != "None";
@@ -169,6 +182,44 @@ public class VRPostureLogger : MonoBehaviour
     public void SetBlockIndex(int blockIndex)
     {
         currentBlockIndex = blockIndex;
+    }
+
+    public void SetViewArcMeta(int viewArc, int viewArcSegment, int blockInViewArc, int blocksPerViewArc, int conditionTotalBlocks)
+    {
+        currentViewArc = Mathf.Max(0, viewArc);
+        currentViewArcSegment = Mathf.Max(0, viewArcSegment);
+        currentBlockInViewArc = Mathf.Max(0, blockInViewArc);
+        currentBlocksPerViewArc = Mathf.Max(0, blocksPerViewArc);
+        currentConditionTotalBlocks = Mathf.Max(0, conditionTotalBlocks);
+    }
+
+    public void SetTargetTemplateMeta(int templateIndex, string templateName, int targetBallOneBased)
+    {
+        currentTargetTemplateIndex = Mathf.Max(0, templateIndex);
+        currentTargetTemplateName = string.IsNullOrWhiteSpace(templateName) ? "None" : SanitizeCsvText(templateName);
+        currentTargetBallOneBased = Mathf.Max(0, targetBallOneBased);
+    }
+
+    public void SetPatternTrialMeta(int patternIndex, string patternName, int trialInPattern)
+    {
+        currentPatternIndex = Mathf.Max(0, patternIndex);
+        currentPatternName = string.IsNullOrWhiteSpace(patternName) ? "None" : SanitizeCsvText(patternName);
+        currentTrialInPattern = Mathf.Max(0, trialInPattern);
+    }
+
+    private void ResetTaskDetailMeta()
+    {
+        currentViewArc = 0;
+        currentViewArcSegment = 0;
+        currentBlockInViewArc = 0;
+        currentBlocksPerViewArc = 0;
+        currentConditionTotalBlocks = 0;
+        currentTargetTemplateIndex = 0;
+        currentTargetTemplateName = "None";
+        currentTargetBallOneBased = 0;
+        currentPatternIndex = 0;
+        currentPatternName = "None";
+        currentTrialInPattern = 0;
     }
 
     public void LogTrial(int correctCount)
@@ -190,7 +241,7 @@ public class VRPostureLogger : MonoBehaviour
             return;
 
         string ts = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff");
-        eventWriter.WriteLine($"{ts},{label},{info}");
+        eventWriter.WriteLine($"{ts},{SanitizeCsvText(label)},{SanitizeCsvText(info)}");
         if (flushEveryFrame) eventWriter.Flush();
     }
 
@@ -274,9 +325,10 @@ public class VRPostureLogger : MonoBehaviour
         }
 
         int lateralScore = calibrated ? GetLateralScore(Mathf.Abs(roll)) : 0;
-        int pitchScore = calibrated ? GetPitchScore(Mathf.Abs(pitch)) : 0;
         int slouchScore = calibrated ? GetSlouchScore(slouchTimer) : 0;
-        int totalScore = lateralScore + pitchScore + slouchScore;
+
+        int rulaScore = calibrated ? GetRulaScore(pitch, roll) : 0;
+        string rulaReason = calibrated ? GetRulaReason(pitch, roll) : "not_calibrated";
 
         OpenWritersIfNeeded();
         if (frameWriter == null)
@@ -289,6 +341,17 @@ public class VRPostureLogger : MonoBehaviour
             $"{currentPhase}," +
             $"{currentCondition}," +
             $"{currentBlockIndex}," +
+            $"{currentViewArc}," +
+            $"{currentViewArcSegment}," +
+            $"{currentBlockInViewArc}," +
+            $"{currentBlocksPerViewArc}," +
+            $"{currentConditionTotalBlocks}," +
+            $"{currentTargetTemplateIndex}," +
+            $"{currentTargetTemplateName}," +
+            $"{currentTargetBallOneBased}," +
+            $"{currentPatternIndex}," +
+            $"{currentPatternName}," +
+            $"{currentTrialInPattern}," +
             $"{correctTargetPulse}," +
             $"{pitch:F3}," +
             $"{roll:F3}," +
@@ -296,9 +359,9 @@ public class VRPostureLogger : MonoBehaviour
             $"{slouchTimer:F3}," +
             $"{normalizedHeight:F3}," +
             $"{lateralScore}," +
-            $"{pitchScore}," +
             $"{slouchScore}," +
-            $"{totalScore}"
+            $"{rulaScore}," +
+            $"{SanitizeCsvText(rulaReason)}"
         );
 
         if (flushEveryFrame) frameWriter.Flush();
@@ -308,7 +371,7 @@ public class VRPostureLogger : MonoBehaviour
     {
         if (frameWriter != null && eventWriter != null) return;
 
-        string folder = @"C:\Users\munhciteam\Documents\Projects\amin projects\LATEST-ADV-COURSEWORK\Assets\PostureLogs";
+        string folder = @"C:\Users\munhciteam\Documents\Projects\amin projects\Ergonomics project VR head-neck\Assets\PostureLogs";
 
         try
         {
@@ -331,7 +394,7 @@ public class VRPostureLogger : MonoBehaviour
             eventWriter = new StreamWriter(eventLogPath, false, new System.Text.UTF8Encoding(true));
 
             frameWriter.WriteLine(
-                "timestamp,phase,condition,blockIndex,correctTarget,pitch,roll,isSlouching,slouchTimer,normalizedHeight,lateralScore,pitchScore,slouchScore,totalScore"
+                "timestamp,phase,condition,blockIndex,viewArc,viewArcSegment,blockInViewArc,blocksPerViewArc,conditionTotalBlocks,targetTemplateIndex,targetTemplateName,targetBallOneBased,patternIndex,patternName,trialInPattern,correctTarget,pitch,roll,isSlouching,slouchTimer,normalizedHeight,lateralScore,slouchScore,rulaScore,rulaReason"
             );
             eventWriter.WriteLine("timestamp,label,info");
 
@@ -409,6 +472,45 @@ public class VRPostureLogger : MonoBehaviour
         return $"{posture} {feedback}";
     }
 
+
+    private int GetRulaScore(float pitch, float roll)
+    {
+        int score = GetRulaBasePitchScore(pitch);
+
+        if (Mathf.Abs(roll) > 8f)
+            score += 1;
+
+        return score;
+    }
+
+    private int GetRulaBasePitchScore(float pitch)
+    {
+        if (pitch >= 0f && pitch <= 10f) return 1;
+        if (pitch > 10f && pitch <= 20f) return 2;
+        if (pitch > 20f) return 3;
+        if (pitch < 0f && pitch >= -20) return 4;
+
+        return 5;
+    }
+
+    private string GetRulaReason(float pitch, float roll)
+    {
+        string pitchReason;
+
+        if (pitch >= 0f && pitch <= 10f)
+            pitchReason = "forward_0_10";
+        else if (pitch > 10f && pitch <= 20f)
+            pitchReason = "forward_10_20";
+        else if (pitch > 20f)
+            pitchReason = "forward_over_20";
+        else
+            pitchReason = "backward_extension";
+
+        if (Mathf.Abs(roll) > 8f)
+            return pitchReason + "+lateral_tilt_8_or_more";
+
+        return pitchReason + "_only";
+    }
     private int GetLateralScore(float absRoll)
     {
         if (absRoll <= lateral1) return 1;
@@ -417,12 +519,6 @@ public class VRPostureLogger : MonoBehaviour
         return 4;
     }
 
-    private int GetPitchScore(float absPitch)
-    {
-        if (absPitch <= pitch1) return 1;
-        if (absPitch <= pitch2) return 3;
-        return 4;
-    }
 
     private int GetSlouchScore(float duration)
     {
@@ -430,6 +526,12 @@ public class VRPostureLogger : MonoBehaviour
         if (duration < 2f) return 1;
         if (duration <= slouchMedium) return 3;
         return 5;
+    }
+
+    private string SanitizeCsvText(string value)
+    {
+        if (string.IsNullOrEmpty(value)) return "";
+        return value.Replace("\r", " ").Replace("\n", " ").Replace(",", ";");
     }
 
     private void OnApplicationQuit()

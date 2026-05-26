@@ -1,0 +1,1733 @@
+﻿timestamp,label,info
+2026-05-14 12:23:17.238,PROTOCOL_BEGIN,
+2026-05-14 12:23:17.238,TASK_SEQUENCE_META,source=P1 | preset=Part1 | order=XA->XB->XC
+2026-05-14 12:23:17.238,TASK_BEGIN_FRAMELOG_PAUSE,
+2026-05-14 12:23:17.238,PHASE_SET,WAITING_BEFORE_BASELINE
+2026-05-14 12:23:17.238,TASK_BEGIN,preset=P1 | part=Part1 | order=XA->XB->XC
+2026-05-14 12:23:17.239,CONDITION_META,rawCondition=SitNF | condition=sitting none | source=P1 | preset=Part1 | slot=XA | feedbackOn=0
+2026-05-14 12:23:17.239,PHASE_SET,WAITING_BEFORE_BASELINE
+2026-05-14 12:23:17.239,PHASE_SET,BASELINE_START
+2026-05-14 12:23:17.241,BASELINE_START,
+2026-05-14 12:23:27.347,PHASE_SET,BASELINE_END
+2026-05-14 12:23:27.347,BASELINE_REFERENCE,condition=sitting none | baselinePitch=-0.365 | baselineRoll=0.468 | baselineHeight=0.655
+2026-05-14 12:23:27.347,BASELINE_END,
+2026-05-14 12:23:27.347,PHASE_SET,WAITING_BEFORE_TASK_START
+2026-05-14 12:23:39.421,PHASE_SET,TASK_START
+2026-05-14 12:23:39.422,TASK_START,
+2026-05-14 12:23:39.422,BLOCK_TARGET_SEQUENCE,condition=SitNF | blockTemplate=1-0-2-7-6-9-4-8-3-10-5-4-0-1-8-6-7-3-5-10-9-2-10-1-8-4-0-5-7-2-3-9-6-9-10-4-1-6-3-7-2-8-5-0-1-7-9-4-3-6-0-2-8-10-5-7-10-8-6-9-0-5-3-4-1-2-6-7-2-0-4-9-1-10-3-5-8-8-5-4-3-6-1-2-9-10-0-7-5-10-9-8-7-2-6-0-3-1-4-5-2-1-6-4-7-10-3-0-8-9-7-2-0-6-5-9-3-8-1-4-10-1-10-4-5-2-7-9-6-3-0-8-5-0-1-4-6-9-3-8-7-10-2-0-9-8-10-6-7-5-1-2-4-3-1-4-8-3-9-7-6-0-2-5-10-10-4-5-8-1-3-0-7-2-9-6
+2026-05-14 12:23:39.422,SET_START,set=1 | block=1
+2026-05-14 12:23:39.422,PHASE_SET,TASK_RUNNING
+2026-05-14 12:23:39.424,TRIAL_READY,set=1 | block=1 | conditionOrderIndex=1 | targetIndex=1 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:23:54.351,TRIAL_PROGRESS,correct=1
+2026-05-14 12:23:54.351,CORRECT_HIT,set=1 | block=1 | rtSec=14.928 | correct=1 | targetIndex=1
+2026-05-14 12:23:54.351,TRIAL_READY,set=1 | block=1 | conditionOrderIndex=1 | targetIndex=0 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:23:56.642,TRIAL_PROGRESS,correct=2
+2026-05-14 12:23:56.642,CORRECT_HIT,set=1 | block=1 | rtSec=2.290 | correct=2 | targetIndex=0
+2026-05-14 12:23:56.642,TRIAL_READY,set=1 | block=1 | conditionOrderIndex=1 | targetIndex=2 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:23:57.822,TRIAL_PROGRESS,correct=3
+2026-05-14 12:23:57.822,CORRECT_HIT,set=1 | block=1 | rtSec=1.180 | correct=3 | targetIndex=2
+2026-05-14 12:23:57.822,TRIAL_READY,set=1 | block=1 | conditionOrderIndex=1 | targetIndex=7 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:23:59.545,TRIAL_PROGRESS,correct=4
+2026-05-14 12:23:59.545,CORRECT_HIT,set=1 | block=1 | rtSec=1.722 | correct=4 | targetIndex=7
+2026-05-14 12:23:59.545,TRIAL_READY,set=1 | block=1 | conditionOrderIndex=1 | targetIndex=6 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:24:01.044,TRIAL_PROGRESS,correct=5
+2026-05-14 12:24:01.044,CORRECT_HIT,set=1 | block=1 | rtSec=1.500 | correct=5 | targetIndex=6
+2026-05-14 12:24:01.044,TRIAL_READY,set=1 | block=1 | conditionOrderIndex=1 | targetIndex=9 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:24:05.322,TRIAL_PROGRESS,correct=6
+2026-05-14 12:24:05.322,CORRECT_HIT,set=1 | block=1 | rtSec=4.277 | correct=6 | targetIndex=9
+2026-05-14 12:24:05.322,TRIAL_READY,set=1 | block=1 | conditionOrderIndex=1 | targetIndex=4 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:24:07.614,TRIAL_PROGRESS,correct=7
+2026-05-14 12:24:07.614,CORRECT_HIT,set=1 | block=1 | rtSec=2.292 | correct=7 | targetIndex=4
+2026-05-14 12:24:07.614,TRIAL_READY,set=1 | block=1 | conditionOrderIndex=1 | targetIndex=8 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:24:11.030,TRIAL_PROGRESS,correct=8
+2026-05-14 12:24:11.030,CORRECT_HIT,set=1 | block=1 | rtSec=3.416 | correct=8 | targetIndex=8
+2026-05-14 12:24:11.030,TRIAL_READY,set=1 | block=1 | conditionOrderIndex=1 | targetIndex=3 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:24:13.377,TRIAL_PROGRESS,correct=9
+2026-05-14 12:24:13.377,CORRECT_HIT,set=1 | block=1 | rtSec=2.348 | correct=9 | targetIndex=3
+2026-05-14 12:24:13.377,TRIAL_READY,set=1 | block=1 | conditionOrderIndex=1 | targetIndex=10 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:24:17.849,TRIAL_PROGRESS,correct=10
+2026-05-14 12:24:17.849,CORRECT_HIT,set=1 | block=1 | rtSec=4.472 | correct=10 | targetIndex=10
+2026-05-14 12:24:17.849,TRIAL_READY,set=1 | block=1 | conditionOrderIndex=1 | targetIndex=5 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:24:19.294,TRIAL_PROGRESS,correct=11
+2026-05-14 12:24:19.294,CORRECT_HIT,set=1 | block=1 | rtSec=1.444 | correct=11 | targetIndex=5
+2026-05-14 12:24:19.294,SET_START,set=2 | block=1
+2026-05-14 12:24:19.294,PHASE_SET,TASK_RUNNING
+2026-05-14 12:24:19.294,TRIAL_READY,set=2 | block=1 | conditionOrderIndex=1 | targetIndex=4 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:24:22.168,TRIAL_PROGRESS,correct=12
+2026-05-14 12:24:22.168,CORRECT_HIT,set=2 | block=1 | rtSec=2.875 | correct=12 | targetIndex=4
+2026-05-14 12:24:22.168,TRIAL_READY,set=2 | block=1 | conditionOrderIndex=1 | targetIndex=0 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:24:24.140,TRIAL_PROGRESS,correct=13
+2026-05-14 12:24:24.140,CORRECT_HIT,set=2 | block=1 | rtSec=1.972 | correct=13 | targetIndex=0
+2026-05-14 12:24:24.140,TRIAL_READY,set=2 | block=1 | conditionOrderIndex=1 | targetIndex=1 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:24:25.238,TRIAL_PROGRESS,correct=14
+2026-05-14 12:24:25.238,CORRECT_HIT,set=2 | block=1 | rtSec=1.097 | correct=14 | targetIndex=1
+2026-05-14 12:24:25.238,TRIAL_READY,set=2 | block=1 | conditionOrderIndex=1 | targetIndex=8 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:24:27.223,TRIAL_PROGRESS,correct=15
+2026-05-14 12:24:27.223,CORRECT_HIT,set=2 | block=1 | rtSec=1.986 | correct=15 | targetIndex=8
+2026-05-14 12:24:27.223,TRIAL_READY,set=2 | block=1 | conditionOrderIndex=1 | targetIndex=6 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:24:28.667,TRIAL_PROGRESS,correct=16
+2026-05-14 12:24:28.667,CORRECT_HIT,set=2 | block=1 | rtSec=1.444 | correct=16 | targetIndex=6
+2026-05-14 12:24:28.667,TRIAL_READY,set=2 | block=1 | conditionOrderIndex=1 | targetIndex=7 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:24:31.001,TRIAL_PROGRESS,correct=17
+2026-05-14 12:24:31.001,CORRECT_HIT,set=2 | block=1 | rtSec=2.333 | correct=17 | targetIndex=7
+2026-05-14 12:24:31.001,TRIAL_READY,set=2 | block=1 | conditionOrderIndex=1 | targetIndex=3 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:24:32.487,TRIAL_PROGRESS,correct=18
+2026-05-14 12:24:32.487,CORRECT_HIT,set=2 | block=1 | rtSec=1.486 | correct=18 | targetIndex=3
+2026-05-14 12:24:32.487,TRIAL_READY,set=2 | block=1 | conditionOrderIndex=1 | targetIndex=5 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:24:34.195,TRIAL_PROGRESS,correct=19
+2026-05-14 12:24:34.195,CORRECT_HIT,set=2 | block=1 | rtSec=1.708 | correct=19 | targetIndex=5
+2026-05-14 12:24:34.195,TRIAL_READY,set=2 | block=1 | conditionOrderIndex=1 | targetIndex=10 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:24:37.376,TRIAL_PROGRESS,correct=20
+2026-05-14 12:24:37.376,CORRECT_HIT,set=2 | block=1 | rtSec=3.181 | correct=20 | targetIndex=10
+2026-05-14 12:24:37.376,TRIAL_READY,set=2 | block=1 | conditionOrderIndex=1 | targetIndex=9 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:24:39.833,TRIAL_PROGRESS,correct=21
+2026-05-14 12:24:39.833,CORRECT_HIT,set=2 | block=1 | rtSec=2.458 | correct=21 | targetIndex=9
+2026-05-14 12:24:39.833,TRIAL_READY,set=2 | block=1 | conditionOrderIndex=1 | targetIndex=2 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:24:42.209,TRIAL_PROGRESS,correct=22
+2026-05-14 12:24:42.209,CORRECT_HIT,set=2 | block=1 | rtSec=2.375 | correct=22 | targetIndex=2
+2026-05-14 12:24:42.209,SET_START,set=3 | block=1
+2026-05-14 12:24:42.209,PHASE_SET,TASK_RUNNING
+2026-05-14 12:24:42.209,TRIAL_READY,set=3 | block=1 | conditionOrderIndex=1 | targetIndex=10 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:24:44.529,TRIAL_PROGRESS,correct=23
+2026-05-14 12:24:44.529,CORRECT_HIT,set=3 | block=1 | rtSec=2.319 | correct=23 | targetIndex=10
+2026-05-14 12:24:44.529,TRIAL_READY,set=3 | block=1 | conditionOrderIndex=1 | targetIndex=1 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:24:47.237,TRIAL_PROGRESS,correct=24
+2026-05-14 12:24:47.237,CORRECT_HIT,set=3 | block=1 | rtSec=2.708 | correct=24 | targetIndex=1
+2026-05-14 12:24:47.237,TRIAL_READY,set=3 | block=1 | conditionOrderIndex=1 | targetIndex=8 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:24:48.764,TRIAL_PROGRESS,correct=25
+2026-05-14 12:24:48.764,CORRECT_HIT,set=3 | block=1 | rtSec=1.528 | correct=25 | targetIndex=8
+2026-05-14 12:24:48.764,TRIAL_READY,set=3 | block=1 | conditionOrderIndex=1 | targetIndex=4 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:24:50.862,TRIAL_PROGRESS,correct=26
+2026-05-14 12:24:50.862,CORRECT_HIT,set=3 | block=1 | rtSec=2.097 | correct=26 | targetIndex=4
+2026-05-14 12:24:50.862,TRIAL_READY,set=3 | block=1 | conditionOrderIndex=1 | targetIndex=0 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:24:52.569,TRIAL_PROGRESS,correct=27
+2026-05-14 12:24:52.569,CORRECT_HIT,set=3 | block=1 | rtSec=1.708 | correct=27 | targetIndex=0
+2026-05-14 12:24:52.569,TRIAL_READY,set=3 | block=1 | conditionOrderIndex=1 | targetIndex=5 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:24:54.166,TRIAL_PROGRESS,correct=28
+2026-05-14 12:24:54.166,CORRECT_HIT,set=3 | block=1 | rtSec=1.597 | correct=28 | targetIndex=5
+2026-05-14 12:24:54.166,TRIAL_READY,set=3 | block=1 | conditionOrderIndex=1 | targetIndex=7 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:24:55.528,TRIAL_PROGRESS,correct=29
+2026-05-14 12:24:55.528,CORRECT_HIT,set=3 | block=1 | rtSec=1.361 | correct=29 | targetIndex=7
+2026-05-14 12:24:55.528,TRIAL_READY,set=3 | block=1 | conditionOrderIndex=1 | targetIndex=2 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:24:57.833,TRIAL_PROGRESS,correct=30
+2026-05-14 12:24:57.833,CORRECT_HIT,set=3 | block=1 | rtSec=2.306 | correct=30 | targetIndex=2
+2026-05-14 12:24:57.833,TRIAL_READY,set=3 | block=1 | conditionOrderIndex=1 | targetIndex=3 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:25:00.000,TRIAL_PROGRESS,correct=31
+2026-05-14 12:25:00.000,CORRECT_HIT,set=3 | block=1 | rtSec=2.166 | correct=31 | targetIndex=3
+2026-05-14 12:25:00.000,TRIAL_READY,set=3 | block=1 | conditionOrderIndex=1 | targetIndex=9 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:25:01.832,TRIAL_PROGRESS,correct=32
+2026-05-14 12:25:01.832,CORRECT_HIT,set=3 | block=1 | rtSec=1.833 | correct=32 | targetIndex=9
+2026-05-14 12:25:01.832,TRIAL_READY,set=3 | block=1 | conditionOrderIndex=1 | targetIndex=6 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:25:03.249,TRIAL_PROGRESS,correct=33
+2026-05-14 12:25:03.249,CORRECT_HIT,set=3 | block=1 | rtSec=1.416 | correct=33 | targetIndex=6
+2026-05-14 12:25:03.249,SET_START,set=4 | block=1
+2026-05-14 12:25:03.249,PHASE_SET,TASK_RUNNING
+2026-05-14 12:25:03.249,TRIAL_READY,set=4 | block=1 | conditionOrderIndex=1 | targetIndex=9 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:25:04.638,TRIAL_PROGRESS,correct=34
+2026-05-14 12:25:04.638,CORRECT_HIT,set=4 | block=1 | rtSec=1.389 | correct=34 | targetIndex=9
+2026-05-14 12:25:04.638,TRIAL_READY,set=4 | block=1 | conditionOrderIndex=1 | targetIndex=10 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:25:06.055,TRIAL_PROGRESS,correct=35
+2026-05-14 12:25:06.055,CORRECT_HIT,set=4 | block=1 | rtSec=1.417 | correct=35 | targetIndex=10
+2026-05-14 12:25:06.055,TRIAL_READY,set=4 | block=1 | conditionOrderIndex=1 | targetIndex=4 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:25:07.582,TRIAL_PROGRESS,correct=36
+2026-05-14 12:25:07.582,CORRECT_HIT,set=4 | block=1 | rtSec=1.528 | correct=36 | targetIndex=4
+2026-05-14 12:25:07.582,TRIAL_READY,set=4 | block=1 | conditionOrderIndex=1 | targetIndex=1 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:25:08.930,TRIAL_PROGRESS,correct=37
+2026-05-14 12:25:08.930,CORRECT_HIT,set=4 | block=1 | rtSec=1.347 | correct=37 | targetIndex=1
+2026-05-14 12:25:08.930,TRIAL_READY,set=4 | block=1 | conditionOrderIndex=1 | targetIndex=6 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:25:10.444,TRIAL_PROGRESS,correct=38
+2026-05-14 12:25:10.444,CORRECT_HIT,set=4 | block=1 | rtSec=1.514 | correct=38 | targetIndex=6
+2026-05-14 12:25:10.444,TRIAL_READY,set=4 | block=1 | conditionOrderIndex=1 | targetIndex=3 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:25:12.207,TRIAL_PROGRESS,correct=39
+2026-05-14 12:25:12.207,CORRECT_HIT,set=4 | block=1 | rtSec=1.763 | correct=39 | targetIndex=3
+2026-05-14 12:25:12.207,TRIAL_READY,set=4 | block=1 | conditionOrderIndex=1 | targetIndex=7 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:25:13.651,TRIAL_PROGRESS,correct=40
+2026-05-14 12:25:13.651,CORRECT_HIT,set=4 | block=1 | rtSec=1.444 | correct=40 | targetIndex=7
+2026-05-14 12:25:13.651,TRIAL_READY,set=4 | block=1 | conditionOrderIndex=1 | targetIndex=2 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:25:15.680,TRIAL_PROGRESS,correct=41
+2026-05-14 12:25:15.680,CORRECT_HIT,set=4 | block=1 | rtSec=2.027 | correct=41 | targetIndex=2
+2026-05-14 12:25:15.680,TRIAL_READY,set=4 | block=1 | conditionOrderIndex=1 | targetIndex=8 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:25:17.624,TRIAL_PROGRESS,correct=42
+2026-05-14 12:25:17.624,CORRECT_HIT,set=4 | block=1 | rtSec=1.945 | correct=42 | targetIndex=8
+2026-05-14 12:25:17.624,TRIAL_READY,set=4 | block=1 | conditionOrderIndex=1 | targetIndex=5 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:25:19.249,TRIAL_PROGRESS,correct=43
+2026-05-14 12:25:19.249,CORRECT_HIT,set=4 | block=1 | rtSec=1.625 | correct=43 | targetIndex=5
+2026-05-14 12:25:19.249,TRIAL_READY,set=4 | block=1 | conditionOrderIndex=1 | targetIndex=0 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:25:22.013,TRIAL_PROGRESS,correct=44
+2026-05-14 12:25:22.013,CORRECT_HIT,set=4 | block=1 | rtSec=2.764 | correct=44 | targetIndex=0
+2026-05-14 12:25:22.013,SET_START,set=5 | block=1
+2026-05-14 12:25:22.013,PHASE_SET,TASK_RUNNING
+2026-05-14 12:25:22.013,TRIAL_READY,set=5 | block=1 | conditionOrderIndex=1 | targetIndex=1 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:25:23.054,TRIAL_PROGRESS,correct=45
+2026-05-14 12:25:23.054,CORRECT_HIT,set=5 | block=1 | rtSec=1.041 | correct=45 | targetIndex=1
+2026-05-14 12:25:23.054,TRIAL_READY,set=5 | block=1 | conditionOrderIndex=1 | targetIndex=7 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:25:24.651,TRIAL_PROGRESS,correct=46
+2026-05-14 12:25:24.651,CORRECT_HIT,set=5 | block=1 | rtSec=1.597 | correct=46 | targetIndex=7
+2026-05-14 12:25:24.651,TRIAL_READY,set=5 | block=1 | conditionOrderIndex=1 | targetIndex=9 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:25:27.192,TRIAL_PROGRESS,correct=47
+2026-05-14 12:25:27.192,CORRECT_HIT,set=5 | block=1 | rtSec=2.541 | correct=47 | targetIndex=9
+2026-05-14 12:25:27.192,TRIAL_READY,set=5 | block=1 | conditionOrderIndex=1 | targetIndex=4 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:25:28.762,TRIAL_PROGRESS,correct=48
+2026-05-14 12:25:28.762,CORRECT_HIT,set=5 | block=1 | rtSec=1.569 | correct=48 | targetIndex=4
+2026-05-14 12:25:28.762,TRIAL_READY,set=5 | block=1 | conditionOrderIndex=1 | targetIndex=3 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:25:30.984,TRIAL_PROGRESS,correct=49
+2026-05-14 12:25:30.984,CORRECT_HIT,set=5 | block=1 | rtSec=2.222 | correct=49 | targetIndex=3
+2026-05-14 12:25:30.984,TRIAL_READY,set=5 | block=1 | conditionOrderIndex=1 | targetIndex=6 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:25:32.914,TRIAL_PROGRESS,correct=50
+2026-05-14 12:25:32.914,CORRECT_HIT,set=5 | block=1 | rtSec=1.930 | correct=50 | targetIndex=6
+2026-05-14 12:25:32.915,TRIAL_READY,set=5 | block=1 | conditionOrderIndex=1 | targetIndex=0 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:25:35.567,TRIAL_PROGRESS,correct=51
+2026-05-14 12:25:35.567,CORRECT_HIT,set=5 | block=1 | rtSec=2.653 | correct=51 | targetIndex=0
+2026-05-14 12:25:35.567,TRIAL_READY,set=5 | block=1 | conditionOrderIndex=1 | targetIndex=2 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:25:37.289,TRIAL_PROGRESS,correct=52
+2026-05-14 12:25:37.289,CORRECT_HIT,set=5 | block=1 | rtSec=1.722 | correct=52 | targetIndex=2
+2026-05-14 12:25:37.289,TRIAL_READY,set=5 | block=1 | conditionOrderIndex=1 | targetIndex=8 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:25:39.136,TRIAL_PROGRESS,correct=53
+2026-05-14 12:25:39.136,CORRECT_HIT,set=5 | block=1 | rtSec=1.847 | correct=53 | targetIndex=8
+2026-05-14 12:25:39.136,TRIAL_READY,set=5 | block=1 | conditionOrderIndex=1 | targetIndex=10 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:25:40.665,TRIAL_PROGRESS,correct=54
+2026-05-14 12:25:40.665,CORRECT_HIT,set=5 | block=1 | rtSec=1.528 | correct=54 | targetIndex=10
+2026-05-14 12:25:40.665,TRIAL_READY,set=5 | block=1 | conditionOrderIndex=1 | targetIndex=5 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:25:43.136,TRIAL_PROGRESS,correct=55
+2026-05-14 12:25:43.136,CORRECT_HIT,set=5 | block=1 | rtSec=2.471 | correct=55 | targetIndex=5
+2026-05-14 12:25:43.136,SET_START,set=6 | block=1
+2026-05-14 12:25:43.136,PHASE_SET,TASK_RUNNING
+2026-05-14 12:25:43.136,TRIAL_READY,set=6 | block=1 | conditionOrderIndex=1 | targetIndex=7 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:25:44.372,TRIAL_PROGRESS,correct=56
+2026-05-14 12:25:44.372,CORRECT_HIT,set=6 | block=1 | rtSec=1.236 | correct=56 | targetIndex=7
+2026-05-14 12:25:44.372,TRIAL_READY,set=6 | block=1 | conditionOrderIndex=1 | targetIndex=10 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:25:47.149,TRIAL_PROGRESS,correct=57
+2026-05-14 12:25:47.149,CORRECT_HIT,set=6 | block=1 | rtSec=2.778 | correct=57 | targetIndex=10
+2026-05-14 12:25:47.149,TRIAL_READY,set=6 | block=1 | conditionOrderIndex=1 | targetIndex=8 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:25:48.719,TRIAL_PROGRESS,correct=58
+2026-05-14 12:25:48.719,CORRECT_HIT,set=6 | block=1 | rtSec=1.569 | correct=58 | targetIndex=8
+2026-05-14 12:25:48.719,TRIAL_READY,set=6 | block=1 | conditionOrderIndex=1 | targetIndex=6 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:25:50.359,TRIAL_PROGRESS,correct=59
+2026-05-14 12:25:50.359,CORRECT_HIT,set=6 | block=1 | rtSec=1.639 | correct=59 | targetIndex=6
+2026-05-14 12:25:50.359,TRIAL_READY,set=6 | block=1 | conditionOrderIndex=1 | targetIndex=9 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:25:53.010,TRIAL_PROGRESS,correct=60
+2026-05-14 12:25:53.010,CORRECT_HIT,set=6 | block=1 | rtSec=2.652 | correct=60 | targetIndex=9
+2026-05-14 12:25:53.010,TRIAL_READY,set=6 | block=1 | conditionOrderIndex=1 | targetIndex=0 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:25:55.038,TRIAL_PROGRESS,correct=61
+2026-05-14 12:25:55.038,CORRECT_HIT,set=6 | block=1 | rtSec=2.027 | correct=61 | targetIndex=0
+2026-05-14 12:25:55.038,TRIAL_READY,set=6 | block=1 | conditionOrderIndex=1 | targetIndex=5 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:25:56.774,TRIAL_PROGRESS,correct=62
+2026-05-14 12:25:56.774,CORRECT_HIT,set=6 | block=1 | rtSec=1.736 | correct=62 | targetIndex=5
+2026-05-14 12:25:56.774,TRIAL_READY,set=6 | block=1 | conditionOrderIndex=1 | targetIndex=3 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:25:58.011,TRIAL_PROGRESS,correct=63
+2026-05-14 12:25:58.011,CORRECT_HIT,set=6 | block=1 | rtSec=1.236 | correct=63 | targetIndex=3
+2026-05-14 12:25:58.011,TRIAL_READY,set=6 | block=1 | conditionOrderIndex=1 | targetIndex=4 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:26:00.441,TRIAL_PROGRESS,correct=64
+2026-05-14 12:26:00.441,CORRECT_HIT,set=6 | block=1 | rtSec=2.431 | correct=64 | targetIndex=4
+2026-05-14 12:26:00.442,TRIAL_READY,set=6 | block=1 | conditionOrderIndex=1 | targetIndex=1 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:26:02.649,TRIAL_PROGRESS,correct=65
+2026-05-14 12:26:02.649,CORRECT_HIT,set=6 | block=1 | rtSec=2.208 | correct=65 | targetIndex=1
+2026-05-14 12:26:02.649,TRIAL_READY,set=6 | block=1 | conditionOrderIndex=1 | targetIndex=2 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:26:04.690,TRIAL_PROGRESS,correct=66
+2026-05-14 12:26:04.690,CORRECT_HIT,set=6 | block=1 | rtSec=2.041 | correct=66 | targetIndex=2
+2026-05-14 12:26:04.690,SET_START,set=7 | block=1
+2026-05-14 12:26:04.690,PHASE_SET,TASK_RUNNING
+2026-05-14 12:26:04.690,TRIAL_READY,set=7 | block=1 | conditionOrderIndex=1 | targetIndex=6 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:26:07.122,TRIAL_PROGRESS,correct=67
+2026-05-14 12:26:07.122,CORRECT_HIT,set=7 | block=1 | rtSec=2.431 | correct=67 | targetIndex=6
+2026-05-14 12:26:07.122,TRIAL_READY,set=7 | block=1 | conditionOrderIndex=1 | targetIndex=7 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:26:08.302,TRIAL_PROGRESS,correct=68
+2026-05-14 12:26:08.302,CORRECT_HIT,set=7 | block=1 | rtSec=1.180 | correct=68 | targetIndex=7
+2026-05-14 12:26:08.302,TRIAL_READY,set=7 | block=1 | conditionOrderIndex=1 | targetIndex=2 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:26:10.148,TRIAL_PROGRESS,correct=69
+2026-05-14 12:26:10.148,CORRECT_HIT,set=7 | block=1 | rtSec=1.847 | correct=69 | targetIndex=2
+2026-05-14 12:26:10.148,TRIAL_READY,set=7 | block=1 | conditionOrderIndex=1 | targetIndex=0 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:26:12.037,TRIAL_PROGRESS,correct=70
+2026-05-14 12:26:12.037,CORRECT_HIT,set=7 | block=1 | rtSec=1.888 | correct=70 | targetIndex=0
+2026-05-14 12:26:12.037,TRIAL_READY,set=7 | block=1 | conditionOrderIndex=1 | targetIndex=4 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:26:13.690,TRIAL_PROGRESS,correct=71
+2026-05-14 12:26:13.690,CORRECT_HIT,set=7 | block=1 | rtSec=1.653 | correct=71 | targetIndex=4
+2026-05-14 12:26:13.690,TRIAL_READY,set=7 | block=1 | conditionOrderIndex=1 | targetIndex=9 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:26:18.926,TRIAL_PROGRESS,correct=72
+2026-05-14 12:26:18.926,CORRECT_HIT,set=7 | block=1 | rtSec=5.235 | correct=72 | targetIndex=9
+2026-05-14 12:26:18.926,TRIAL_READY,set=7 | block=1 | conditionOrderIndex=1 | targetIndex=1 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:26:23.730,TRIAL_PROGRESS,correct=73
+2026-05-14 12:26:23.730,CORRECT_HIT,set=7 | block=1 | rtSec=4.806 | correct=73 | targetIndex=1
+2026-05-14 12:26:23.730,TRIAL_READY,set=7 | block=1 | conditionOrderIndex=1 | targetIndex=10 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:26:29.773,TRIAL_PROGRESS,correct=74
+2026-05-14 12:26:29.773,CORRECT_HIT,set=7 | block=1 | rtSec=6.041 | correct=74 | targetIndex=10
+2026-05-14 12:26:29.773,TRIAL_READY,set=7 | block=1 | conditionOrderIndex=1 | targetIndex=3 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:26:32.023,TRIAL_PROGRESS,correct=75
+2026-05-14 12:26:32.023,CORRECT_HIT,set=7 | block=1 | rtSec=2.250 | correct=75 | targetIndex=3
+2026-05-14 12:26:32.023,TRIAL_READY,set=7 | block=1 | conditionOrderIndex=1 | targetIndex=5 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:26:35.883,TRIAL_PROGRESS,correct=76
+2026-05-14 12:26:35.883,CORRECT_HIT,set=7 | block=1 | rtSec=3.861 | correct=76 | targetIndex=5
+2026-05-14 12:26:35.883,TRIAL_READY,set=7 | block=1 | conditionOrderIndex=1 | targetIndex=8 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:26:37.257,TRIAL_PROGRESS,correct=77
+2026-05-14 12:26:37.257,CORRECT_HIT,set=7 | block=1 | rtSec=1.375 | correct=77 | targetIndex=8
+2026-05-14 12:26:37.257,SET_START,set=8 | block=1
+2026-05-14 12:26:37.257,PHASE_SET,TASK_RUNNING
+2026-05-14 12:26:37.257,TRIAL_READY,set=8 | block=1 | conditionOrderIndex=1 | targetIndex=8 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:26:38.620,TRIAL_PROGRESS,correct=78
+2026-05-14 12:26:38.620,CORRECT_HIT,set=8 | block=1 | rtSec=1.361 | correct=78 | targetIndex=8
+2026-05-14 12:26:38.620,TRIAL_READY,set=8 | block=1 | conditionOrderIndex=1 | targetIndex=5 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:26:40.036,TRIAL_PROGRESS,correct=79
+2026-05-14 12:26:40.036,CORRECT_HIT,set=8 | block=1 | rtSec=1.416 | correct=79 | targetIndex=5
+2026-05-14 12:26:40.036,TRIAL_READY,set=8 | block=1 | conditionOrderIndex=1 | targetIndex=4 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:26:42.160,TRIAL_PROGRESS,correct=80
+2026-05-14 12:26:42.160,CORRECT_HIT,set=8 | block=1 | rtSec=2.125 | correct=80 | targetIndex=4
+2026-05-14 12:26:42.160,TRIAL_READY,set=8 | block=1 | conditionOrderIndex=1 | targetIndex=3 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:26:43.634,TRIAL_PROGRESS,correct=81
+2026-05-14 12:26:43.634,CORRECT_HIT,set=8 | block=1 | rtSec=1.472 | correct=81 | targetIndex=3
+2026-05-14 12:26:43.634,TRIAL_READY,set=8 | block=1 | conditionOrderIndex=1 | targetIndex=6 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:26:46.592,TRIAL_PROGRESS,correct=82
+2026-05-14 12:26:46.592,CORRECT_HIT,set=8 | block=1 | rtSec=2.958 | correct=82 | targetIndex=6
+2026-05-14 12:26:46.592,TRIAL_READY,set=8 | block=1 | conditionOrderIndex=1 | targetIndex=1 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:26:50.049,TRIAL_PROGRESS,correct=83
+2026-05-14 12:26:50.049,CORRECT_HIT,set=8 | block=1 | rtSec=3.458 | correct=83 | targetIndex=1
+2026-05-14 12:26:50.049,TRIAL_READY,set=8 | block=1 | conditionOrderIndex=1 | targetIndex=2 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:26:51.882,TRIAL_PROGRESS,correct=84
+2026-05-14 12:26:51.882,CORRECT_HIT,set=8 | block=1 | rtSec=1.834 | correct=84 | targetIndex=2
+2026-05-14 12:26:51.882,TRIAL_READY,set=8 | block=1 | conditionOrderIndex=1 | targetIndex=9 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:26:53.868,TRIAL_PROGRESS,correct=85
+2026-05-14 12:26:53.868,CORRECT_HIT,set=8 | block=1 | rtSec=1.986 | correct=85 | targetIndex=9
+2026-05-14 12:26:53.868,TRIAL_READY,set=8 | block=1 | conditionOrderIndex=1 | targetIndex=10 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:26:56.063,TRIAL_PROGRESS,correct=86
+2026-05-14 12:26:56.063,CORRECT_HIT,set=8 | block=1 | rtSec=2.194 | correct=86 | targetIndex=10
+2026-05-14 12:26:56.063,TRIAL_READY,set=8 | block=1 | conditionOrderIndex=1 | targetIndex=0 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:26:58.452,TRIAL_PROGRESS,correct=87
+2026-05-14 12:26:58.452,CORRECT_HIT,set=8 | block=1 | rtSec=2.389 | correct=87 | targetIndex=0
+2026-05-14 12:26:58.452,TRIAL_READY,set=8 | block=1 | conditionOrderIndex=1 | targetIndex=7 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:27:00.882,TRIAL_PROGRESS,correct=88
+2026-05-14 12:27:00.882,CORRECT_HIT,set=8 | block=1 | rtSec=2.430 | correct=88 | targetIndex=7
+2026-05-14 12:27:00.882,SET_START,set=9 | block=1
+2026-05-14 12:27:00.882,PHASE_SET,TASK_RUNNING
+2026-05-14 12:27:00.882,TRIAL_READY,set=9 | block=1 | conditionOrderIndex=1 | targetIndex=5 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:27:02.339,TRIAL_PROGRESS,correct=89
+2026-05-14 12:27:02.339,CORRECT_HIT,set=9 | block=1 | rtSec=1.457 | correct=89 | targetIndex=5
+2026-05-14 12:27:02.339,TRIAL_READY,set=9 | block=1 | conditionOrderIndex=1 | targetIndex=10 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:27:04.437,TRIAL_PROGRESS,correct=90
+2026-05-14 12:27:04.437,CORRECT_HIT,set=9 | block=1 | rtSec=2.097 | correct=90 | targetIndex=10
+2026-05-14 12:27:04.437,TRIAL_READY,set=9 | block=1 | conditionOrderIndex=1 | targetIndex=9 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:27:05.937,TRIAL_PROGRESS,correct=91
+2026-05-14 12:27:05.937,CORRECT_HIT,set=9 | block=1 | rtSec=1.500 | correct=91 | targetIndex=9
+2026-05-14 12:27:05.937,TRIAL_READY,set=9 | block=1 | conditionOrderIndex=1 | targetIndex=8 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:27:08.673,TRIAL_PROGRESS,correct=92
+2026-05-14 12:27:08.673,CORRECT_HIT,set=9 | block=1 | rtSec=2.736 | correct=92 | targetIndex=8
+2026-05-14 12:27:08.673,TRIAL_READY,set=9 | block=1 | conditionOrderIndex=1 | targetIndex=7 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:27:10.132,TRIAL_PROGRESS,correct=93
+2026-05-14 12:27:10.132,CORRECT_HIT,set=9 | block=1 | rtSec=1.458 | correct=93 | targetIndex=7
+2026-05-14 12:27:10.132,TRIAL_READY,set=9 | block=1 | conditionOrderIndex=1 | targetIndex=2 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:27:11.881,TRIAL_PROGRESS,correct=94
+2026-05-14 12:27:11.881,CORRECT_HIT,set=9 | block=1 | rtSec=1.750 | correct=94 | targetIndex=2
+2026-05-14 12:27:11.881,TRIAL_READY,set=9 | block=1 | conditionOrderIndex=1 | targetIndex=6 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:27:13.590,TRIAL_PROGRESS,correct=95
+2026-05-14 12:27:13.590,CORRECT_HIT,set=9 | block=1 | rtSec=1.709 | correct=95 | targetIndex=6
+2026-05-14 12:27:13.590,TRIAL_READY,set=9 | block=1 | conditionOrderIndex=1 | targetIndex=0 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:27:16.201,TRIAL_PROGRESS,correct=96
+2026-05-14 12:27:16.201,CORRECT_HIT,set=9 | block=1 | rtSec=2.611 | correct=96 | targetIndex=0
+2026-05-14 12:27:16.201,TRIAL_READY,set=9 | block=1 | conditionOrderIndex=1 | targetIndex=3 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:27:17.561,TRIAL_PROGRESS,correct=97
+2026-05-14 12:27:17.561,CORRECT_HIT,set=9 | block=1 | rtSec=1.361 | correct=97 | targetIndex=3
+2026-05-14 12:27:17.561,TRIAL_READY,set=9 | block=1 | conditionOrderIndex=1 | targetIndex=1 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:27:18.950,TRIAL_PROGRESS,correct=98
+2026-05-14 12:27:18.950,CORRECT_HIT,set=9 | block=1 | rtSec=1.389 | correct=98 | targetIndex=1
+2026-05-14 12:27:18.950,TRIAL_READY,set=9 | block=1 | conditionOrderIndex=1 | targetIndex=4 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:27:20.770,TRIAL_PROGRESS,correct=99
+2026-05-14 12:27:20.770,CORRECT_HIT,set=9 | block=1 | rtSec=1.819 | correct=99 | targetIndex=4
+2026-05-14 12:27:20.770,SET_START,set=10 | block=1
+2026-05-14 12:27:20.770,PHASE_SET,TASK_RUNNING
+2026-05-14 12:27:20.770,TRIAL_READY,set=10 | block=1 | conditionOrderIndex=1 | targetIndex=5 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:27:22.187,TRIAL_PROGRESS,correct=100
+2026-05-14 12:27:22.187,CORRECT_HIT,set=10 | block=1 | rtSec=1.417 | correct=100 | targetIndex=5
+2026-05-14 12:27:22.187,TRIAL_READY,set=10 | block=1 | conditionOrderIndex=1 | targetIndex=2 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:27:23.520,TRIAL_PROGRESS,correct=101
+2026-05-14 12:27:23.520,CORRECT_HIT,set=10 | block=1 | rtSec=1.333 | correct=101 | targetIndex=2
+2026-05-14 12:27:23.520,TRIAL_READY,set=10 | block=1 | conditionOrderIndex=1 | targetIndex=1 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:27:24.658,TRIAL_PROGRESS,correct=102
+2026-05-14 12:27:24.658,CORRECT_HIT,set=10 | block=1 | rtSec=1.138 | correct=102 | targetIndex=1
+2026-05-14 12:27:24.658,TRIAL_READY,set=10 | block=1 | conditionOrderIndex=1 | targetIndex=6 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:27:26.144,TRIAL_PROGRESS,correct=103
+2026-05-14 12:27:26.144,CORRECT_HIT,set=10 | block=1 | rtSec=1.486 | correct=103 | targetIndex=6
+2026-05-14 12:27:26.144,TRIAL_READY,set=10 | block=1 | conditionOrderIndex=1 | targetIndex=4 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:27:28.493,TRIAL_PROGRESS,correct=104
+2026-05-14 12:27:28.493,CORRECT_HIT,set=10 | block=1 | rtSec=2.348 | correct=104 | targetIndex=4
+2026-05-14 12:27:28.493,TRIAL_READY,set=10 | block=1 | conditionOrderIndex=1 | targetIndex=7 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:27:29.298,TRIAL_PROGRESS,correct=105
+2026-05-14 12:27:29.298,CORRECT_HIT,set=10 | block=1 | rtSec=0.805 | correct=105 | targetIndex=7
+2026-05-14 12:27:29.298,TRIAL_READY,set=10 | block=1 | conditionOrderIndex=1 | targetIndex=10 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:27:30.742,TRIAL_PROGRESS,correct=106
+2026-05-14 12:27:30.742,CORRECT_HIT,set=10 | block=1 | rtSec=1.444 | correct=106 | targetIndex=10
+2026-05-14 12:27:30.742,TRIAL_READY,set=10 | block=1 | conditionOrderIndex=1 | targetIndex=3 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:27:32.492,TRIAL_PROGRESS,correct=107
+2026-05-14 12:27:32.492,CORRECT_HIT,set=10 | block=1 | rtSec=1.750 | correct=107 | targetIndex=3
+2026-05-14 12:27:32.492,TRIAL_READY,set=10 | block=1 | conditionOrderIndex=1 | targetIndex=0 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:27:33.853,TRIAL_PROGRESS,correct=108
+2026-05-14 12:27:33.853,CORRECT_HIT,set=10 | block=1 | rtSec=1.361 | correct=108 | targetIndex=0
+2026-05-14 12:27:33.853,TRIAL_READY,set=10 | block=1 | conditionOrderIndex=1 | targetIndex=8 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:27:36.144,TRIAL_PROGRESS,correct=109
+2026-05-14 12:27:36.144,CORRECT_HIT,set=10 | block=1 | rtSec=2.291 | correct=109 | targetIndex=8
+2026-05-14 12:27:36.145,TRIAL_READY,set=10 | block=1 | conditionOrderIndex=1 | targetIndex=9 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:27:37.297,TRIAL_PROGRESS,correct=110
+2026-05-14 12:27:37.297,CORRECT_HIT,set=10 | block=1 | rtSec=1.152 | correct=110 | targetIndex=9
+2026-05-14 12:27:37.297,SET_START,set=11 | block=1
+2026-05-14 12:27:37.297,PHASE_SET,TASK_RUNNING
+2026-05-14 12:27:37.297,TRIAL_READY,set=11 | block=1 | conditionOrderIndex=1 | targetIndex=7 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:27:38.325,TRIAL_PROGRESS,correct=111
+2026-05-14 12:27:38.325,CORRECT_HIT,set=11 | block=1 | rtSec=1.028 | correct=111 | targetIndex=7
+2026-05-14 12:27:38.325,TRIAL_READY,set=11 | block=1 | conditionOrderIndex=1 | targetIndex=2 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:27:39.811,TRIAL_PROGRESS,correct=112
+2026-05-14 12:27:39.811,CORRECT_HIT,set=11 | block=1 | rtSec=1.486 | correct=112 | targetIndex=2
+2026-05-14 12:27:39.811,TRIAL_READY,set=11 | block=1 | conditionOrderIndex=1 | targetIndex=0 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:27:41.337,TRIAL_PROGRESS,correct=113
+2026-05-14 12:27:41.337,CORRECT_HIT,set=11 | block=1 | rtSec=1.527 | correct=113 | targetIndex=0
+2026-05-14 12:27:41.337,TRIAL_READY,set=11 | block=1 | conditionOrderIndex=1 | targetIndex=6 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:27:42.782,TRIAL_PROGRESS,correct=114
+2026-05-14 12:27:42.782,CORRECT_HIT,set=11 | block=1 | rtSec=1.445 | correct=114 | targetIndex=6
+2026-05-14 12:27:42.782,TRIAL_READY,set=11 | block=1 | conditionOrderIndex=1 | targetIndex=5 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:27:44.519,TRIAL_PROGRESS,correct=115
+2026-05-14 12:27:44.519,CORRECT_HIT,set=11 | block=1 | rtSec=1.736 | correct=115 | targetIndex=5
+2026-05-14 12:27:44.519,TRIAL_READY,set=11 | block=1 | conditionOrderIndex=1 | targetIndex=9 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:27:46.241,TRIAL_PROGRESS,correct=116
+2026-05-14 12:27:46.241,CORRECT_HIT,set=11 | block=1 | rtSec=1.722 | correct=116 | targetIndex=9
+2026-05-14 12:27:46.241,TRIAL_READY,set=11 | block=1 | conditionOrderIndex=1 | targetIndex=3 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:27:48.935,TRIAL_PROGRESS,correct=117
+2026-05-14 12:27:48.936,CORRECT_HIT,set=11 | block=1 | rtSec=2.695 | correct=117 | targetIndex=3
+2026-05-14 12:27:48.936,TRIAL_READY,set=11 | block=1 | conditionOrderIndex=1 | targetIndex=8 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:27:51.796,TRIAL_PROGRESS,correct=118
+2026-05-14 12:27:51.796,CORRECT_HIT,set=11 | block=1 | rtSec=2.861 | correct=118 | targetIndex=8
+2026-05-14 12:27:51.796,TRIAL_READY,set=11 | block=1 | conditionOrderIndex=1 | targetIndex=1 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:27:53.852,TRIAL_PROGRESS,correct=119
+2026-05-14 12:27:53.852,CORRECT_HIT,set=11 | block=1 | rtSec=2.056 | correct=119 | targetIndex=1
+2026-05-14 12:27:53.852,TRIAL_READY,set=11 | block=1 | conditionOrderIndex=1 | targetIndex=4 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:27:54.963,TRIAL_PROGRESS,correct=120
+2026-05-14 12:27:54.963,CORRECT_HIT,set=11 | block=1 | rtSec=1.111 | correct=120 | targetIndex=4
+2026-05-14 12:27:54.964,TRIAL_READY,set=11 | block=1 | conditionOrderIndex=1 | targetIndex=10 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:27:57.018,TRIAL_PROGRESS,correct=121
+2026-05-14 12:27:57.018,CORRECT_HIT,set=11 | block=1 | rtSec=2.055 | correct=121 | targetIndex=10
+2026-05-14 12:27:57.018,SET_START,set=12 | block=1
+2026-05-14 12:27:57.018,PHASE_SET,TASK_RUNNING
+2026-05-14 12:27:57.018,TRIAL_READY,set=12 | block=1 | conditionOrderIndex=1 | targetIndex=1 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:27:58.643,TRIAL_PROGRESS,correct=122
+2026-05-14 12:27:58.643,CORRECT_HIT,set=12 | block=1 | rtSec=1.625 | correct=122 | targetIndex=1
+2026-05-14 12:27:58.643,TRIAL_READY,set=12 | block=1 | conditionOrderIndex=1 | targetIndex=10 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:28:00.643,TRIAL_PROGRESS,correct=123
+2026-05-14 12:28:00.643,CORRECT_HIT,set=12 | block=1 | rtSec=2.000 | correct=123 | targetIndex=10
+2026-05-14 12:28:00.643,TRIAL_READY,set=12 | block=1 | conditionOrderIndex=1 | targetIndex=4 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:28:02.114,TRIAL_PROGRESS,correct=124
+2026-05-14 12:28:02.114,CORRECT_HIT,set=12 | block=1 | rtSec=1.472 | correct=124 | targetIndex=4
+2026-05-14 12:28:02.114,TRIAL_READY,set=12 | block=1 | conditionOrderIndex=1 | targetIndex=5 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:28:05.170,TRIAL_PROGRESS,correct=125
+2026-05-14 12:28:05.170,CORRECT_HIT,set=12 | block=1 | rtSec=3.055 | correct=125 | targetIndex=5
+2026-05-14 12:28:05.170,TRIAL_READY,set=12 | block=1 | conditionOrderIndex=1 | targetIndex=2 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:28:07.795,TRIAL_PROGRESS,correct=126
+2026-05-14 12:28:07.795,CORRECT_HIT,set=12 | block=1 | rtSec=2.625 | correct=126 | targetIndex=2
+2026-05-14 12:28:07.795,TRIAL_READY,set=12 | block=1 | conditionOrderIndex=1 | targetIndex=7 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:28:09.517,TRIAL_PROGRESS,correct=127
+2026-05-14 12:28:09.517,CORRECT_HIT,set=12 | block=1 | rtSec=1.722 | correct=127 | targetIndex=7
+2026-05-14 12:28:09.517,TRIAL_READY,set=12 | block=1 | conditionOrderIndex=1 | targetIndex=9 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:28:10.476,TRIAL_PROGRESS,correct=128
+2026-05-14 12:28:10.476,CORRECT_HIT,set=12 | block=1 | rtSec=0.958 | correct=128 | targetIndex=9
+2026-05-14 12:28:10.476,TRIAL_READY,set=12 | block=1 | conditionOrderIndex=1 | targetIndex=6 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:28:11.823,TRIAL_PROGRESS,correct=129
+2026-05-14 12:28:11.823,CORRECT_HIT,set=12 | block=1 | rtSec=1.347 | correct=129 | targetIndex=6
+2026-05-14 12:28:11.823,TRIAL_READY,set=12 | block=1 | conditionOrderIndex=1 | targetIndex=3 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:28:13.546,TRIAL_PROGRESS,correct=130
+2026-05-14 12:28:13.546,CORRECT_HIT,set=12 | block=1 | rtSec=1.722 | correct=130 | targetIndex=3
+2026-05-14 12:28:13.546,TRIAL_READY,set=12 | block=1 | conditionOrderIndex=1 | targetIndex=0 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:28:16.419,TRIAL_PROGRESS,correct=131
+2026-05-14 12:28:16.419,CORRECT_HIT,set=12 | block=1 | rtSec=2.874 | correct=131 | targetIndex=0
+2026-05-14 12:28:16.419,TRIAL_READY,set=12 | block=1 | conditionOrderIndex=1 | targetIndex=8 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:28:18.128,TRIAL_PROGRESS,correct=132
+2026-05-14 12:28:18.128,CORRECT_HIT,set=12 | block=1 | rtSec=1.709 | correct=132 | targetIndex=8
+2026-05-14 12:28:18.128,SET_START,set=13 | block=1
+2026-05-14 12:28:18.128,PHASE_SET,TASK_RUNNING
+2026-05-14 12:28:18.128,TRIAL_READY,set=13 | block=1 | conditionOrderIndex=1 | targetIndex=5 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:28:21.003,TRIAL_PROGRESS,correct=133
+2026-05-14 12:28:21.003,CORRECT_HIT,set=13 | block=1 | rtSec=2.875 | correct=133 | targetIndex=5
+2026-05-14 12:28:21.003,TRIAL_READY,set=13 | block=1 | conditionOrderIndex=1 | targetIndex=0 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:28:23.392,TRIAL_PROGRESS,correct=134
+2026-05-14 12:28:23.392,CORRECT_HIT,set=13 | block=1 | rtSec=2.389 | correct=134 | targetIndex=0
+2026-05-14 12:28:23.392,TRIAL_READY,set=13 | block=1 | conditionOrderIndex=1 | targetIndex=1 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:28:25.141,TRIAL_PROGRESS,correct=135
+2026-05-14 12:28:25.141,CORRECT_HIT,set=13 | block=1 | rtSec=1.750 | correct=135 | targetIndex=1
+2026-05-14 12:28:25.141,TRIAL_READY,set=13 | block=1 | conditionOrderIndex=1 | targetIndex=4 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:28:27.336,TRIAL_PROGRESS,correct=136
+2026-05-14 12:28:27.336,CORRECT_HIT,set=13 | block=1 | rtSec=2.194 | correct=136 | targetIndex=4
+2026-05-14 12:28:27.336,TRIAL_READY,set=13 | block=1 | conditionOrderIndex=1 | targetIndex=6 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:28:28.627,TRIAL_PROGRESS,correct=137
+2026-05-14 12:28:28.627,CORRECT_HIT,set=13 | block=1 | rtSec=1.292 | correct=137 | targetIndex=6
+2026-05-14 12:28:28.627,TRIAL_READY,set=13 | block=1 | conditionOrderIndex=1 | targetIndex=9 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:28:29.849,TRIAL_PROGRESS,correct=138
+2026-05-14 12:28:29.849,CORRECT_HIT,set=13 | block=1 | rtSec=1.222 | correct=138 | targetIndex=9
+2026-05-14 12:28:29.849,TRIAL_READY,set=13 | block=1 | conditionOrderIndex=1 | targetIndex=3 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:28:31.697,TRIAL_PROGRESS,correct=139
+2026-05-14 12:28:31.697,CORRECT_HIT,set=13 | block=1 | rtSec=1.847 | correct=139 | targetIndex=3
+2026-05-14 12:28:31.697,TRIAL_READY,set=13 | block=1 | conditionOrderIndex=1 | targetIndex=8 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:28:34.725,TRIAL_PROGRESS,correct=140
+2026-05-14 12:28:34.725,CORRECT_HIT,set=13 | block=1 | rtSec=3.028 | correct=140 | targetIndex=8
+2026-05-14 12:28:34.725,TRIAL_READY,set=13 | block=1 | conditionOrderIndex=1 | targetIndex=7 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:28:35.529,TRIAL_PROGRESS,correct=141
+2026-05-14 12:28:35.529,CORRECT_HIT,set=13 | block=1 | rtSec=0.806 | correct=141 | targetIndex=7
+2026-05-14 12:28:35.529,TRIAL_READY,set=13 | block=1 | conditionOrderIndex=1 | targetIndex=10 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:28:36.683,TRIAL_PROGRESS,correct=142
+2026-05-14 12:28:36.683,CORRECT_HIT,set=13 | block=1 | rtSec=1.153 | correct=142 | targetIndex=10
+2026-05-14 12:28:36.683,TRIAL_READY,set=13 | block=1 | conditionOrderIndex=1 | targetIndex=2 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:28:38.447,TRIAL_PROGRESS,correct=143
+2026-05-14 12:28:38.447,CORRECT_HIT,set=13 | block=1 | rtSec=1.764 | correct=143 | targetIndex=2
+2026-05-14 12:28:38.447,SET_START,set=14 | block=1
+2026-05-14 12:28:38.447,PHASE_SET,TASK_RUNNING
+2026-05-14 12:28:38.447,TRIAL_READY,set=14 | block=1 | conditionOrderIndex=1 | targetIndex=0 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:28:39.474,TRIAL_PROGRESS,correct=144
+2026-05-14 12:28:39.474,CORRECT_HIT,set=14 | block=1 | rtSec=1.027 | correct=144 | targetIndex=0
+2026-05-14 12:28:39.474,TRIAL_READY,set=14 | block=1 | conditionOrderIndex=1 | targetIndex=9 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:28:42.599,TRIAL_PROGRESS,correct=145
+2026-05-14 12:28:42.599,CORRECT_HIT,set=14 | block=1 | rtSec=3.125 | correct=145 | targetIndex=9
+2026-05-14 12:28:42.599,TRIAL_READY,set=14 | block=1 | conditionOrderIndex=1 | targetIndex=8 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:28:43.794,TRIAL_PROGRESS,correct=146
+2026-05-14 12:28:43.794,CORRECT_HIT,set=14 | block=1 | rtSec=1.195 | correct=146 | targetIndex=8
+2026-05-14 12:28:43.794,TRIAL_READY,set=14 | block=1 | conditionOrderIndex=1 | targetIndex=10 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:28:45.751,TRIAL_PROGRESS,correct=147
+2026-05-14 12:28:45.751,CORRECT_HIT,set=14 | block=1 | rtSec=1.958 | correct=147 | targetIndex=10
+2026-05-14 12:28:45.751,TRIAL_READY,set=14 | block=1 | conditionOrderIndex=1 | targetIndex=6 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:28:47.279,TRIAL_PROGRESS,correct=148
+2026-05-14 12:28:47.279,CORRECT_HIT,set=14 | block=1 | rtSec=1.527 | correct=148 | targetIndex=6
+2026-05-14 12:28:47.279,TRIAL_READY,set=14 | block=1 | conditionOrderIndex=1 | targetIndex=7 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:28:48.238,TRIAL_PROGRESS,correct=149
+2026-05-14 12:28:48.238,CORRECT_HIT,set=14 | block=1 | rtSec=0.958 | correct=149 | targetIndex=7
+2026-05-14 12:28:48.238,TRIAL_READY,set=14 | block=1 | conditionOrderIndex=1 | targetIndex=5 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:28:50.029,TRIAL_PROGRESS,correct=150
+2026-05-14 12:28:50.029,CORRECT_HIT,set=14 | block=1 | rtSec=1.792 | correct=150 | targetIndex=5
+2026-05-14 12:28:50.029,TRIAL_READY,set=14 | block=1 | conditionOrderIndex=1 | targetIndex=1 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:28:51.293,TRIAL_PROGRESS,correct=151
+2026-05-14 12:28:51.293,CORRECT_HIT,set=14 | block=1 | rtSec=1.264 | correct=151 | targetIndex=1
+2026-05-14 12:28:51.293,TRIAL_READY,set=14 | block=1 | conditionOrderIndex=1 | targetIndex=2 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:28:52.807,TRIAL_PROGRESS,correct=152
+2026-05-14 12:28:52.807,CORRECT_HIT,set=14 | block=1 | rtSec=1.514 | correct=152 | targetIndex=2
+2026-05-14 12:28:52.807,TRIAL_READY,set=14 | block=1 | conditionOrderIndex=1 | targetIndex=4 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:28:54.084,TRIAL_PROGRESS,correct=153
+2026-05-14 12:28:54.084,CORRECT_HIT,set=14 | block=1 | rtSec=1.277 | correct=153 | targetIndex=4
+2026-05-14 12:28:54.084,TRIAL_READY,set=14 | block=1 | conditionOrderIndex=1 | targetIndex=3 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:28:55.918,TRIAL_PROGRESS,correct=154
+2026-05-14 12:28:55.918,CORRECT_HIT,set=14 | block=1 | rtSec=1.834 | correct=154 | targetIndex=3
+2026-05-14 12:28:55.918,SET_START,set=15 | block=1
+2026-05-14 12:28:55.918,PHASE_SET,TASK_RUNNING
+2026-05-14 12:28:55.918,TRIAL_READY,set=15 | block=1 | conditionOrderIndex=1 | targetIndex=1 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:28:56.974,TRIAL_PROGRESS,correct=155
+2026-05-14 12:28:56.974,CORRECT_HIT,set=15 | block=1 | rtSec=1.055 | correct=155 | targetIndex=1
+2026-05-14 12:28:56.974,TRIAL_READY,set=15 | block=1 | conditionOrderIndex=1 | targetIndex=4 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:28:58.223,TRIAL_PROGRESS,correct=156
+2026-05-14 12:28:58.223,CORRECT_HIT,set=15 | block=1 | rtSec=1.250 | correct=156 | targetIndex=4
+2026-05-14 12:28:58.223,TRIAL_READY,set=15 | block=1 | conditionOrderIndex=1 | targetIndex=8 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:28:59.918,TRIAL_PROGRESS,correct=157
+2026-05-14 12:28:59.918,CORRECT_HIT,set=15 | block=1 | rtSec=1.694 | correct=157 | targetIndex=8
+2026-05-14 12:28:59.918,TRIAL_READY,set=15 | block=1 | conditionOrderIndex=1 | targetIndex=3 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:29:01.501,TRIAL_PROGRESS,correct=158
+2026-05-14 12:29:01.501,CORRECT_HIT,set=15 | block=1 | rtSec=1.583 | correct=158 | targetIndex=3
+2026-05-14 12:29:01.501,TRIAL_READY,set=15 | block=1 | conditionOrderIndex=1 | targetIndex=9 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:29:03.806,TRIAL_PROGRESS,correct=159
+2026-05-14 12:29:03.806,CORRECT_HIT,set=15 | block=1 | rtSec=2.305 | correct=159 | targetIndex=9
+2026-05-14 12:29:03.806,TRIAL_READY,set=15 | block=1 | conditionOrderIndex=1 | targetIndex=7 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:29:05.084,TRIAL_PROGRESS,correct=160
+2026-05-14 12:29:05.084,CORRECT_HIT,set=15 | block=1 | rtSec=1.278 | correct=160 | targetIndex=7
+2026-05-14 12:29:05.084,TRIAL_READY,set=15 | block=1 | conditionOrderIndex=1 | targetIndex=6 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:29:06.543,TRIAL_PROGRESS,correct=161
+2026-05-14 12:29:06.543,CORRECT_HIT,set=15 | block=1 | rtSec=1.458 | correct=161 | targetIndex=6
+2026-05-14 12:29:06.543,TRIAL_READY,set=15 | block=1 | conditionOrderIndex=1 | targetIndex=0 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:29:08.153,TRIAL_PROGRESS,correct=162
+2026-05-14 12:29:08.154,CORRECT_HIT,set=15 | block=1 | rtSec=1.611 | correct=162 | targetIndex=0
+2026-05-14 12:29:08.154,TRIAL_READY,set=15 | block=1 | conditionOrderIndex=1 | targetIndex=2 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:29:09.251,TRIAL_PROGRESS,correct=163
+2026-05-14 12:29:09.251,CORRECT_HIT,set=15 | block=1 | rtSec=1.097 | correct=163 | targetIndex=2
+2026-05-14 12:29:09.251,TRIAL_READY,set=15 | block=1 | conditionOrderIndex=1 | targetIndex=5 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:29:10.500,TRIAL_PROGRESS,correct=164
+2026-05-14 12:29:10.500,CORRECT_HIT,set=15 | block=1 | rtSec=1.250 | correct=164 | targetIndex=5
+2026-05-14 12:29:10.500,TRIAL_READY,set=15 | block=1 | conditionOrderIndex=1 | targetIndex=10 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:29:12.418,TRIAL_PROGRESS,correct=165
+2026-05-14 12:29:12.418,CORRECT_HIT,set=15 | block=1 | rtSec=1.917 | correct=165 | targetIndex=10
+2026-05-14 12:29:12.418,SET_START,set=16 | block=1
+2026-05-14 12:29:12.418,PHASE_SET,TASK_RUNNING
+2026-05-14 12:29:12.418,TRIAL_READY,set=16 | block=1 | conditionOrderIndex=1 | targetIndex=10 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:29:13.834,TRIAL_PROGRESS,correct=166
+2026-05-14 12:29:13.834,CORRECT_HIT,set=16 | block=1 | rtSec=1.416 | correct=166 | targetIndex=10
+2026-05-14 12:29:13.834,TRIAL_READY,set=16 | block=1 | conditionOrderIndex=1 | targetIndex=4 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:29:15.042,TRIAL_PROGRESS,correct=167
+2026-05-14 12:29:15.042,CORRECT_HIT,set=16 | block=1 | rtSec=1.208 | correct=167 | targetIndex=4
+2026-05-14 12:29:15.042,TRIAL_READY,set=16 | block=1 | conditionOrderIndex=1 | targetIndex=5 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:29:17.264,TRIAL_PROGRESS,correct=168
+2026-05-14 12:29:17.264,CORRECT_HIT,set=16 | block=1 | rtSec=2.222 | correct=168 | targetIndex=5
+2026-05-14 12:29:17.264,TRIAL_READY,set=16 | block=1 | conditionOrderIndex=1 | targetIndex=8 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:29:18.972,TRIAL_PROGRESS,correct=169
+2026-05-14 12:29:18.972,CORRECT_HIT,set=16 | block=1 | rtSec=1.708 | correct=169 | targetIndex=8
+2026-05-14 12:29:18.972,TRIAL_READY,set=16 | block=1 | conditionOrderIndex=1 | targetIndex=1 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:29:21.070,TRIAL_PROGRESS,correct=170
+2026-05-14 12:29:21.070,CORRECT_HIT,set=16 | block=1 | rtSec=2.097 | correct=170 | targetIndex=1
+2026-05-14 12:29:21.070,TRIAL_READY,set=16 | block=1 | conditionOrderIndex=1 | targetIndex=3 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:29:22.332,TRIAL_PROGRESS,correct=171
+2026-05-14 12:29:22.332,CORRECT_HIT,set=16 | block=1 | rtSec=1.263 | correct=171 | targetIndex=3
+2026-05-14 12:29:22.332,TRIAL_READY,set=16 | block=1 | conditionOrderIndex=1 | targetIndex=0 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:29:24.056,TRIAL_PROGRESS,correct=172
+2026-05-14 12:29:24.056,CORRECT_HIT,set=16 | block=1 | rtSec=1.722 | correct=172 | targetIndex=0
+2026-05-14 12:29:24.056,TRIAL_READY,set=16 | block=1 | conditionOrderIndex=1 | targetIndex=7 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:29:25.777,TRIAL_PROGRESS,correct=173
+2026-05-14 12:29:25.777,CORRECT_HIT,set=16 | block=1 | rtSec=1.722 | correct=173 | targetIndex=7
+2026-05-14 12:29:25.777,TRIAL_READY,set=16 | block=1 | conditionOrderIndex=1 | targetIndex=2 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:29:28.276,TRIAL_PROGRESS,correct=174
+2026-05-14 12:29:28.276,CORRECT_HIT,set=16 | block=1 | rtSec=2.500 | correct=174 | targetIndex=2
+2026-05-14 12:29:28.276,TRIAL_READY,set=16 | block=1 | conditionOrderIndex=1 | targetIndex=9 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:29:31.222,TRIAL_PROGRESS,correct=175
+2026-05-14 12:29:31.222,CORRECT_HIT,set=16 | block=1 | rtSec=2.945 | correct=175 | targetIndex=9
+2026-05-14 12:29:31.222,TRIAL_READY,set=16 | block=1 | conditionOrderIndex=1 | targetIndex=6 | baseColorIndex=0 | targetColor=white
+2026-05-14 12:29:32.651,TRIAL_PROGRESS,correct=176
+2026-05-14 12:29:32.651,CORRECT_HIT,set=16 | block=1 | rtSec=1.430 | correct=176 | targetIndex=6
+2026-05-14 12:29:32.653,PHASE_SET,TASK_END
+2026-05-14 12:29:32.653,TASK_END,
+2026-05-14 12:29:32.653,PHASE_SET,WAITING_RESEARCHER_CONFIRMATION
+2026-05-14 12:29:32.653,CONDITION_FINISHED_WAITING_NEXT,finished=SitNF | next=SitPF | taskPos=2/3
+2026-05-14 12:33:14.210,PHASE_SET,RESEARCHER_CONFIRMED_WAITING_USER_BASELINE
+2026-05-14 12:33:21.432,CONDITION_META,rawCondition=SitPF | condition=sitting partial | source=P1 | preset=Part1 | slot=XB | feedbackOn=1
+2026-05-14 12:33:21.432,PHASE_SET,WAITING_BEFORE_BASELINE
+2026-05-14 12:33:21.432,PHASE_SET,BASELINE_START
+2026-05-14 12:33:21.432,BASELINE_START,
+2026-05-14 12:33:31.514,PHASE_SET,BASELINE_END
+2026-05-14 12:33:31.514,BASELINE_REFERENCE,condition=sitting partial | baselinePitch=0.302 | baselineRoll=-0.049 | baselineHeight=0.655
+2026-05-14 12:33:31.514,BASELINE_END,
+2026-05-14 12:33:31.514,PHASE_SET,WAITING_BEFORE_TASK_START
+2026-05-14 12:33:44.446,PHASE_SET,TASK_START
+2026-05-14 12:33:44.446,TASK_START,
+2026-05-14 12:33:44.446,BLOCK_TARGET_SEQUENCE,condition=SitPF | blockTemplate=10-5-7-0-4-8-6-9-2-1-3-2-9-3-10-5-0-4-8-1-7-6-3-4-8-7-10-6-0-2-5-1-9-10-7-6-1-3-5-0-4-2-8-9-5-1-8-6-4-3-2-0-7-10-9-5-4-3-7-0-10-6-2-8-9-1-6-1-7-8-5-2-4-3-0-10-9-10-8-9-1-7-6-3-4-2-0-5-0-2-4-9-8-6-5-1-7-3-10-6-0-4-9-2-7-3-5-8-10-1-1-10-7-5-8-0-6-4-2-3-9-3-8-2-4-5-10-1-0-7-9-6-10-8-2-3-5-0-4-9-1-7-6-7-4-2-1-8-6-3-9-10-0-5-9-1-4-8-5-7-3-6-0-10-2-3-5-0-1-10-8-4-7-6-2-9
+2026-05-14 12:33:44.446,SET_START,set=1 | block=1
+2026-05-14 12:33:44.446,PHASE_SET,TASK_RUNNING
+2026-05-14 12:33:44.446,TRIAL_READY,set=1 | block=1 | conditionOrderIndex=2 | targetIndex=10 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:33:49.374,TRIAL_PROGRESS,correct=1
+2026-05-14 12:33:49.374,CORRECT_HIT,set=1 | block=1 | rtSec=4.928 | correct=1 | targetIndex=10
+2026-05-14 12:33:49.374,TRIAL_READY,set=1 | block=1 | conditionOrderIndex=2 | targetIndex=5 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:33:52.082,TRIAL_PROGRESS,correct=2
+2026-05-14 12:33:52.082,CORRECT_HIT,set=1 | block=1 | rtSec=2.708 | correct=2 | targetIndex=5
+2026-05-14 12:33:52.082,TRIAL_READY,set=1 | block=1 | conditionOrderIndex=2 | targetIndex=7 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:33:54.248,TRIAL_PROGRESS,correct=3
+2026-05-14 12:33:54.248,CORRECT_HIT,set=1 | block=1 | rtSec=2.166 | correct=3 | targetIndex=7
+2026-05-14 12:33:54.248,TRIAL_READY,set=1 | block=1 | conditionOrderIndex=2 | targetIndex=0 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:33:56.986,TRIAL_PROGRESS,correct=4
+2026-05-14 12:33:56.986,CORRECT_HIT,set=1 | block=1 | rtSec=2.736 | correct=4 | targetIndex=0
+2026-05-14 12:33:56.986,TRIAL_READY,set=1 | block=1 | conditionOrderIndex=2 | targetIndex=4 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:33:58.528,TRIAL_PROGRESS,correct=5
+2026-05-14 12:33:58.528,CORRECT_HIT,set=1 | block=1 | rtSec=1.542 | correct=5 | targetIndex=4
+2026-05-14 12:33:58.528,TRIAL_READY,set=1 | block=1 | conditionOrderIndex=2 | targetIndex=8 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:34:00.208,TRIAL_PROGRESS,correct=6
+2026-05-14 12:34:00.208,CORRECT_HIT,set=1 | block=1 | rtSec=1.680 | correct=6 | targetIndex=8
+2026-05-14 12:34:00.208,TRIAL_READY,set=1 | block=1 | conditionOrderIndex=2 | targetIndex=6 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:34:01.457,TRIAL_PROGRESS,correct=7
+2026-05-14 12:34:01.457,CORRECT_HIT,set=1 | block=1 | rtSec=1.250 | correct=7 | targetIndex=6
+2026-05-14 12:34:01.457,TRIAL_READY,set=1 | block=1 | conditionOrderIndex=2 | targetIndex=9 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:34:02.666,TRIAL_PROGRESS,correct=8
+2026-05-14 12:34:02.666,CORRECT_HIT,set=1 | block=1 | rtSec=1.209 | correct=8 | targetIndex=9
+2026-05-14 12:34:02.666,TRIAL_READY,set=1 | block=1 | conditionOrderIndex=2 | targetIndex=2 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:34:04.137,TRIAL_PROGRESS,correct=9
+2026-05-14 12:34:04.137,CORRECT_HIT,set=1 | block=1 | rtSec=1.472 | correct=9 | targetIndex=2
+2026-05-14 12:34:04.137,TRIAL_READY,set=1 | block=1 | conditionOrderIndex=2 | targetIndex=1 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:34:07.041,TRIAL_PROGRESS,correct=10
+2026-05-14 12:34:07.041,CORRECT_HIT,set=1 | block=1 | rtSec=2.903 | correct=10 | targetIndex=1
+2026-05-14 12:34:07.041,TRIAL_READY,set=1 | block=1 | conditionOrderIndex=2 | targetIndex=3 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:34:08.623,TRIAL_PROGRESS,correct=11
+2026-05-14 12:34:08.623,CORRECT_HIT,set=1 | block=1 | rtSec=1.583 | correct=11 | targetIndex=3
+2026-05-14 12:34:08.623,SET_START,set=2 | block=1
+2026-05-14 12:34:08.623,PHASE_SET,TASK_RUNNING
+2026-05-14 12:34:08.623,TRIAL_READY,set=2 | block=1 | conditionOrderIndex=2 | targetIndex=2 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:34:11.484,TRIAL_PROGRESS,correct=12
+2026-05-14 12:34:11.484,CORRECT_HIT,set=2 | block=1 | rtSec=2.861 | correct=12 | targetIndex=2
+2026-05-14 12:34:11.484,TRIAL_READY,set=2 | block=1 | conditionOrderIndex=2 | targetIndex=9 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:34:13.429,TRIAL_PROGRESS,correct=13
+2026-05-14 12:34:13.429,CORRECT_HIT,set=2 | block=1 | rtSec=1.945 | correct=13 | targetIndex=9
+2026-05-14 12:34:13.429,TRIAL_READY,set=2 | block=1 | conditionOrderIndex=2 | targetIndex=3 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:34:15.096,TRIAL_PROGRESS,correct=14
+2026-05-14 12:34:15.096,CORRECT_HIT,set=2 | block=1 | rtSec=1.667 | correct=14 | targetIndex=3
+2026-05-14 12:34:15.096,TRIAL_READY,set=2 | block=1 | conditionOrderIndex=2 | targetIndex=10 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:34:16.887,TRIAL_PROGRESS,correct=15
+2026-05-14 12:34:16.887,CORRECT_HIT,set=2 | block=1 | rtSec=1.792 | correct=15 | targetIndex=10
+2026-05-14 12:34:16.887,TRIAL_READY,set=2 | block=1 | conditionOrderIndex=2 | targetIndex=5 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:34:18.956,TRIAL_PROGRESS,correct=16
+2026-05-14 12:34:18.956,CORRECT_HIT,set=2 | block=1 | rtSec=2.069 | correct=16 | targetIndex=5
+2026-05-14 12:34:18.956,TRIAL_READY,set=2 | block=1 | conditionOrderIndex=2 | targetIndex=0 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:34:20.721,TRIAL_PROGRESS,correct=17
+2026-05-14 12:34:20.721,CORRECT_HIT,set=2 | block=1 | rtSec=1.764 | correct=17 | targetIndex=0
+2026-05-14 12:34:20.721,TRIAL_READY,set=2 | block=1 | conditionOrderIndex=2 | targetIndex=4 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:34:22.026,TRIAL_PROGRESS,correct=18
+2026-05-14 12:34:22.026,CORRECT_HIT,set=2 | block=1 | rtSec=1.305 | correct=18 | targetIndex=4
+2026-05-14 12:34:22.026,TRIAL_READY,set=2 | block=1 | conditionOrderIndex=2 | targetIndex=8 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:34:23.290,TRIAL_PROGRESS,correct=19
+2026-05-14 12:34:23.290,CORRECT_HIT,set=2 | block=1 | rtSec=1.264 | correct=19 | targetIndex=8
+2026-05-14 12:34:23.290,TRIAL_READY,set=2 | block=1 | conditionOrderIndex=2 | targetIndex=1 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:34:24.888,TRIAL_PROGRESS,correct=20
+2026-05-14 12:34:24.888,CORRECT_HIT,set=2 | block=1 | rtSec=1.597 | correct=20 | targetIndex=1
+2026-05-14 12:34:24.888,TRIAL_READY,set=2 | block=1 | conditionOrderIndex=2 | targetIndex=7 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:34:26.290,TRIAL_PROGRESS,correct=21
+2026-05-14 12:34:26.290,CORRECT_HIT,set=2 | block=1 | rtSec=1.403 | correct=21 | targetIndex=7
+2026-05-14 12:34:26.290,TRIAL_READY,set=2 | block=1 | conditionOrderIndex=2 | targetIndex=6 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:34:27.970,TRIAL_PROGRESS,correct=22
+2026-05-14 12:34:27.970,CORRECT_HIT,set=2 | block=1 | rtSec=1.680 | correct=22 | targetIndex=6
+2026-05-14 12:34:27.970,SET_START,set=3 | block=1
+2026-05-14 12:34:27.970,PHASE_SET,TASK_RUNNING
+2026-05-14 12:34:27.970,TRIAL_READY,set=3 | block=1 | conditionOrderIndex=2 | targetIndex=3 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:34:29.511,TRIAL_PROGRESS,correct=23
+2026-05-14 12:34:29.511,CORRECT_HIT,set=3 | block=1 | rtSec=1.541 | correct=23 | targetIndex=3
+2026-05-14 12:34:29.511,TRIAL_READY,set=3 | block=1 | conditionOrderIndex=2 | targetIndex=4 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:34:31.095,TRIAL_PROGRESS,correct=24
+2026-05-14 12:34:31.095,CORRECT_HIT,set=3 | block=1 | rtSec=1.583 | correct=24 | targetIndex=4
+2026-05-14 12:34:31.095,TRIAL_READY,set=3 | block=1 | conditionOrderIndex=2 | targetIndex=8 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:34:33.053,TRIAL_PROGRESS,correct=25
+2026-05-14 12:34:33.053,CORRECT_HIT,set=3 | block=1 | rtSec=1.959 | correct=25 | targetIndex=8
+2026-05-14 12:34:33.053,TRIAL_READY,set=3 | block=1 | conditionOrderIndex=2 | targetIndex=7 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:34:34.553,TRIAL_PROGRESS,correct=26
+2026-05-14 12:34:34.553,CORRECT_HIT,set=3 | block=1 | rtSec=1.500 | correct=26 | targetIndex=7
+2026-05-14 12:34:34.553,TRIAL_READY,set=3 | block=1 | conditionOrderIndex=2 | targetIndex=10 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:34:38.594,TRIAL_PROGRESS,correct=27
+2026-05-14 12:34:38.594,CORRECT_HIT,set=3 | block=1 | rtSec=4.041 | correct=27 | targetIndex=10
+2026-05-14 12:34:38.594,TRIAL_READY,set=3 | block=1 | conditionOrderIndex=2 | targetIndex=6 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:34:39.998,TRIAL_PROGRESS,correct=28
+2026-05-14 12:34:39.998,CORRECT_HIT,set=3 | block=1 | rtSec=1.403 | correct=28 | targetIndex=6
+2026-05-14 12:34:39.998,TRIAL_READY,set=3 | block=1 | conditionOrderIndex=2 | targetIndex=0 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:34:41.969,TRIAL_PROGRESS,correct=29
+2026-05-14 12:34:41.969,CORRECT_HIT,set=3 | block=1 | rtSec=1.972 | correct=29 | targetIndex=0
+2026-05-14 12:34:41.969,TRIAL_READY,set=3 | block=1 | conditionOrderIndex=2 | targetIndex=2 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:34:43.330,TRIAL_PROGRESS,correct=30
+2026-05-14 12:34:43.330,CORRECT_HIT,set=3 | block=1 | rtSec=1.361 | correct=30 | targetIndex=2
+2026-05-14 12:34:43.330,TRIAL_READY,set=3 | block=1 | conditionOrderIndex=2 | targetIndex=5 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:34:44.997,TRIAL_PROGRESS,correct=31
+2026-05-14 12:34:44.997,CORRECT_HIT,set=3 | block=1 | rtSec=1.667 | correct=31 | targetIndex=5
+2026-05-14 12:34:44.997,TRIAL_READY,set=3 | block=1 | conditionOrderIndex=2 | targetIndex=1 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:34:46.525,TRIAL_PROGRESS,correct=32
+2026-05-14 12:34:46.525,CORRECT_HIT,set=3 | block=1 | rtSec=1.528 | correct=32 | targetIndex=1
+2026-05-14 12:34:46.525,TRIAL_READY,set=3 | block=1 | conditionOrderIndex=2 | targetIndex=9 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:34:48.704,TRIAL_PROGRESS,correct=33
+2026-05-14 12:34:48.704,CORRECT_HIT,set=3 | block=1 | rtSec=2.180 | correct=33 | targetIndex=9
+2026-05-14 12:34:48.704,SET_START,set=4 | block=1
+2026-05-14 12:34:48.704,PHASE_SET,TASK_RUNNING
+2026-05-14 12:34:48.704,TRIAL_READY,set=4 | block=1 | conditionOrderIndex=2 | targetIndex=10 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:34:51.259,TRIAL_PROGRESS,correct=34
+2026-05-14 12:34:51.259,CORRECT_HIT,set=4 | block=1 | rtSec=2.555 | correct=34 | targetIndex=10
+2026-05-14 12:34:51.259,TRIAL_READY,set=4 | block=1 | conditionOrderIndex=2 | targetIndex=7 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:34:52.704,TRIAL_PROGRESS,correct=35
+2026-05-14 12:34:52.704,CORRECT_HIT,set=4 | block=1 | rtSec=1.444 | correct=35 | targetIndex=7
+2026-05-14 12:34:52.704,TRIAL_READY,set=4 | block=1 | conditionOrderIndex=2 | targetIndex=6 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:34:54.372,TRIAL_PROGRESS,correct=36
+2026-05-14 12:34:54.372,CORRECT_HIT,set=4 | block=1 | rtSec=1.667 | correct=36 | targetIndex=6
+2026-05-14 12:34:54.372,TRIAL_READY,set=4 | block=1 | conditionOrderIndex=2 | targetIndex=1 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:34:56.719,TRIAL_PROGRESS,correct=37
+2026-05-14 12:34:56.719,CORRECT_HIT,set=4 | block=1 | rtSec=2.347 | correct=37 | targetIndex=1
+2026-05-14 12:34:56.719,TRIAL_READY,set=4 | block=1 | conditionOrderIndex=2 | targetIndex=3 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:35:06.023,TRIAL_PROGRESS,correct=38
+2026-05-14 12:35:06.023,CORRECT_HIT,set=4 | block=1 | rtSec=9.305 | correct=38 | targetIndex=3
+2026-05-14 12:35:06.023,TRIAL_READY,set=4 | block=1 | conditionOrderIndex=2 | targetIndex=5 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:35:08.037,TRIAL_PROGRESS,correct=39
+2026-05-14 12:35:08.037,CORRECT_HIT,set=4 | block=1 | rtSec=2.014 | correct=39 | targetIndex=5
+2026-05-14 12:35:08.037,TRIAL_READY,set=4 | block=1 | conditionOrderIndex=2 | targetIndex=0 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:35:10.218,TRIAL_PROGRESS,correct=40
+2026-05-14 12:35:10.218,CORRECT_HIT,set=4 | block=1 | rtSec=2.180 | correct=40 | targetIndex=0
+2026-05-14 12:35:10.218,TRIAL_READY,set=4 | block=1 | conditionOrderIndex=2 | targetIndex=4 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:35:11.634,TRIAL_PROGRESS,correct=41
+2026-05-14 12:35:11.634,CORRECT_HIT,set=4 | block=1 | rtSec=1.417 | correct=41 | targetIndex=4
+2026-05-14 12:35:11.634,TRIAL_READY,set=4 | block=1 | conditionOrderIndex=2 | targetIndex=2 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:35:12.772,TRIAL_PROGRESS,correct=42
+2026-05-14 12:35:12.772,CORRECT_HIT,set=4 | block=1 | rtSec=1.139 | correct=42 | targetIndex=2
+2026-05-14 12:35:12.772,TRIAL_READY,set=4 | block=1 | conditionOrderIndex=2 | targetIndex=8 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:35:14.397,TRIAL_PROGRESS,correct=43
+2026-05-14 12:35:14.397,CORRECT_HIT,set=4 | block=1 | rtSec=1.625 | correct=43 | targetIndex=8
+2026-05-14 12:35:14.397,TRIAL_READY,set=4 | block=1 | conditionOrderIndex=2 | targetIndex=9 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:35:15.981,TRIAL_PROGRESS,correct=44
+2026-05-14 12:35:15.981,CORRECT_HIT,set=4 | block=1 | rtSec=1.583 | correct=44 | targetIndex=9
+2026-05-14 12:35:15.981,SET_START,set=5 | block=1
+2026-05-14 12:35:15.981,PHASE_SET,TASK_RUNNING
+2026-05-14 12:35:15.981,TRIAL_READY,set=5 | block=1 | conditionOrderIndex=2 | targetIndex=5 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:35:19.008,TRIAL_PROGRESS,correct=45
+2026-05-14 12:35:19.008,CORRECT_HIT,set=5 | block=1 | rtSec=3.028 | correct=45 | targetIndex=5
+2026-05-14 12:35:19.008,TRIAL_READY,set=5 | block=1 | conditionOrderIndex=2 | targetIndex=1 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:35:21.287,TRIAL_PROGRESS,correct=46
+2026-05-14 12:35:21.287,CORRECT_HIT,set=5 | block=1 | rtSec=2.277 | correct=46 | targetIndex=1
+2026-05-14 12:35:21.287,TRIAL_READY,set=5 | block=1 | conditionOrderIndex=2 | targetIndex=8 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:35:23.328,TRIAL_PROGRESS,correct=47
+2026-05-14 12:35:23.328,CORRECT_HIT,set=5 | block=1 | rtSec=2.042 | correct=47 | targetIndex=8
+2026-05-14 12:35:23.328,TRIAL_READY,set=5 | block=1 | conditionOrderIndex=2 | targetIndex=6 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:35:24.662,TRIAL_PROGRESS,correct=48
+2026-05-14 12:35:24.662,CORRECT_HIT,set=5 | block=1 | rtSec=1.333 | correct=48 | targetIndex=6
+2026-05-14 12:35:24.662,TRIAL_READY,set=5 | block=1 | conditionOrderIndex=2 | targetIndex=4 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:35:25.801,TRIAL_PROGRESS,correct=49
+2026-05-14 12:35:25.801,CORRECT_HIT,set=5 | block=1 | rtSec=1.139 | correct=49 | targetIndex=4
+2026-05-14 12:35:25.801,TRIAL_READY,set=5 | block=1 | conditionOrderIndex=2 | targetIndex=3 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:35:26.870,TRIAL_PROGRESS,correct=50
+2026-05-14 12:35:26.870,CORRECT_HIT,set=5 | block=1 | rtSec=1.069 | correct=50 | targetIndex=3
+2026-05-14 12:35:26.870,TRIAL_READY,set=5 | block=1 | conditionOrderIndex=2 | targetIndex=2 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:35:28.494,TRIAL_PROGRESS,correct=51
+2026-05-14 12:35:28.494,CORRECT_HIT,set=5 | block=1 | rtSec=1.624 | correct=51 | targetIndex=2
+2026-05-14 12:35:28.495,TRIAL_READY,set=5 | block=1 | conditionOrderIndex=2 | targetIndex=0 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:35:29.786,TRIAL_PROGRESS,correct=52
+2026-05-14 12:35:29.786,CORRECT_HIT,set=5 | block=1 | rtSec=1.292 | correct=52 | targetIndex=0
+2026-05-14 12:35:29.786,TRIAL_READY,set=5 | block=1 | conditionOrderIndex=2 | targetIndex=7 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:35:31.619,TRIAL_PROGRESS,correct=53
+2026-05-14 12:35:31.619,CORRECT_HIT,set=5 | block=1 | rtSec=1.833 | correct=53 | targetIndex=7
+2026-05-14 12:35:31.619,TRIAL_READY,set=5 | block=1 | conditionOrderIndex=2 | targetIndex=10 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:35:33.508,TRIAL_PROGRESS,correct=54
+2026-05-14 12:35:33.508,CORRECT_HIT,set=5 | block=1 | rtSec=1.889 | correct=54 | targetIndex=10
+2026-05-14 12:35:33.508,TRIAL_READY,set=5 | block=1 | conditionOrderIndex=2 | targetIndex=9 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:35:34.453,TRIAL_PROGRESS,correct=55
+2026-05-14 12:35:34.453,CORRECT_HIT,set=5 | block=1 | rtSec=0.944 | correct=55 | targetIndex=9
+2026-05-14 12:35:34.453,SET_START,set=6 | block=1
+2026-05-14 12:35:34.453,PHASE_SET,TASK_RUNNING
+2026-05-14 12:35:34.453,TRIAL_READY,set=6 | block=1 | conditionOrderIndex=2 | targetIndex=5 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:35:37.897,TRIAL_PROGRESS,correct=56
+2026-05-14 12:35:37.897,CORRECT_HIT,set=6 | block=1 | rtSec=3.444 | correct=56 | targetIndex=5
+2026-05-14 12:35:37.897,TRIAL_READY,set=6 | block=1 | conditionOrderIndex=2 | targetIndex=4 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:35:39.105,TRIAL_PROGRESS,correct=57
+2026-05-14 12:35:39.105,CORRECT_HIT,set=6 | block=1 | rtSec=1.208 | correct=57 | targetIndex=4
+2026-05-14 12:35:39.105,TRIAL_READY,set=6 | block=1 | conditionOrderIndex=2 | targetIndex=3 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:35:40.092,TRIAL_PROGRESS,correct=58
+2026-05-14 12:35:40.092,CORRECT_HIT,set=6 | block=1 | rtSec=0.986 | correct=58 | targetIndex=3
+2026-05-14 12:35:40.092,TRIAL_READY,set=6 | block=1 | conditionOrderIndex=2 | targetIndex=7 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:35:41.799,TRIAL_PROGRESS,correct=59
+2026-05-14 12:35:41.799,CORRECT_HIT,set=6 | block=1 | rtSec=1.708 | correct=59 | targetIndex=7
+2026-05-14 12:35:41.799,TRIAL_READY,set=6 | block=1 | conditionOrderIndex=2 | targetIndex=0 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:35:44.022,TRIAL_PROGRESS,correct=60
+2026-05-14 12:35:44.022,CORRECT_HIT,set=6 | block=1 | rtSec=2.222 | correct=60 | targetIndex=0
+2026-05-14 12:35:44.022,TRIAL_READY,set=6 | block=1 | conditionOrderIndex=2 | targetIndex=10 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:35:46.438,TRIAL_PROGRESS,correct=61
+2026-05-14 12:35:46.438,CORRECT_HIT,set=6 | block=1 | rtSec=2.416 | correct=61 | targetIndex=10
+2026-05-14 12:35:46.438,TRIAL_READY,set=6 | block=1 | conditionOrderIndex=2 | targetIndex=6 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:35:47.979,TRIAL_PROGRESS,correct=62
+2026-05-14 12:35:47.979,CORRECT_HIT,set=6 | block=1 | rtSec=1.542 | correct=62 | targetIndex=6
+2026-05-14 12:35:47.979,TRIAL_READY,set=6 | block=1 | conditionOrderIndex=2 | targetIndex=2 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:35:49.230,TRIAL_PROGRESS,correct=63
+2026-05-14 12:35:49.230,CORRECT_HIT,set=6 | block=1 | rtSec=1.250 | correct=63 | targetIndex=2
+2026-05-14 12:35:49.230,TRIAL_READY,set=6 | block=1 | conditionOrderIndex=2 | targetIndex=8 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:35:50.591,TRIAL_PROGRESS,correct=64
+2026-05-14 12:35:50.591,CORRECT_HIT,set=6 | block=1 | rtSec=1.361 | correct=64 | targetIndex=8
+2026-05-14 12:35:50.591,TRIAL_READY,set=6 | block=1 | conditionOrderIndex=2 | targetIndex=9 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:35:51.633,TRIAL_PROGRESS,correct=65
+2026-05-14 12:35:51.633,CORRECT_HIT,set=6 | block=1 | rtSec=1.041 | correct=65 | targetIndex=9
+2026-05-14 12:35:51.633,TRIAL_READY,set=6 | block=1 | conditionOrderIndex=2 | targetIndex=1 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:35:53.438,TRIAL_PROGRESS,correct=66
+2026-05-14 12:35:53.438,CORRECT_HIT,set=6 | block=1 | rtSec=1.805 | correct=66 | targetIndex=1
+2026-05-14 12:35:53.438,SET_START,set=7 | block=1
+2026-05-14 12:35:53.438,PHASE_SET,TASK_RUNNING
+2026-05-14 12:35:53.438,TRIAL_READY,set=7 | block=1 | conditionOrderIndex=2 | targetIndex=6 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:35:54.867,TRIAL_PROGRESS,correct=67
+2026-05-14 12:35:54.869,CORRECT_HIT,set=7 | block=1 | rtSec=1.431 | correct=67 | targetIndex=6
+2026-05-14 12:35:54.869,TRIAL_READY,set=7 | block=1 | conditionOrderIndex=2 | targetIndex=1 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:35:56.285,TRIAL_PROGRESS,correct=68
+2026-05-14 12:35:56.285,CORRECT_HIT,set=7 | block=1 | rtSec=1.417 | correct=68 | targetIndex=1
+2026-05-14 12:35:56.285,TRIAL_READY,set=7 | block=1 | conditionOrderIndex=2 | targetIndex=7 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:35:58.548,TRIAL_PROGRESS,correct=69
+2026-05-14 12:35:58.548,CORRECT_HIT,set=7 | block=1 | rtSec=2.263 | correct=69 | targetIndex=7
+2026-05-14 12:35:58.548,TRIAL_READY,set=7 | block=1 | conditionOrderIndex=2 | targetIndex=8 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:36:00.701,TRIAL_PROGRESS,correct=70
+2026-05-14 12:36:00.701,CORRECT_HIT,set=7 | block=1 | rtSec=2.153 | correct=70 | targetIndex=8
+2026-05-14 12:36:00.701,TRIAL_READY,set=7 | block=1 | conditionOrderIndex=2 | targetIndex=5 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:36:02.298,TRIAL_PROGRESS,correct=71
+2026-05-14 12:36:02.298,CORRECT_HIT,set=7 | block=1 | rtSec=1.597 | correct=71 | targetIndex=5
+2026-05-14 12:36:02.298,TRIAL_READY,set=7 | block=1 | conditionOrderIndex=2 | targetIndex=2 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:36:04.104,TRIAL_PROGRESS,correct=72
+2026-05-14 12:36:04.104,CORRECT_HIT,set=7 | block=1 | rtSec=1.806 | correct=72 | targetIndex=2
+2026-05-14 12:36:04.104,TRIAL_READY,set=7 | block=1 | conditionOrderIndex=2 | targetIndex=4 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:36:05.576,TRIAL_PROGRESS,correct=73
+2026-05-14 12:36:05.576,CORRECT_HIT,set=7 | block=1 | rtSec=1.473 | correct=73 | targetIndex=4
+2026-05-14 12:36:05.576,TRIAL_READY,set=7 | block=1 | conditionOrderIndex=2 | targetIndex=3 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:36:06.881,TRIAL_PROGRESS,correct=74
+2026-05-14 12:36:06.881,CORRECT_HIT,set=7 | block=1 | rtSec=1.306 | correct=74 | targetIndex=3
+2026-05-14 12:36:06.881,TRIAL_READY,set=7 | block=1 | conditionOrderIndex=2 | targetIndex=0 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:36:08.687,TRIAL_PROGRESS,correct=75
+2026-05-14 12:36:08.687,CORRECT_HIT,set=7 | block=1 | rtSec=1.805 | correct=75 | targetIndex=0
+2026-05-14 12:36:08.687,TRIAL_READY,set=7 | block=1 | conditionOrderIndex=2 | targetIndex=10 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:36:10.603,TRIAL_PROGRESS,correct=76
+2026-05-14 12:36:10.603,CORRECT_HIT,set=7 | block=1 | rtSec=1.916 | correct=76 | targetIndex=10
+2026-05-14 12:36:10.603,TRIAL_READY,set=7 | block=1 | conditionOrderIndex=2 | targetIndex=9 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:36:11.742,TRIAL_PROGRESS,correct=77
+2026-05-14 12:36:11.742,CORRECT_HIT,set=7 | block=1 | rtSec=1.139 | correct=77 | targetIndex=9
+2026-05-14 12:36:11.742,SET_START,set=8 | block=1
+2026-05-14 12:36:11.742,PHASE_SET,TASK_RUNNING
+2026-05-14 12:36:11.742,TRIAL_READY,set=8 | block=1 | conditionOrderIndex=2 | targetIndex=10 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:36:13.701,TRIAL_PROGRESS,correct=78
+2026-05-14 12:36:13.701,CORRECT_HIT,set=8 | block=1 | rtSec=1.959 | correct=78 | targetIndex=10
+2026-05-14 12:36:13.701,TRIAL_READY,set=8 | block=1 | conditionOrderIndex=2 | targetIndex=8 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:36:14.852,TRIAL_PROGRESS,correct=79
+2026-05-14 12:36:14.852,CORRECT_HIT,set=8 | block=1 | rtSec=1.152 | correct=79 | targetIndex=8
+2026-05-14 12:36:14.852,TRIAL_READY,set=8 | block=1 | conditionOrderIndex=2 | targetIndex=9 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:36:17.631,TRIAL_PROGRESS,correct=80
+2026-05-14 12:36:17.631,CORRECT_HIT,set=8 | block=1 | rtSec=2.778 | correct=80 | targetIndex=9
+2026-05-14 12:36:17.631,TRIAL_READY,set=8 | block=1 | conditionOrderIndex=2 | targetIndex=1 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:36:19.728,TRIAL_PROGRESS,correct=81
+2026-05-14 12:36:19.728,CORRECT_HIT,set=8 | block=1 | rtSec=2.096 | correct=81 | targetIndex=1
+2026-05-14 12:36:19.728,TRIAL_READY,set=8 | block=1 | conditionOrderIndex=2 | targetIndex=7 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:36:21.631,TRIAL_PROGRESS,correct=82
+2026-05-14 12:36:21.631,CORRECT_HIT,set=8 | block=1 | rtSec=1.903 | correct=82 | targetIndex=7
+2026-05-14 12:36:21.631,TRIAL_READY,set=8 | block=1 | conditionOrderIndex=2 | targetIndex=6 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:36:23.812,TRIAL_PROGRESS,correct=83
+2026-05-14 12:36:23.812,CORRECT_HIT,set=8 | block=1 | rtSec=2.181 | correct=83 | targetIndex=6
+2026-05-14 12:36:23.812,TRIAL_READY,set=8 | block=1 | conditionOrderIndex=2 | targetIndex=3 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:36:25.130,TRIAL_PROGRESS,correct=84
+2026-05-14 12:36:25.130,CORRECT_HIT,set=8 | block=1 | rtSec=1.319 | correct=84 | targetIndex=3
+2026-05-14 12:36:25.130,TRIAL_READY,set=8 | block=1 | conditionOrderIndex=2 | targetIndex=4 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:36:27.644,TRIAL_PROGRESS,correct=85
+2026-05-14 12:36:27.644,CORRECT_HIT,set=8 | block=1 | rtSec=2.514 | correct=85 | targetIndex=4
+2026-05-14 12:36:27.644,TRIAL_READY,set=8 | block=1 | conditionOrderIndex=2 | targetIndex=2 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:36:29.575,TRIAL_PROGRESS,correct=86
+2026-05-14 12:36:29.575,CORRECT_HIT,set=8 | block=1 | rtSec=1.930 | correct=86 | targetIndex=2
+2026-05-14 12:36:29.575,TRIAL_READY,set=8 | block=1 | conditionOrderIndex=2 | targetIndex=0 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:36:31.631,TRIAL_PROGRESS,correct=87
+2026-05-14 12:36:31.631,CORRECT_HIT,set=8 | block=1 | rtSec=2.056 | correct=87 | targetIndex=0
+2026-05-14 12:36:31.631,TRIAL_READY,set=8 | block=1 | conditionOrderIndex=2 | targetIndex=5 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:36:33.421,TRIAL_PROGRESS,correct=88
+2026-05-14 12:36:33.421,CORRECT_HIT,set=8 | block=1 | rtSec=1.791 | correct=88 | targetIndex=5
+2026-05-14 12:36:33.421,SET_START,set=9 | block=1
+2026-05-14 12:36:33.421,PHASE_SET,TASK_RUNNING
+2026-05-14 12:36:33.421,TRIAL_READY,set=9 | block=1 | conditionOrderIndex=2 | targetIndex=0 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:36:36.602,TRIAL_PROGRESS,correct=89
+2026-05-14 12:36:36.602,CORRECT_HIT,set=9 | block=1 | rtSec=3.181 | correct=89 | targetIndex=0
+2026-05-14 12:36:36.602,TRIAL_READY,set=9 | block=1 | conditionOrderIndex=2 | targetIndex=2 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:36:37.630,TRIAL_PROGRESS,correct=90
+2026-05-14 12:36:37.630,CORRECT_HIT,set=9 | block=1 | rtSec=1.027 | correct=90 | targetIndex=2
+2026-05-14 12:36:37.630,TRIAL_READY,set=9 | block=1 | conditionOrderIndex=2 | targetIndex=4 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:36:38.810,TRIAL_PROGRESS,correct=91
+2026-05-14 12:36:38.810,CORRECT_HIT,set=9 | block=1 | rtSec=1.181 | correct=91 | targetIndex=4
+2026-05-14 12:36:38.810,TRIAL_READY,set=9 | block=1 | conditionOrderIndex=2 | targetIndex=9 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:36:40.088,TRIAL_PROGRESS,correct=92
+2026-05-14 12:36:40.089,CORRECT_HIT,set=9 | block=1 | rtSec=1.278 | correct=92 | targetIndex=9
+2026-05-14 12:36:40.089,TRIAL_READY,set=9 | block=1 | conditionOrderIndex=2 | targetIndex=8 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:36:43.171,TRIAL_PROGRESS,correct=93
+2026-05-14 12:36:43.171,CORRECT_HIT,set=9 | block=1 | rtSec=3.083 | correct=93 | targetIndex=8
+2026-05-14 12:36:43.171,TRIAL_READY,set=9 | block=1 | conditionOrderIndex=2 | targetIndex=6 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:36:44.337,TRIAL_PROGRESS,correct=94
+2026-05-14 12:36:44.337,CORRECT_HIT,set=9 | block=1 | rtSec=1.167 | correct=94 | targetIndex=6
+2026-05-14 12:36:44.339,TRIAL_READY,set=9 | block=1 | conditionOrderIndex=2 | targetIndex=5 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:36:45.476,TRIAL_PROGRESS,correct=95
+2026-05-14 12:36:45.476,CORRECT_HIT,set=9 | block=1 | rtSec=1.139 | correct=95 | targetIndex=5
+2026-05-14 12:36:45.476,TRIAL_READY,set=9 | block=1 | conditionOrderIndex=2 | targetIndex=1 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:36:47.060,TRIAL_PROGRESS,correct=96
+2026-05-14 12:36:47.060,CORRECT_HIT,set=9 | block=1 | rtSec=1.583 | correct=96 | targetIndex=1
+2026-05-14 12:36:47.060,TRIAL_READY,set=9 | block=1 | conditionOrderIndex=2 | targetIndex=7 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:36:48.962,TRIAL_PROGRESS,correct=97
+2026-05-14 12:36:48.962,CORRECT_HIT,set=9 | block=1 | rtSec=1.902 | correct=97 | targetIndex=7
+2026-05-14 12:36:48.962,TRIAL_READY,set=9 | block=1 | conditionOrderIndex=2 | targetIndex=3 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:36:51.602,TRIAL_PROGRESS,correct=98
+2026-05-14 12:36:51.602,CORRECT_HIT,set=9 | block=1 | rtSec=2.638 | correct=98 | targetIndex=3
+2026-05-14 12:36:51.602,TRIAL_READY,set=9 | block=1 | conditionOrderIndex=2 | targetIndex=10 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:36:55.157,TRIAL_PROGRESS,correct=99
+2026-05-14 12:36:55.157,CORRECT_HIT,set=9 | block=1 | rtSec=3.555 | correct=99 | targetIndex=10
+2026-05-14 12:36:55.157,SET_START,set=10 | block=1
+2026-05-14 12:36:55.157,PHASE_SET,TASK_RUNNING
+2026-05-14 12:36:55.157,TRIAL_READY,set=10 | block=1 | conditionOrderIndex=2 | targetIndex=6 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:36:56.782,TRIAL_PROGRESS,correct=100
+2026-05-14 12:36:56.782,CORRECT_HIT,set=10 | block=1 | rtSec=1.625 | correct=100 | targetIndex=6
+2026-05-14 12:36:56.782,TRIAL_READY,set=10 | block=1 | conditionOrderIndex=2 | targetIndex=0 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:36:59.683,TRIAL_PROGRESS,correct=101
+2026-05-14 12:36:59.683,CORRECT_HIT,set=10 | block=1 | rtSec=2.902 | correct=101 | targetIndex=0
+2026-05-14 12:36:59.684,TRIAL_READY,set=10 | block=1 | conditionOrderIndex=2 | targetIndex=4 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:37:00.976,TRIAL_PROGRESS,correct=102
+2026-05-14 12:37:00.976,CORRECT_HIT,set=10 | block=1 | rtSec=1.292 | correct=102 | targetIndex=4
+2026-05-14 12:37:00.976,TRIAL_READY,set=10 | block=1 | conditionOrderIndex=2 | targetIndex=9 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:37:02.850,TRIAL_PROGRESS,correct=103
+2026-05-14 12:37:02.850,CORRECT_HIT,set=10 | block=1 | rtSec=1.875 | correct=103 | targetIndex=9
+2026-05-14 12:37:02.850,TRIAL_READY,set=10 | block=1 | conditionOrderIndex=2 | targetIndex=2 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:37:04.865,TRIAL_PROGRESS,correct=104
+2026-05-14 12:37:04.865,CORRECT_HIT,set=10 | block=1 | rtSec=2.014 | correct=104 | targetIndex=2
+2026-05-14 12:37:04.865,TRIAL_READY,set=10 | block=1 | conditionOrderIndex=2 | targetIndex=7 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:37:06.309,TRIAL_PROGRESS,correct=105
+2026-05-14 12:37:06.309,CORRECT_HIT,set=10 | block=1 | rtSec=1.444 | correct=105 | targetIndex=7
+2026-05-14 12:37:06.309,TRIAL_READY,set=10 | block=1 | conditionOrderIndex=2 | targetIndex=3 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:37:07.309,TRIAL_PROGRESS,correct=106
+2026-05-14 12:37:07.309,CORRECT_HIT,set=10 | block=1 | rtSec=1.000 | correct=106 | targetIndex=3
+2026-05-14 12:37:07.309,TRIAL_READY,set=10 | block=1 | conditionOrderIndex=2 | targetIndex=5 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:37:08.503,TRIAL_PROGRESS,correct=107
+2026-05-14 12:37:08.503,CORRECT_HIT,set=10 | block=1 | rtSec=1.194 | correct=107 | targetIndex=5
+2026-05-14 12:37:08.503,TRIAL_READY,set=10 | block=1 | conditionOrderIndex=2 | targetIndex=8 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:37:10.100,TRIAL_PROGRESS,correct=108
+2026-05-14 12:37:10.100,CORRECT_HIT,set=10 | block=1 | rtSec=1.597 | correct=108 | targetIndex=8
+2026-05-14 12:37:10.100,TRIAL_READY,set=10 | block=1 | conditionOrderIndex=2 | targetIndex=10 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:37:12.503,TRIAL_PROGRESS,correct=109
+2026-05-14 12:37:12.503,CORRECT_HIT,set=10 | block=1 | rtSec=2.402 | correct=109 | targetIndex=10
+2026-05-14 12:37:12.503,TRIAL_READY,set=10 | block=1 | conditionOrderIndex=2 | targetIndex=1 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:37:14.211,TRIAL_PROGRESS,correct=110
+2026-05-14 12:37:14.211,CORRECT_HIT,set=10 | block=1 | rtSec=1.709 | correct=110 | targetIndex=1
+2026-05-14 12:37:14.211,SET_START,set=11 | block=1
+2026-05-14 12:37:14.211,PHASE_SET,TASK_RUNNING
+2026-05-14 12:37:14.212,TRIAL_READY,set=11 | block=1 | conditionOrderIndex=2 | targetIndex=1 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:37:16.489,TRIAL_PROGRESS,correct=111
+2026-05-14 12:37:16.489,CORRECT_HIT,set=11 | block=1 | rtSec=2.277 | correct=111 | targetIndex=1
+2026-05-14 12:37:16.489,TRIAL_READY,set=11 | block=1 | conditionOrderIndex=2 | targetIndex=10 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:37:18.656,TRIAL_PROGRESS,correct=112
+2026-05-14 12:37:18.656,CORRECT_HIT,set=11 | block=1 | rtSec=2.167 | correct=112 | targetIndex=10
+2026-05-14 12:37:18.656,TRIAL_READY,set=11 | block=1 | conditionOrderIndex=2 | targetIndex=7 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:37:20.211,TRIAL_PROGRESS,correct=113
+2026-05-14 12:37:20.211,CORRECT_HIT,set=11 | block=1 | rtSec=1.555 | correct=113 | targetIndex=7
+2026-05-14 12:37:20.211,TRIAL_READY,set=11 | block=1 | conditionOrderIndex=2 | targetIndex=5 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:37:23.544,TRIAL_PROGRESS,correct=114
+2026-05-14 12:37:23.544,CORRECT_HIT,set=11 | block=1 | rtSec=3.333 | correct=114 | targetIndex=5
+2026-05-14 12:37:23.544,TRIAL_READY,set=11 | block=1 | conditionOrderIndex=2 | targetIndex=8 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:37:26.030,TRIAL_PROGRESS,correct=115
+2026-05-14 12:37:26.030,CORRECT_HIT,set=11 | block=1 | rtSec=2.486 | correct=115 | targetIndex=8
+2026-05-14 12:37:26.030,TRIAL_READY,set=11 | block=1 | conditionOrderIndex=2 | targetIndex=0 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:37:28.072,TRIAL_PROGRESS,correct=116
+2026-05-14 12:37:28.072,CORRECT_HIT,set=11 | block=1 | rtSec=2.042 | correct=116 | targetIndex=0
+2026-05-14 12:37:28.072,TRIAL_READY,set=11 | block=1 | conditionOrderIndex=2 | targetIndex=6 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:37:29.668,TRIAL_PROGRESS,correct=117
+2026-05-14 12:37:29.668,CORRECT_HIT,set=11 | block=1 | rtSec=1.597 | correct=117 | targetIndex=6
+2026-05-14 12:37:29.668,TRIAL_READY,set=11 | block=1 | conditionOrderIndex=2 | targetIndex=4 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:37:31.876,TRIAL_PROGRESS,correct=118
+2026-05-14 12:37:31.876,CORRECT_HIT,set=11 | block=1 | rtSec=2.208 | correct=118 | targetIndex=4
+2026-05-14 12:37:31.876,TRIAL_READY,set=11 | block=1 | conditionOrderIndex=2 | targetIndex=2 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:37:33.225,TRIAL_PROGRESS,correct=119
+2026-05-14 12:37:33.225,CORRECT_HIT,set=11 | block=1 | rtSec=1.347 | correct=119 | targetIndex=2
+2026-05-14 12:37:33.225,TRIAL_READY,set=11 | block=1 | conditionOrderIndex=2 | targetIndex=3 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:37:35.196,TRIAL_PROGRESS,correct=120
+2026-05-14 12:37:35.196,CORRECT_HIT,set=11 | block=1 | rtSec=1.972 | correct=120 | targetIndex=3
+2026-05-14 12:37:35.196,TRIAL_READY,set=11 | block=1 | conditionOrderIndex=2 | targetIndex=9 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:37:38.599,TRIAL_PROGRESS,correct=121
+2026-05-14 12:37:38.599,CORRECT_HIT,set=11 | block=1 | rtSec=3.402 | correct=121 | targetIndex=9
+2026-05-14 12:37:38.599,SET_START,set=12 | block=1
+2026-05-14 12:37:38.599,PHASE_SET,TASK_RUNNING
+2026-05-14 12:37:38.599,TRIAL_READY,set=12 | block=1 | conditionOrderIndex=2 | targetIndex=3 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:37:40.030,TRIAL_PROGRESS,correct=122
+2026-05-14 12:37:40.030,CORRECT_HIT,set=12 | block=1 | rtSec=1.431 | correct=122 | targetIndex=3
+2026-05-14 12:37:40.030,TRIAL_READY,set=12 | block=1 | conditionOrderIndex=2 | targetIndex=8 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:37:42.043,TRIAL_PROGRESS,correct=123
+2026-05-14 12:37:42.043,CORRECT_HIT,set=12 | block=1 | rtSec=2.014 | correct=123 | targetIndex=8
+2026-05-14 12:37:42.043,TRIAL_READY,set=12 | block=1 | conditionOrderIndex=2 | targetIndex=2 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:37:44.417,TRIAL_PROGRESS,correct=124
+2026-05-14 12:37:44.417,CORRECT_HIT,set=12 | block=1 | rtSec=2.375 | correct=124 | targetIndex=2
+2026-05-14 12:37:44.417,TRIAL_READY,set=12 | block=1 | conditionOrderIndex=2 | targetIndex=4 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:37:45.863,TRIAL_PROGRESS,correct=125
+2026-05-14 12:37:45.863,CORRECT_HIT,set=12 | block=1 | rtSec=1.445 | correct=125 | targetIndex=4
+2026-05-14 12:37:45.863,TRIAL_READY,set=12 | block=1 | conditionOrderIndex=2 | targetIndex=5 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:37:48.446,TRIAL_PROGRESS,correct=126
+2026-05-14 12:37:48.446,CORRECT_HIT,set=12 | block=1 | rtSec=2.583 | correct=126 | targetIndex=5
+2026-05-14 12:37:48.446,TRIAL_READY,set=12 | block=1 | conditionOrderIndex=2 | targetIndex=10 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:37:51.626,TRIAL_PROGRESS,correct=127
+2026-05-14 12:37:51.626,CORRECT_HIT,set=12 | block=1 | rtSec=3.180 | correct=127 | targetIndex=10
+2026-05-14 12:37:51.626,TRIAL_READY,set=12 | block=1 | conditionOrderIndex=2 | targetIndex=1 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:37:53.486,TRIAL_PROGRESS,correct=128
+2026-05-14 12:37:53.486,CORRECT_HIT,set=12 | block=1 | rtSec=1.861 | correct=128 | targetIndex=1
+2026-05-14 12:37:53.486,TRIAL_READY,set=12 | block=1 | conditionOrderIndex=2 | targetIndex=0 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:37:54.737,TRIAL_PROGRESS,correct=129
+2026-05-14 12:37:54.737,CORRECT_HIT,set=12 | block=1 | rtSec=1.250 | correct=129 | targetIndex=0
+2026-05-14 12:37:54.737,TRIAL_READY,set=12 | block=1 | conditionOrderIndex=2 | targetIndex=7 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:37:56.431,TRIAL_PROGRESS,correct=130
+2026-05-14 12:37:56.431,CORRECT_HIT,set=12 | block=1 | rtSec=1.694 | correct=130 | targetIndex=7
+2026-05-14 12:37:56.431,TRIAL_READY,set=12 | block=1 | conditionOrderIndex=2 | targetIndex=9 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:37:57.890,TRIAL_PROGRESS,correct=131
+2026-05-14 12:37:57.890,CORRECT_HIT,set=12 | block=1 | rtSec=1.458 | correct=131 | targetIndex=9
+2026-05-14 12:37:57.890,TRIAL_READY,set=12 | block=1 | conditionOrderIndex=2 | targetIndex=6 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:37:59.459,TRIAL_PROGRESS,correct=132
+2026-05-14 12:37:59.459,CORRECT_HIT,set=12 | block=1 | rtSec=1.570 | correct=132 | targetIndex=6
+2026-05-14 12:37:59.459,SET_START,set=13 | block=1
+2026-05-14 12:37:59.459,PHASE_SET,TASK_RUNNING
+2026-05-14 12:37:59.459,TRIAL_READY,set=13 | block=1 | conditionOrderIndex=2 | targetIndex=10 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:38:01.361,TRIAL_PROGRESS,correct=133
+2026-05-14 12:38:01.361,CORRECT_HIT,set=13 | block=1 | rtSec=1.903 | correct=133 | targetIndex=10
+2026-05-14 12:38:01.361,TRIAL_READY,set=13 | block=1 | conditionOrderIndex=2 | targetIndex=8 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:38:02.695,TRIAL_PROGRESS,correct=134
+2026-05-14 12:38:02.695,CORRECT_HIT,set=13 | block=1 | rtSec=1.333 | correct=134 | targetIndex=8
+2026-05-14 12:38:02.695,TRIAL_READY,set=13 | block=1 | conditionOrderIndex=2 | targetIndex=2 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:38:04.791,TRIAL_PROGRESS,correct=135
+2026-05-14 12:38:04.791,CORRECT_HIT,set=13 | block=1 | rtSec=2.097 | correct=135 | targetIndex=2
+2026-05-14 12:38:04.791,TRIAL_READY,set=13 | block=1 | conditionOrderIndex=2 | targetIndex=3 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:38:06.209,TRIAL_PROGRESS,correct=136
+2026-05-14 12:38:06.209,CORRECT_HIT,set=13 | block=1 | rtSec=1.417 | correct=136 | targetIndex=3
+2026-05-14 12:38:06.209,TRIAL_READY,set=13 | block=1 | conditionOrderIndex=2 | targetIndex=5 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:38:08.501,TRIAL_PROGRESS,correct=137
+2026-05-14 12:38:08.501,CORRECT_HIT,set=13 | block=1 | rtSec=2.291 | correct=137 | targetIndex=5
+2026-05-14 12:38:08.501,TRIAL_READY,set=13 | block=1 | conditionOrderIndex=2 | targetIndex=0 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:38:11.181,TRIAL_PROGRESS,correct=138
+2026-05-14 12:38:11.181,CORRECT_HIT,set=13 | block=1 | rtSec=2.681 | correct=138 | targetIndex=0
+2026-05-14 12:38:11.181,TRIAL_READY,set=13 | block=1 | conditionOrderIndex=2 | targetIndex=4 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:38:13.431,TRIAL_PROGRESS,correct=139
+2026-05-14 12:38:13.431,CORRECT_HIT,set=13 | block=1 | rtSec=2.249 | correct=139 | targetIndex=4
+2026-05-14 12:38:13.431,TRIAL_READY,set=13 | block=1 | conditionOrderIndex=2 | targetIndex=9 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:38:15.110,TRIAL_PROGRESS,correct=140
+2026-05-14 12:38:15.110,CORRECT_HIT,set=13 | block=1 | rtSec=1.680 | correct=140 | targetIndex=9
+2026-05-14 12:38:15.110,TRIAL_READY,set=13 | block=1 | conditionOrderIndex=2 | targetIndex=1 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:38:17.333,TRIAL_PROGRESS,correct=141
+2026-05-14 12:38:17.333,CORRECT_HIT,set=13 | block=1 | rtSec=2.222 | correct=141 | targetIndex=1
+2026-05-14 12:38:17.333,TRIAL_READY,set=13 | block=1 | conditionOrderIndex=2 | targetIndex=7 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:38:19.041,TRIAL_PROGRESS,correct=142
+2026-05-14 12:38:19.041,CORRECT_HIT,set=13 | block=1 | rtSec=1.708 | correct=142 | targetIndex=7
+2026-05-14 12:38:19.041,TRIAL_READY,set=13 | block=1 | conditionOrderIndex=2 | targetIndex=6 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:38:20.444,TRIAL_PROGRESS,correct=143
+2026-05-14 12:38:20.444,CORRECT_HIT,set=13 | block=1 | rtSec=1.403 | correct=143 | targetIndex=6
+2026-05-14 12:38:20.444,SET_START,set=14 | block=1
+2026-05-14 12:38:20.444,PHASE_SET,TASK_RUNNING
+2026-05-14 12:38:20.444,TRIAL_READY,set=14 | block=1 | conditionOrderIndex=2 | targetIndex=7 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:38:23.111,TRIAL_PROGRESS,correct=144
+2026-05-14 12:38:23.111,CORRECT_HIT,set=14 | block=1 | rtSec=2.667 | correct=144 | targetIndex=7
+2026-05-14 12:38:23.111,TRIAL_READY,set=14 | block=1 | conditionOrderIndex=2 | targetIndex=4 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:38:25.901,TRIAL_PROGRESS,correct=145
+2026-05-14 12:38:25.901,CORRECT_HIT,set=14 | block=1 | rtSec=2.792 | correct=145 | targetIndex=4
+2026-05-14 12:38:25.901,TRIAL_READY,set=14 | block=1 | conditionOrderIndex=2 | targetIndex=2 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:38:27.234,TRIAL_PROGRESS,correct=146
+2026-05-14 12:38:27.234,CORRECT_HIT,set=14 | block=1 | rtSec=1.333 | correct=146 | targetIndex=2
+2026-05-14 12:38:27.234,TRIAL_READY,set=14 | block=1 | conditionOrderIndex=2 | targetIndex=1 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:38:28.721,TRIAL_PROGRESS,correct=147
+2026-05-14 12:38:28.721,CORRECT_HIT,set=14 | block=1 | rtSec=1.486 | correct=147 | targetIndex=1
+2026-05-14 12:38:28.721,TRIAL_READY,set=14 | block=1 | conditionOrderIndex=2 | targetIndex=8 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:38:30.791,TRIAL_PROGRESS,correct=148
+2026-05-14 12:38:30.791,CORRECT_HIT,set=14 | block=1 | rtSec=2.070 | correct=148 | targetIndex=8
+2026-05-14 12:38:30.791,TRIAL_READY,set=14 | block=1 | conditionOrderIndex=2 | targetIndex=6 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:38:32.332,TRIAL_PROGRESS,correct=149
+2026-05-14 12:38:32.332,CORRECT_HIT,set=14 | block=1 | rtSec=1.541 | correct=149 | targetIndex=6
+2026-05-14 12:38:32.332,TRIAL_READY,set=14 | block=1 | conditionOrderIndex=2 | targetIndex=3 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:38:37.012,TRIAL_PROGRESS,correct=150
+2026-05-14 12:38:37.012,CORRECT_HIT,set=14 | block=1 | rtSec=4.681 | correct=150 | targetIndex=3
+2026-05-14 12:38:37.012,TRIAL_READY,set=14 | block=1 | conditionOrderIndex=2 | targetIndex=9 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:38:40.442,TRIAL_PROGRESS,correct=151
+2026-05-14 12:38:40.442,CORRECT_HIT,set=14 | block=1 | rtSec=3.430 | correct=151 | targetIndex=9
+2026-05-14 12:38:40.442,TRIAL_READY,set=14 | block=1 | conditionOrderIndex=2 | targetIndex=10 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:38:44.165,TRIAL_PROGRESS,correct=152
+2026-05-14 12:38:44.165,CORRECT_HIT,set=14 | block=1 | rtSec=3.722 | correct=152 | targetIndex=10
+2026-05-14 12:38:44.165,TRIAL_READY,set=14 | block=1 | conditionOrderIndex=2 | targetIndex=0 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:38:48.817,TRIAL_PROGRESS,correct=153
+2026-05-14 12:38:48.817,CORRECT_HIT,set=14 | block=1 | rtSec=4.652 | correct=153 | targetIndex=0
+2026-05-14 12:38:48.817,TRIAL_READY,set=14 | block=1 | conditionOrderIndex=2 | targetIndex=5 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:38:51.400,TRIAL_PROGRESS,correct=154
+2026-05-14 12:38:51.400,CORRECT_HIT,set=14 | block=1 | rtSec=2.583 | correct=154 | targetIndex=5
+2026-05-14 12:38:51.400,SET_START,set=15 | block=1
+2026-05-14 12:38:51.400,PHASE_SET,TASK_RUNNING
+2026-05-14 12:38:51.400,TRIAL_READY,set=15 | block=1 | conditionOrderIndex=2 | targetIndex=9 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:38:53.817,TRIAL_PROGRESS,correct=155
+2026-05-14 12:38:53.817,CORRECT_HIT,set=15 | block=1 | rtSec=2.416 | correct=155 | targetIndex=9
+2026-05-14 12:38:53.817,TRIAL_READY,set=15 | block=1 | conditionOrderIndex=2 | targetIndex=1 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:38:56.427,TRIAL_PROGRESS,correct=156
+2026-05-14 12:38:56.427,CORRECT_HIT,set=15 | block=1 | rtSec=2.611 | correct=156 | targetIndex=1
+2026-05-14 12:38:56.427,TRIAL_READY,set=15 | block=1 | conditionOrderIndex=2 | targetIndex=4 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:38:58.720,TRIAL_PROGRESS,correct=157
+2026-05-14 12:38:58.720,CORRECT_HIT,set=15 | block=1 | rtSec=2.292 | correct=157 | targetIndex=4
+2026-05-14 12:38:58.720,TRIAL_READY,set=15 | block=1 | conditionOrderIndex=2 | targetIndex=8 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:39:00.595,TRIAL_PROGRESS,correct=158
+2026-05-14 12:39:00.595,CORRECT_HIT,set=15 | block=1 | rtSec=1.875 | correct=158 | targetIndex=8
+2026-05-14 12:39:00.595,TRIAL_READY,set=15 | block=1 | conditionOrderIndex=2 | targetIndex=5 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:39:03.123,TRIAL_PROGRESS,correct=159
+2026-05-14 12:39:03.123,CORRECT_HIT,set=15 | block=1 | rtSec=2.527 | correct=159 | targetIndex=5
+2026-05-14 12:39:03.123,TRIAL_READY,set=15 | block=1 | conditionOrderIndex=2 | targetIndex=7 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:39:06.191,TRIAL_PROGRESS,correct=160
+2026-05-14 12:39:06.191,CORRECT_HIT,set=15 | block=1 | rtSec=3.069 | correct=160 | targetIndex=7
+2026-05-14 12:39:06.191,TRIAL_READY,set=15 | block=1 | conditionOrderIndex=2 | targetIndex=3 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:39:07.760,TRIAL_PROGRESS,correct=161
+2026-05-14 12:39:07.760,CORRECT_HIT,set=15 | block=1 | rtSec=1.569 | correct=161 | targetIndex=3
+2026-05-14 12:39:07.760,TRIAL_READY,set=15 | block=1 | conditionOrderIndex=2 | targetIndex=6 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:39:11.052,TRIAL_PROGRESS,correct=162
+2026-05-14 12:39:11.052,CORRECT_HIT,set=15 | block=1 | rtSec=3.292 | correct=162 | targetIndex=6
+2026-05-14 12:39:11.052,TRIAL_READY,set=15 | block=1 | conditionOrderIndex=2 | targetIndex=0 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:39:13.539,TRIAL_PROGRESS,correct=163
+2026-05-14 12:39:13.539,CORRECT_HIT,set=15 | block=1 | rtSec=2.486 | correct=163 | targetIndex=0
+2026-05-14 12:39:13.539,TRIAL_READY,set=15 | block=1 | conditionOrderIndex=2 | targetIndex=10 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:39:16.206,TRIAL_PROGRESS,correct=164
+2026-05-14 12:39:16.206,CORRECT_HIT,set=15 | block=1 | rtSec=2.667 | correct=164 | targetIndex=10
+2026-05-14 12:39:16.206,TRIAL_READY,set=15 | block=1 | conditionOrderIndex=2 | targetIndex=2 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:39:18.246,TRIAL_PROGRESS,correct=165
+2026-05-14 12:39:18.246,CORRECT_HIT,set=15 | block=1 | rtSec=2.041 | correct=165 | targetIndex=2
+2026-05-14 12:39:18.246,SET_START,set=16 | block=1
+2026-05-14 12:39:18.246,PHASE_SET,TASK_RUNNING
+2026-05-14 12:39:18.246,TRIAL_READY,set=16 | block=1 | conditionOrderIndex=2 | targetIndex=3 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:39:19.691,TRIAL_PROGRESS,correct=166
+2026-05-14 12:39:19.691,CORRECT_HIT,set=16 | block=1 | rtSec=1.445 | correct=166 | targetIndex=3
+2026-05-14 12:39:19.691,TRIAL_READY,set=16 | block=1 | conditionOrderIndex=2 | targetIndex=5 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:39:21.343,TRIAL_PROGRESS,correct=167
+2026-05-14 12:39:21.343,CORRECT_HIT,set=16 | block=1 | rtSec=1.652 | correct=167 | targetIndex=5
+2026-05-14 12:39:21.343,TRIAL_READY,set=16 | block=1 | conditionOrderIndex=2 | targetIndex=0 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:39:25.370,TRIAL_PROGRESS,correct=168
+2026-05-14 12:39:25.370,CORRECT_HIT,set=16 | block=1 | rtSec=4.027 | correct=168 | targetIndex=0
+2026-05-14 12:39:25.371,TRIAL_READY,set=16 | block=1 | conditionOrderIndex=2 | targetIndex=1 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:39:26.635,TRIAL_PROGRESS,correct=169
+2026-05-14 12:39:26.635,CORRECT_HIT,set=16 | block=1 | rtSec=1.264 | correct=169 | targetIndex=1
+2026-05-14 12:39:26.635,TRIAL_READY,set=16 | block=1 | conditionOrderIndex=2 | targetIndex=10 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:39:32.787,TRIAL_PROGRESS,correct=170
+2026-05-14 12:39:32.787,CORRECT_HIT,set=16 | block=1 | rtSec=6.153 | correct=170 | targetIndex=10
+2026-05-14 12:39:32.788,TRIAL_READY,set=16 | block=1 | conditionOrderIndex=2 | targetIndex=8 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:39:34.218,TRIAL_PROGRESS,correct=171
+2026-05-14 12:39:34.218,CORRECT_HIT,set=16 | block=1 | rtSec=1.430 | correct=171 | targetIndex=8
+2026-05-14 12:39:34.218,TRIAL_READY,set=16 | block=1 | conditionOrderIndex=2 | targetIndex=4 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:39:43.856,TRIAL_PROGRESS,correct=172
+2026-05-14 12:39:43.856,CORRECT_HIT,set=16 | block=1 | rtSec=9.639 | correct=172 | targetIndex=4
+2026-05-14 12:39:43.856,TRIAL_READY,set=16 | block=1 | conditionOrderIndex=2 | targetIndex=7 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:39:45.967,TRIAL_PROGRESS,correct=173
+2026-05-14 12:39:45.967,CORRECT_HIT,set=16 | block=1 | rtSec=2.111 | correct=173 | targetIndex=7
+2026-05-14 12:39:45.967,TRIAL_READY,set=16 | block=1 | conditionOrderIndex=2 | targetIndex=6 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:39:51.425,TRIAL_PROGRESS,correct=174
+2026-05-14 12:39:51.425,CORRECT_HIT,set=16 | block=1 | rtSec=5.458 | correct=174 | targetIndex=6
+2026-05-14 12:39:51.425,TRIAL_READY,set=16 | block=1 | conditionOrderIndex=2 | targetIndex=2 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:39:53.397,TRIAL_PROGRESS,correct=175
+2026-05-14 12:39:53.397,CORRECT_HIT,set=16 | block=1 | rtSec=1.972 | correct=175 | targetIndex=2
+2026-05-14 12:39:53.397,TRIAL_READY,set=16 | block=1 | conditionOrderIndex=2 | targetIndex=9 | baseColorIndex=1 | targetColor=white
+2026-05-14 12:39:59.300,TRIAL_PROGRESS,correct=176
+2026-05-14 12:39:59.300,CORRECT_HIT,set=16 | block=1 | rtSec=5.903 | correct=176 | targetIndex=9
+2026-05-14 12:39:59.300,PHASE_SET,TASK_END
+2026-05-14 12:39:59.300,TASK_END,
+2026-05-14 12:39:59.301,PHASE_SET,WAITING_RESEARCHER_CONFIRMATION
+2026-05-14 12:39:59.301,CONDITION_FINISHED_WAITING_NEXT,finished=SitPF | next=SitFF | taskPos=3/3
+2026-05-14 12:47:08.944,PHASE_SET,RESEARCHER_CONFIRMED_WAITING_USER_BASELINE
+2026-05-14 12:47:12.901,CONDITION_META,rawCondition=SitFF | condition=sitting full | source=P1 | preset=Part1 | slot=XC | feedbackOn=1
+2026-05-14 12:47:12.901,PHASE_SET,WAITING_BEFORE_BASELINE
+2026-05-14 12:47:12.901,PHASE_SET,BASELINE_START
+2026-05-14 12:47:12.901,BASELINE_START,
+2026-05-14 12:47:22.957,PHASE_SET,BASELINE_END
+2026-05-14 12:47:22.957,BASELINE_REFERENCE,condition=sitting full | baselinePitch=-2.984 | baselineRoll=0.725 | baselineHeight=0.660
+2026-05-14 12:47:22.957,BASELINE_END,
+2026-05-14 12:47:22.957,PHASE_SET,WAITING_BEFORE_TASK_START
+2026-05-14 12:47:28.179,PHASE_SET,TASK_START
+2026-05-14 12:47:28.179,TASK_START,
+2026-05-14 12:47:28.179,BLOCK_TARGET_SEQUENCE,condition=SitFF | blockTemplate=6-7-5-0-9-3-8-1-10-2-4-10-0-5-2-3-6-9-4-1-7-8-7-9-5-2-1-6-4-8-3-0-10-9-1-2-0-8-6-10-3-4-7-5-1-4-0-6-9-10-3-7-5-8-2-10-0-6-5-9-2-8-3-1-7-4-4-6-10-2-3-5-9-0-8-1-7-8-4-0-10-5-7-1-3-6-2-9-2-8-5-6-4-10-1-9-7-0-3-2-10-4-8-6-0-7-3-5-1-9-1-6-9-8-3-10-0-7-4-2-5-9-0-2-1-7-8-5-3-4-10-6-3-8-5-1-0-6-9-10-2-7-4-3-9-2-1-0-10-8-7-6-4-5-3-9-0-4-7-5-1-2-6-8-10-1-2-4-10-7-8-9-3-6-5-0
+2026-05-14 12:47:28.179,SET_START,set=1 | block=1
+2026-05-14 12:47:28.179,PHASE_SET,TASK_RUNNING
+2026-05-14 12:47:28.179,TRIAL_READY,set=1 | block=1 | conditionOrderIndex=3 | targetIndex=6 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:47:31.497,TRIAL_PROGRESS,correct=1
+2026-05-14 12:47:31.497,CORRECT_HIT,set=1 | block=1 | rtSec=3.319 | correct=1 | targetIndex=6
+2026-05-14 12:47:31.497,TRIAL_READY,set=1 | block=1 | conditionOrderIndex=3 | targetIndex=7 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:47:34.179,TRIAL_PROGRESS,correct=2
+2026-05-14 12:47:34.179,CORRECT_HIT,set=1 | block=1 | rtSec=2.680 | correct=2 | targetIndex=7
+2026-05-14 12:47:34.179,TRIAL_READY,set=1 | block=1 | conditionOrderIndex=3 | targetIndex=5 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:47:35.734,TRIAL_PROGRESS,correct=3
+2026-05-14 12:47:35.734,CORRECT_HIT,set=1 | block=1 | rtSec=1.556 | correct=3 | targetIndex=5
+2026-05-14 12:47:35.734,TRIAL_READY,set=1 | block=1 | conditionOrderIndex=3 | targetIndex=0 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:47:37.956,TRIAL_PROGRESS,correct=4
+2026-05-14 12:47:37.956,CORRECT_HIT,set=1 | block=1 | rtSec=2.222 | correct=4 | targetIndex=0
+2026-05-14 12:47:37.956,TRIAL_READY,set=1 | block=1 | conditionOrderIndex=3 | targetIndex=9 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:47:39.969,TRIAL_PROGRESS,correct=5
+2026-05-14 12:47:39.969,CORRECT_HIT,set=1 | block=1 | rtSec=2.014 | correct=5 | targetIndex=9
+2026-05-14 12:47:39.969,TRIAL_READY,set=1 | block=1 | conditionOrderIndex=3 | targetIndex=3 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:47:42.553,TRIAL_PROGRESS,correct=6
+2026-05-14 12:47:42.553,CORRECT_HIT,set=1 | block=1 | rtSec=2.584 | correct=6 | targetIndex=3
+2026-05-14 12:47:42.553,TRIAL_READY,set=1 | block=1 | conditionOrderIndex=3 | targetIndex=8 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:47:46.581,TRIAL_PROGRESS,correct=7
+2026-05-14 12:47:46.581,CORRECT_HIT,set=1 | block=1 | rtSec=4.028 | correct=7 | targetIndex=8
+2026-05-14 12:47:46.581,TRIAL_READY,set=1 | block=1 | conditionOrderIndex=3 | targetIndex=1 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:47:49.261,TRIAL_PROGRESS,correct=8
+2026-05-14 12:47:49.261,CORRECT_HIT,set=1 | block=1 | rtSec=2.679 | correct=8 | targetIndex=1
+2026-05-14 12:47:49.261,TRIAL_READY,set=1 | block=1 | conditionOrderIndex=3 | targetIndex=10 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:47:51.636,TRIAL_PROGRESS,correct=9
+2026-05-14 12:47:51.636,CORRECT_HIT,set=1 | block=1 | rtSec=2.375 | correct=9 | targetIndex=10
+2026-05-14 12:47:51.636,TRIAL_READY,set=1 | block=1 | conditionOrderIndex=3 | targetIndex=2 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:47:53.829,TRIAL_PROGRESS,correct=10
+2026-05-14 12:47:53.829,CORRECT_HIT,set=1 | block=1 | rtSec=2.194 | correct=10 | targetIndex=2
+2026-05-14 12:47:53.829,TRIAL_READY,set=1 | block=1 | conditionOrderIndex=3 | targetIndex=4 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:47:55.288,TRIAL_PROGRESS,correct=11
+2026-05-14 12:47:55.288,CORRECT_HIT,set=1 | block=1 | rtSec=1.458 | correct=11 | targetIndex=4
+2026-05-14 12:47:55.288,SET_START,set=2 | block=1
+2026-05-14 12:47:55.288,PHASE_SET,TASK_RUNNING
+2026-05-14 12:47:55.288,TRIAL_READY,set=2 | block=1 | conditionOrderIndex=3 | targetIndex=10 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:47:58.566,TRIAL_PROGRESS,correct=12
+2026-05-14 12:47:58.566,CORRECT_HIT,set=2 | block=1 | rtSec=3.278 | correct=12 | targetIndex=10
+2026-05-14 12:47:58.566,TRIAL_READY,set=2 | block=1 | conditionOrderIndex=3 | targetIndex=0 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:48:00.816,TRIAL_PROGRESS,correct=13
+2026-05-14 12:48:00.816,CORRECT_HIT,set=2 | block=1 | rtSec=2.250 | correct=13 | targetIndex=0
+2026-05-14 12:48:00.816,TRIAL_READY,set=2 | block=1 | conditionOrderIndex=3 | targetIndex=5 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:48:03.829,TRIAL_PROGRESS,correct=14
+2026-05-14 12:48:03.829,CORRECT_HIT,set=2 | block=1 | rtSec=3.013 | correct=14 | targetIndex=5
+2026-05-14 12:48:03.829,TRIAL_READY,set=2 | block=1 | conditionOrderIndex=3 | targetIndex=2 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:48:05.787,TRIAL_PROGRESS,correct=15
+2026-05-14 12:48:05.787,CORRECT_HIT,set=2 | block=1 | rtSec=1.958 | correct=15 | targetIndex=2
+2026-05-14 12:48:05.787,TRIAL_READY,set=2 | block=1 | conditionOrderIndex=3 | targetIndex=3 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:48:07.510,TRIAL_PROGRESS,correct=16
+2026-05-14 12:48:07.510,CORRECT_HIT,set=2 | block=1 | rtSec=1.722 | correct=16 | targetIndex=3
+2026-05-14 12:48:07.510,TRIAL_READY,set=2 | block=1 | conditionOrderIndex=3 | targetIndex=6 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:48:09.440,TRIAL_PROGRESS,correct=17
+2026-05-14 12:48:09.440,CORRECT_HIT,set=2 | block=1 | rtSec=1.930 | correct=17 | targetIndex=6
+2026-05-14 12:48:09.440,TRIAL_READY,set=2 | block=1 | conditionOrderIndex=3 | targetIndex=9 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:48:11.301,TRIAL_PROGRESS,correct=18
+2026-05-14 12:48:11.301,CORRECT_HIT,set=2 | block=1 | rtSec=1.861 | correct=18 | targetIndex=9
+2026-05-14 12:48:11.301,TRIAL_READY,set=2 | block=1 | conditionOrderIndex=3 | targetIndex=4 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:48:12.996,TRIAL_PROGRESS,correct=19
+2026-05-14 12:48:12.996,CORRECT_HIT,set=2 | block=1 | rtSec=1.695 | correct=19 | targetIndex=4
+2026-05-14 12:48:12.996,TRIAL_READY,set=2 | block=1 | conditionOrderIndex=3 | targetIndex=1 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:48:14.635,TRIAL_PROGRESS,correct=20
+2026-05-14 12:48:14.635,CORRECT_HIT,set=2 | block=1 | rtSec=1.638 | correct=20 | targetIndex=1
+2026-05-14 12:48:14.635,TRIAL_READY,set=2 | block=1 | conditionOrderIndex=3 | targetIndex=7 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:48:18.329,TRIAL_PROGRESS,correct=21
+2026-05-14 12:48:18.329,CORRECT_HIT,set=2 | block=1 | rtSec=3.694 | correct=21 | targetIndex=7
+2026-05-14 12:48:18.329,TRIAL_READY,set=2 | block=1 | conditionOrderIndex=3 | targetIndex=8 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:48:19.899,TRIAL_PROGRESS,correct=22
+2026-05-14 12:48:19.899,CORRECT_HIT,set=2 | block=1 | rtSec=1.569 | correct=22 | targetIndex=8
+2026-05-14 12:48:19.899,SET_START,set=3 | block=1
+2026-05-14 12:48:19.899,PHASE_SET,TASK_RUNNING
+2026-05-14 12:48:19.899,TRIAL_READY,set=3 | block=1 | conditionOrderIndex=3 | targetIndex=7 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:48:22.064,TRIAL_PROGRESS,correct=23
+2026-05-14 12:48:22.064,CORRECT_HIT,set=3 | block=1 | rtSec=2.166 | correct=23 | targetIndex=7
+2026-05-14 12:48:22.064,TRIAL_READY,set=3 | block=1 | conditionOrderIndex=3 | targetIndex=9 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:48:23.592,TRIAL_PROGRESS,correct=24
+2026-05-14 12:48:23.592,CORRECT_HIT,set=3 | block=1 | rtSec=1.527 | correct=24 | targetIndex=9
+2026-05-14 12:48:23.592,TRIAL_READY,set=3 | block=1 | conditionOrderIndex=3 | targetIndex=5 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:48:26.176,TRIAL_PROGRESS,correct=25
+2026-05-14 12:48:26.176,CORRECT_HIT,set=3 | block=1 | rtSec=2.583 | correct=25 | targetIndex=5
+2026-05-14 12:48:26.176,TRIAL_READY,set=3 | block=1 | conditionOrderIndex=3 | targetIndex=2 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:48:27.537,TRIAL_PROGRESS,correct=26
+2026-05-14 12:48:27.537,CORRECT_HIT,set=3 | block=1 | rtSec=1.361 | correct=26 | targetIndex=2
+2026-05-14 12:48:27.537,TRIAL_READY,set=3 | block=1 | conditionOrderIndex=3 | targetIndex=1 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:48:28.911,TRIAL_PROGRESS,correct=27
+2026-05-14 12:48:28.911,CORRECT_HIT,set=3 | block=1 | rtSec=1.375 | correct=27 | targetIndex=1
+2026-05-14 12:48:28.911,TRIAL_READY,set=3 | block=1 | conditionOrderIndex=3 | targetIndex=6 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:48:30.481,TRIAL_PROGRESS,correct=28
+2026-05-14 12:48:30.481,CORRECT_HIT,set=3 | block=1 | rtSec=1.570 | correct=28 | targetIndex=6
+2026-05-14 12:48:30.481,TRIAL_READY,set=3 | block=1 | conditionOrderIndex=3 | targetIndex=4 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:48:31.884,TRIAL_PROGRESS,correct=29
+2026-05-14 12:48:31.884,CORRECT_HIT,set=3 | block=1 | rtSec=1.403 | correct=29 | targetIndex=4
+2026-05-14 12:48:31.884,TRIAL_READY,set=3 | block=1 | conditionOrderIndex=3 | targetIndex=8 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:48:33.204,TRIAL_PROGRESS,correct=30
+2026-05-14 12:48:33.204,CORRECT_HIT,set=3 | block=1 | rtSec=1.319 | correct=30 | targetIndex=8
+2026-05-14 12:48:33.204,TRIAL_READY,set=3 | block=1 | conditionOrderIndex=3 | targetIndex=3 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:48:34.689,TRIAL_PROGRESS,correct=31
+2026-05-14 12:48:34.689,CORRECT_HIT,set=3 | block=1 | rtSec=1.486 | correct=31 | targetIndex=3
+2026-05-14 12:48:34.689,TRIAL_READY,set=3 | block=1 | conditionOrderIndex=3 | targetIndex=0 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:48:36.313,TRIAL_PROGRESS,correct=32
+2026-05-14 12:48:36.313,CORRECT_HIT,set=3 | block=1 | rtSec=1.624 | correct=32 | targetIndex=0
+2026-05-14 12:48:36.313,TRIAL_READY,set=3 | block=1 | conditionOrderIndex=3 | targetIndex=10 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:48:38.577,TRIAL_PROGRESS,correct=33
+2026-05-14 12:48:38.577,CORRECT_HIT,set=3 | block=1 | rtSec=2.264 | correct=33 | targetIndex=10
+2026-05-14 12:48:38.577,SET_START,set=4 | block=1
+2026-05-14 12:48:38.577,PHASE_SET,TASK_RUNNING
+2026-05-14 12:48:38.577,TRIAL_READY,set=4 | block=1 | conditionOrderIndex=3 | targetIndex=9 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:48:39.953,TRIAL_PROGRESS,correct=34
+2026-05-14 12:48:39.953,CORRECT_HIT,set=4 | block=1 | rtSec=1.375 | correct=34 | targetIndex=9
+2026-05-14 12:48:39.953,TRIAL_READY,set=4 | block=1 | conditionOrderIndex=3 | targetIndex=1 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:48:41.675,TRIAL_PROGRESS,correct=35
+2026-05-14 12:48:41.675,CORRECT_HIT,set=4 | block=1 | rtSec=1.722 | correct=35 | targetIndex=1
+2026-05-14 12:48:41.675,TRIAL_READY,set=4 | block=1 | conditionOrderIndex=3 | targetIndex=2 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:48:43.578,TRIAL_PROGRESS,correct=36
+2026-05-14 12:48:43.578,CORRECT_HIT,set=4 | block=1 | rtSec=1.902 | correct=36 | targetIndex=2
+2026-05-14 12:48:43.578,TRIAL_READY,set=4 | block=1 | conditionOrderIndex=3 | targetIndex=0 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:48:45.244,TRIAL_PROGRESS,correct=37
+2026-05-14 12:48:45.244,CORRECT_HIT,set=4 | block=1 | rtSec=1.667 | correct=37 | targetIndex=0
+2026-05-14 12:48:45.244,TRIAL_READY,set=4 | block=1 | conditionOrderIndex=3 | targetIndex=8 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:48:47.036,TRIAL_PROGRESS,correct=38
+2026-05-14 12:48:47.036,CORRECT_HIT,set=4 | block=1 | rtSec=1.791 | correct=38 | targetIndex=8
+2026-05-14 12:48:47.036,TRIAL_READY,set=4 | block=1 | conditionOrderIndex=3 | targetIndex=6 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:48:48.842,TRIAL_PROGRESS,correct=39
+2026-05-14 12:48:48.842,CORRECT_HIT,set=4 | block=1 | rtSec=1.806 | correct=39 | targetIndex=6
+2026-05-14 12:48:48.842,TRIAL_READY,set=4 | block=1 | conditionOrderIndex=3 | targetIndex=10 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:48:50.730,TRIAL_PROGRESS,correct=40
+2026-05-14 12:48:50.730,CORRECT_HIT,set=4 | block=1 | rtSec=1.889 | correct=40 | targetIndex=10
+2026-05-14 12:48:50.730,TRIAL_READY,set=4 | block=1 | conditionOrderIndex=3 | targetIndex=3 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:48:52.508,TRIAL_PROGRESS,correct=41
+2026-05-14 12:48:52.508,CORRECT_HIT,set=4 | block=1 | rtSec=1.778 | correct=41 | targetIndex=3
+2026-05-14 12:48:52.508,TRIAL_READY,set=4 | block=1 | conditionOrderIndex=3 | targetIndex=4 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:48:54.716,TRIAL_PROGRESS,correct=42
+2026-05-14 12:48:54.716,CORRECT_HIT,set=4 | block=1 | rtSec=2.208 | correct=42 | targetIndex=4
+2026-05-14 12:48:54.716,TRIAL_READY,set=4 | block=1 | conditionOrderIndex=3 | targetIndex=7 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:48:56.606,TRIAL_PROGRESS,correct=43
+2026-05-14 12:48:56.606,CORRECT_HIT,set=4 | block=1 | rtSec=1.889 | correct=43 | targetIndex=7
+2026-05-14 12:48:56.606,TRIAL_READY,set=4 | block=1 | conditionOrderIndex=3 | targetIndex=5 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:48:59.383,TRIAL_PROGRESS,correct=44
+2026-05-14 12:48:59.383,CORRECT_HIT,set=4 | block=1 | rtSec=2.777 | correct=44 | targetIndex=5
+2026-05-14 12:48:59.383,SET_START,set=5 | block=1
+2026-05-14 12:48:59.383,PHASE_SET,TASK_RUNNING
+2026-05-14 12:48:59.383,TRIAL_READY,set=5 | block=1 | conditionOrderIndex=3 | targetIndex=1 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:49:00.937,TRIAL_PROGRESS,correct=45
+2026-05-14 12:49:00.937,CORRECT_HIT,set=5 | block=1 | rtSec=1.555 | correct=45 | targetIndex=1
+2026-05-14 12:49:00.937,TRIAL_READY,set=5 | block=1 | conditionOrderIndex=3 | targetIndex=4 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:49:02.743,TRIAL_PROGRESS,correct=46
+2026-05-14 12:49:02.743,CORRECT_HIT,set=5 | block=1 | rtSec=1.806 | correct=46 | targetIndex=4
+2026-05-14 12:49:02.743,TRIAL_READY,set=5 | block=1 | conditionOrderIndex=3 | targetIndex=0 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:49:04.992,TRIAL_PROGRESS,correct=47
+2026-05-14 12:49:04.992,CORRECT_HIT,set=5 | block=1 | rtSec=2.249 | correct=47 | targetIndex=0
+2026-05-14 12:49:04.992,TRIAL_READY,set=5 | block=1 | conditionOrderIndex=3 | targetIndex=6 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:49:06.896,TRIAL_PROGRESS,correct=48
+2026-05-14 12:49:06.896,CORRECT_HIT,set=5 | block=1 | rtSec=1.903 | correct=48 | targetIndex=6
+2026-05-14 12:49:06.896,TRIAL_READY,set=5 | block=1 | conditionOrderIndex=3 | targetIndex=9 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:49:08.590,TRIAL_PROGRESS,correct=49
+2026-05-14 12:49:08.590,CORRECT_HIT,set=5 | block=1 | rtSec=1.695 | correct=49 | targetIndex=9
+2026-05-14 12:49:08.590,TRIAL_READY,set=5 | block=1 | conditionOrderIndex=3 | targetIndex=10 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:49:12.354,TRIAL_PROGRESS,correct=50
+2026-05-14 12:49:12.354,CORRECT_HIT,set=5 | block=1 | rtSec=3.764 | correct=50 | targetIndex=10
+2026-05-14 12:49:12.354,TRIAL_READY,set=5 | block=1 | conditionOrderIndex=3 | targetIndex=3 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:49:13.868,TRIAL_PROGRESS,correct=51
+2026-05-14 12:49:13.868,CORRECT_HIT,set=5 | block=1 | rtSec=1.514 | correct=51 | targetIndex=3
+2026-05-14 12:49:13.868,TRIAL_READY,set=5 | block=1 | conditionOrderIndex=3 | targetIndex=7 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:49:16.089,TRIAL_PROGRESS,correct=52
+2026-05-14 12:49:16.089,CORRECT_HIT,set=5 | block=1 | rtSec=2.222 | correct=52 | targetIndex=7
+2026-05-14 12:49:16.089,TRIAL_READY,set=5 | block=1 | conditionOrderIndex=3 | targetIndex=5 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:49:17.867,TRIAL_PROGRESS,correct=53
+2026-05-14 12:49:17.867,CORRECT_HIT,set=5 | block=1 | rtSec=1.777 | correct=53 | targetIndex=5
+2026-05-14 12:49:17.867,TRIAL_READY,set=5 | block=1 | conditionOrderIndex=3 | targetIndex=8 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:49:20.548,TRIAL_PROGRESS,correct=54
+2026-05-14 12:49:20.548,CORRECT_HIT,set=5 | block=1 | rtSec=2.680 | correct=54 | targetIndex=8
+2026-05-14 12:49:20.548,TRIAL_READY,set=5 | block=1 | conditionOrderIndex=3 | targetIndex=2 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:49:22.381,TRIAL_PROGRESS,correct=55
+2026-05-14 12:49:22.381,CORRECT_HIT,set=5 | block=1 | rtSec=1.833 | correct=55 | targetIndex=2
+2026-05-14 12:49:22.381,SET_START,set=6 | block=1
+2026-05-14 12:49:22.381,PHASE_SET,TASK_RUNNING
+2026-05-14 12:49:22.381,TRIAL_READY,set=6 | block=1 | conditionOrderIndex=3 | targetIndex=10 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:49:24.117,TRIAL_PROGRESS,correct=56
+2026-05-14 12:49:24.117,CORRECT_HIT,set=6 | block=1 | rtSec=1.736 | correct=56 | targetIndex=10
+2026-05-14 12:49:24.117,TRIAL_READY,set=6 | block=1 | conditionOrderIndex=3 | targetIndex=0 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:49:27.019,TRIAL_PROGRESS,correct=57
+2026-05-14 12:49:27.019,CORRECT_HIT,set=6 | block=1 | rtSec=2.902 | correct=57 | targetIndex=0
+2026-05-14 12:49:27.019,TRIAL_READY,set=6 | block=1 | conditionOrderIndex=3 | targetIndex=6 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:49:31.894,TRIAL_PROGRESS,correct=58
+2026-05-14 12:49:31.894,CORRECT_HIT,set=6 | block=1 | rtSec=4.875 | correct=58 | targetIndex=6
+2026-05-14 12:49:31.894,TRIAL_READY,set=6 | block=1 | conditionOrderIndex=3 | targetIndex=5 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:49:38.921,TRIAL_PROGRESS,correct=59
+2026-05-14 12:49:38.921,CORRECT_HIT,set=6 | block=1 | rtSec=7.027 | correct=59 | targetIndex=5
+2026-05-14 12:49:38.921,TRIAL_READY,set=6 | block=1 | conditionOrderIndex=3 | targetIndex=9 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:49:40.450,TRIAL_PROGRESS,correct=60
+2026-05-14 12:49:40.450,CORRECT_HIT,set=6 | block=1 | rtSec=1.527 | correct=60 | targetIndex=9
+2026-05-14 12:49:40.450,TRIAL_READY,set=6 | block=1 | conditionOrderIndex=3 | targetIndex=2 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:49:42.283,TRIAL_PROGRESS,correct=61
+2026-05-14 12:49:42.283,CORRECT_HIT,set=6 | block=1 | rtSec=1.833 | correct=61 | targetIndex=2
+2026-05-14 12:49:42.283,TRIAL_READY,set=6 | block=1 | conditionOrderIndex=3 | targetIndex=8 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:49:44.338,TRIAL_PROGRESS,correct=62
+2026-05-14 12:49:44.338,CORRECT_HIT,set=6 | block=1 | rtSec=2.055 | correct=62 | targetIndex=8
+2026-05-14 12:49:44.338,TRIAL_READY,set=6 | block=1 | conditionOrderIndex=3 | targetIndex=3 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:49:45.922,TRIAL_PROGRESS,correct=63
+2026-05-14 12:49:45.922,CORRECT_HIT,set=6 | block=1 | rtSec=1.583 | correct=63 | targetIndex=3
+2026-05-14 12:49:45.922,TRIAL_READY,set=6 | block=1 | conditionOrderIndex=3 | targetIndex=1 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:49:47.268,TRIAL_PROGRESS,correct=64
+2026-05-14 12:49:47.268,CORRECT_HIT,set=6 | block=1 | rtSec=1.347 | correct=64 | targetIndex=1
+2026-05-14 12:49:47.268,TRIAL_READY,set=6 | block=1 | conditionOrderIndex=3 | targetIndex=7 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:49:48.976,TRIAL_PROGRESS,correct=65
+2026-05-14 12:49:48.976,CORRECT_HIT,set=6 | block=1 | rtSec=1.708 | correct=65 | targetIndex=7
+2026-05-14 12:49:48.976,TRIAL_READY,set=6 | block=1 | conditionOrderIndex=3 | targetIndex=4 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:49:50.532,TRIAL_PROGRESS,correct=66
+2026-05-14 12:49:50.532,CORRECT_HIT,set=6 | block=1 | rtSec=1.556 | correct=66 | targetIndex=4
+2026-05-14 12:49:50.532,SET_START,set=7 | block=1
+2026-05-14 12:49:50.532,PHASE_SET,TASK_RUNNING
+2026-05-14 12:49:50.532,TRIAL_READY,set=7 | block=1 | conditionOrderIndex=3 | targetIndex=4 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:49:51.421,TRIAL_PROGRESS,correct=67
+2026-05-14 12:49:51.421,CORRECT_HIT,set=7 | block=1 | rtSec=0.889 | correct=67 | targetIndex=4
+2026-05-14 12:49:51.421,TRIAL_READY,set=7 | block=1 | conditionOrderIndex=3 | targetIndex=6 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:49:53.019,TRIAL_PROGRESS,correct=68
+2026-05-14 12:49:53.019,CORRECT_HIT,set=7 | block=1 | rtSec=1.597 | correct=68 | targetIndex=6
+2026-05-14 12:49:53.019,TRIAL_READY,set=7 | block=1 | conditionOrderIndex=3 | targetIndex=10 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:49:54.421,TRIAL_PROGRESS,correct=69
+2026-05-14 12:49:54.421,CORRECT_HIT,set=7 | block=1 | rtSec=1.403 | correct=69 | targetIndex=10
+2026-05-14 12:49:54.421,TRIAL_READY,set=7 | block=1 | conditionOrderIndex=3 | targetIndex=2 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:49:55.866,TRIAL_PROGRESS,correct=70
+2026-05-14 12:49:55.866,CORRECT_HIT,set=7 | block=1 | rtSec=1.444 | correct=70 | targetIndex=2
+2026-05-14 12:49:55.866,TRIAL_READY,set=7 | block=1 | conditionOrderIndex=3 | targetIndex=3 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:49:56.907,TRIAL_PROGRESS,correct=71
+2026-05-14 12:49:56.907,CORRECT_HIT,set=7 | block=1 | rtSec=1.042 | correct=71 | targetIndex=3
+2026-05-14 12:49:56.907,TRIAL_READY,set=7 | block=1 | conditionOrderIndex=3 | targetIndex=5 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:49:58.948,TRIAL_PROGRESS,correct=72
+2026-05-14 12:49:58.948,CORRECT_HIT,set=7 | block=1 | rtSec=2.041 | correct=72 | targetIndex=5
+2026-05-14 12:49:58.948,TRIAL_READY,set=7 | block=1 | conditionOrderIndex=3 | targetIndex=9 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:50:00.352,TRIAL_PROGRESS,correct=73
+2026-05-14 12:50:00.352,CORRECT_HIT,set=7 | block=1 | rtSec=1.403 | correct=73 | targetIndex=9
+2026-05-14 12:50:00.352,TRIAL_READY,set=7 | block=1 | conditionOrderIndex=3 | targetIndex=0 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:50:02.420,TRIAL_PROGRESS,correct=74
+2026-05-14 12:50:02.420,CORRECT_HIT,set=7 | block=1 | rtSec=2.069 | correct=74 | targetIndex=0
+2026-05-14 12:50:02.420,TRIAL_READY,set=7 | block=1 | conditionOrderIndex=3 | targetIndex=8 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:50:04.698,TRIAL_PROGRESS,correct=75
+2026-05-14 12:50:04.698,CORRECT_HIT,set=7 | block=1 | rtSec=2.277 | correct=75 | targetIndex=8
+2026-05-14 12:50:04.698,TRIAL_READY,set=7 | block=1 | conditionOrderIndex=3 | targetIndex=1 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:50:07.643,TRIAL_PROGRESS,correct=76
+2026-05-14 12:50:07.643,CORRECT_HIT,set=7 | block=1 | rtSec=2.944 | correct=76 | targetIndex=1
+2026-05-14 12:50:07.643,TRIAL_READY,set=7 | block=1 | conditionOrderIndex=3 | targetIndex=7 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:50:09.184,TRIAL_PROGRESS,correct=77
+2026-05-14 12:50:09.184,CORRECT_HIT,set=7 | block=1 | rtSec=1.542 | correct=77 | targetIndex=7
+2026-05-14 12:50:09.184,SET_START,set=8 | block=1
+2026-05-14 12:50:09.184,PHASE_SET,TASK_RUNNING
+2026-05-14 12:50:09.184,TRIAL_READY,set=8 | block=1 | conditionOrderIndex=3 | targetIndex=8 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:50:10.504,TRIAL_PROGRESS,correct=78
+2026-05-14 12:50:10.504,CORRECT_HIT,set=8 | block=1 | rtSec=1.320 | correct=78 | targetIndex=8
+2026-05-14 12:50:10.504,TRIAL_READY,set=8 | block=1 | conditionOrderIndex=3 | targetIndex=4 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:50:12.073,TRIAL_PROGRESS,correct=79
+2026-05-14 12:50:12.073,CORRECT_HIT,set=8 | block=1 | rtSec=1.569 | correct=79 | targetIndex=4
+2026-05-14 12:50:12.073,TRIAL_READY,set=8 | block=1 | conditionOrderIndex=3 | targetIndex=0 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:50:14.323,TRIAL_PROGRESS,correct=80
+2026-05-14 12:50:14.323,CORRECT_HIT,set=8 | block=1 | rtSec=2.250 | correct=80 | targetIndex=0
+2026-05-14 12:50:14.323,TRIAL_READY,set=8 | block=1 | conditionOrderIndex=3 | targetIndex=10 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:50:17.240,TRIAL_PROGRESS,correct=81
+2026-05-14 12:50:17.240,CORRECT_HIT,set=8 | block=1 | rtSec=2.916 | correct=81 | targetIndex=10
+2026-05-14 12:50:17.240,TRIAL_READY,set=8 | block=1 | conditionOrderIndex=3 | targetIndex=5 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:50:19.323,TRIAL_PROGRESS,correct=82
+2026-05-14 12:50:19.323,CORRECT_HIT,set=8 | block=1 | rtSec=2.083 | correct=82 | targetIndex=5
+2026-05-14 12:50:19.323,TRIAL_READY,set=8 | block=1 | conditionOrderIndex=3 | targetIndex=7 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:50:20.767,TRIAL_PROGRESS,correct=83
+2026-05-14 12:50:20.767,CORRECT_HIT,set=8 | block=1 | rtSec=1.444 | correct=83 | targetIndex=7
+2026-05-14 12:50:20.767,TRIAL_READY,set=8 | block=1 | conditionOrderIndex=3 | targetIndex=1 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:50:22.280,TRIAL_PROGRESS,correct=84
+2026-05-14 12:50:22.280,CORRECT_HIT,set=8 | block=1 | rtSec=1.514 | correct=84 | targetIndex=1
+2026-05-14 12:50:22.280,TRIAL_READY,set=8 | block=1 | conditionOrderIndex=3 | targetIndex=3 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:50:23.544,TRIAL_PROGRESS,correct=85
+2026-05-14 12:50:23.544,CORRECT_HIT,set=8 | block=1 | rtSec=1.264 | correct=85 | targetIndex=3
+2026-05-14 12:50:23.544,TRIAL_READY,set=8 | block=1 | conditionOrderIndex=3 | targetIndex=6 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:50:24.920,TRIAL_PROGRESS,correct=86
+2026-05-14 12:50:24.920,CORRECT_HIT,set=8 | block=1 | rtSec=1.375 | correct=86 | targetIndex=6
+2026-05-14 12:50:24.920,TRIAL_READY,set=8 | block=1 | conditionOrderIndex=3 | targetIndex=2 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:50:26.211,TRIAL_PROGRESS,correct=87
+2026-05-14 12:50:26.211,CORRECT_HIT,set=8 | block=1 | rtSec=1.292 | correct=87 | targetIndex=2
+2026-05-14 12:50:26.211,TRIAL_READY,set=8 | block=1 | conditionOrderIndex=3 | targetIndex=9 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:50:27.891,TRIAL_PROGRESS,correct=88
+2026-05-14 12:50:27.891,CORRECT_HIT,set=8 | block=1 | rtSec=1.680 | correct=88 | targetIndex=9
+2026-05-14 12:50:27.891,SET_START,set=9 | block=1
+2026-05-14 12:50:27.891,PHASE_SET,TASK_RUNNING
+2026-05-14 12:50:27.891,TRIAL_READY,set=9 | block=1 | conditionOrderIndex=3 | targetIndex=2 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:50:29.530,TRIAL_PROGRESS,correct=89
+2026-05-14 12:50:29.531,CORRECT_HIT,set=9 | block=1 | rtSec=1.639 | correct=89 | targetIndex=2
+2026-05-14 12:50:29.531,TRIAL_READY,set=9 | block=1 | conditionOrderIndex=3 | targetIndex=8 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:50:31.433,TRIAL_PROGRESS,correct=90
+2026-05-14 12:50:31.433,CORRECT_HIT,set=9 | block=1 | rtSec=1.902 | correct=90 | targetIndex=8
+2026-05-14 12:50:31.433,TRIAL_READY,set=9 | block=1 | conditionOrderIndex=3 | targetIndex=5 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:50:33.099,TRIAL_PROGRESS,correct=91
+2026-05-14 12:50:33.100,CORRECT_HIT,set=9 | block=1 | rtSec=1.666 | correct=91 | targetIndex=5
+2026-05-14 12:50:33.100,TRIAL_READY,set=9 | block=1 | conditionOrderIndex=3 | targetIndex=6 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:50:34.586,TRIAL_PROGRESS,correct=92
+2026-05-14 12:50:34.586,CORRECT_HIT,set=9 | block=1 | rtSec=1.486 | correct=92 | targetIndex=6
+2026-05-14 12:50:34.586,TRIAL_READY,set=9 | block=1 | conditionOrderIndex=3 | targetIndex=4 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:50:35.766,TRIAL_PROGRESS,correct=93
+2026-05-14 12:50:35.766,CORRECT_HIT,set=9 | block=1 | rtSec=1.181 | correct=93 | targetIndex=4
+2026-05-14 12:50:35.766,TRIAL_READY,set=9 | block=1 | conditionOrderIndex=3 | targetIndex=10 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:50:37.613,TRIAL_PROGRESS,correct=94
+2026-05-14 12:50:37.613,CORRECT_HIT,set=9 | block=1 | rtSec=1.847 | correct=94 | targetIndex=10
+2026-05-14 12:50:37.613,TRIAL_READY,set=9 | block=1 | conditionOrderIndex=3 | targetIndex=1 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:50:40.016,TRIAL_PROGRESS,correct=95
+2026-05-14 12:50:40.016,CORRECT_HIT,set=9 | block=1 | rtSec=2.402 | correct=95 | targetIndex=1
+2026-05-14 12:50:40.016,TRIAL_READY,set=9 | block=1 | conditionOrderIndex=3 | targetIndex=9 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:50:43.044,TRIAL_PROGRESS,correct=96
+2026-05-14 12:50:43.044,CORRECT_HIT,set=9 | block=1 | rtSec=3.028 | correct=96 | targetIndex=9
+2026-05-14 12:50:43.044,TRIAL_READY,set=9 | block=1 | conditionOrderIndex=3 | targetIndex=7 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:50:44.598,TRIAL_PROGRESS,correct=97
+2026-05-14 12:50:44.598,CORRECT_HIT,set=9 | block=1 | rtSec=1.555 | correct=97 | targetIndex=7
+2026-05-14 12:50:44.598,TRIAL_READY,set=9 | block=1 | conditionOrderIndex=3 | targetIndex=0 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:50:47.418,TRIAL_PROGRESS,correct=98
+2026-05-14 12:50:47.418,CORRECT_HIT,set=9 | block=1 | rtSec=2.819 | correct=98 | targetIndex=0
+2026-05-14 12:50:47.418,TRIAL_READY,set=9 | block=1 | conditionOrderIndex=3 | targetIndex=3 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:50:48.669,TRIAL_PROGRESS,correct=99
+2026-05-14 12:50:48.669,CORRECT_HIT,set=9 | block=1 | rtSec=1.250 | correct=99 | targetIndex=3
+2026-05-14 12:50:48.669,SET_START,set=10 | block=1
+2026-05-14 12:50:48.669,PHASE_SET,TASK_RUNNING
+2026-05-14 12:50:48.669,TRIAL_READY,set=10 | block=1 | conditionOrderIndex=3 | targetIndex=2 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:50:50.264,TRIAL_PROGRESS,correct=100
+2026-05-14 12:50:50.264,CORRECT_HIT,set=10 | block=1 | rtSec=1.596 | correct=100 | targetIndex=2
+2026-05-14 12:50:50.264,TRIAL_READY,set=10 | block=1 | conditionOrderIndex=3 | targetIndex=10 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:50:52.029,TRIAL_PROGRESS,correct=101
+2026-05-14 12:50:52.029,CORRECT_HIT,set=10 | block=1 | rtSec=1.764 | correct=101 | targetIndex=10
+2026-05-14 12:50:52.029,TRIAL_READY,set=10 | block=1 | conditionOrderIndex=3 | targetIndex=4 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:50:53.626,TRIAL_PROGRESS,correct=102
+2026-05-14 12:50:53.626,CORRECT_HIT,set=10 | block=1 | rtSec=1.597 | correct=102 | targetIndex=4
+2026-05-14 12:50:53.626,TRIAL_READY,set=10 | block=1 | conditionOrderIndex=3 | targetIndex=8 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:50:54.988,TRIAL_PROGRESS,correct=103
+2026-05-14 12:50:54.988,CORRECT_HIT,set=10 | block=1 | rtSec=1.361 | correct=103 | targetIndex=8
+2026-05-14 12:50:54.988,TRIAL_READY,set=10 | block=1 | conditionOrderIndex=3 | targetIndex=6 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:50:56.417,TRIAL_PROGRESS,correct=104
+2026-05-14 12:50:56.417,CORRECT_HIT,set=10 | block=1 | rtSec=1.430 | correct=104 | targetIndex=6
+2026-05-14 12:50:56.417,TRIAL_READY,set=10 | block=1 | conditionOrderIndex=3 | targetIndex=0 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:50:58.696,TRIAL_PROGRESS,correct=105
+2026-05-14 12:50:58.696,CORRECT_HIT,set=10 | block=1 | rtSec=2.278 | correct=105 | targetIndex=0
+2026-05-14 12:50:58.696,TRIAL_READY,set=10 | block=1 | conditionOrderIndex=3 | targetIndex=7 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:51:00.515,TRIAL_PROGRESS,correct=106
+2026-05-14 12:51:00.515,CORRECT_HIT,set=10 | block=1 | rtSec=1.819 | correct=106 | targetIndex=7
+2026-05-14 12:51:00.515,TRIAL_READY,set=10 | block=1 | conditionOrderIndex=3 | targetIndex=3 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:51:03.209,TRIAL_PROGRESS,correct=107
+2026-05-14 12:51:03.209,CORRECT_HIT,set=10 | block=1 | rtSec=2.695 | correct=107 | targetIndex=3
+2026-05-14 12:51:03.209,TRIAL_READY,set=10 | block=1 | conditionOrderIndex=3 | targetIndex=5 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:51:07.001,TRIAL_PROGRESS,correct=108
+2026-05-14 12:51:07.001,CORRECT_HIT,set=10 | block=1 | rtSec=3.791 | correct=108 | targetIndex=5
+2026-05-14 12:51:07.001,TRIAL_READY,set=10 | block=1 | conditionOrderIndex=3 | targetIndex=1 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:51:08.874,TRIAL_PROGRESS,correct=109
+2026-05-14 12:51:08.874,CORRECT_HIT,set=10 | block=1 | rtSec=1.874 | correct=109 | targetIndex=1
+2026-05-14 12:51:08.874,TRIAL_READY,set=10 | block=1 | conditionOrderIndex=3 | targetIndex=9 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:51:10.722,TRIAL_PROGRESS,correct=110
+2026-05-14 12:51:10.722,CORRECT_HIT,set=10 | block=1 | rtSec=1.847 | correct=110 | targetIndex=9
+2026-05-14 12:51:10.722,SET_START,set=11 | block=1
+2026-05-14 12:51:10.722,PHASE_SET,TASK_RUNNING
+2026-05-14 12:51:10.723,TRIAL_READY,set=11 | block=1 | conditionOrderIndex=3 | targetIndex=1 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:51:12.473,TRIAL_PROGRESS,correct=111
+2026-05-14 12:51:12.473,CORRECT_HIT,set=11 | block=1 | rtSec=1.750 | correct=111 | targetIndex=1
+2026-05-14 12:51:12.473,TRIAL_READY,set=11 | block=1 | conditionOrderIndex=3 | targetIndex=6 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:51:13.834,TRIAL_PROGRESS,correct=112
+2026-05-14 12:51:13.834,CORRECT_HIT,set=11 | block=1 | rtSec=1.361 | correct=112 | targetIndex=6
+2026-05-14 12:51:13.834,TRIAL_READY,set=11 | block=1 | conditionOrderIndex=3 | targetIndex=9 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:51:15.097,TRIAL_PROGRESS,correct=113
+2026-05-14 12:51:15.097,CORRECT_HIT,set=11 | block=1 | rtSec=1.264 | correct=113 | targetIndex=9
+2026-05-14 12:51:15.097,TRIAL_READY,set=11 | block=1 | conditionOrderIndex=3 | targetIndex=8 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:51:17.000,TRIAL_PROGRESS,correct=114
+2026-05-14 12:51:17.000,CORRECT_HIT,set=11 | block=1 | rtSec=1.903 | correct=114 | targetIndex=8
+2026-05-14 12:51:17.000,TRIAL_READY,set=11 | block=1 | conditionOrderIndex=3 | targetIndex=3 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:51:18.403,TRIAL_PROGRESS,correct=115
+2026-05-14 12:51:18.403,CORRECT_HIT,set=11 | block=1 | rtSec=1.403 | correct=115 | targetIndex=3
+2026-05-14 12:51:18.403,TRIAL_READY,set=11 | block=1 | conditionOrderIndex=3 | targetIndex=10 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:51:21.847,TRIAL_PROGRESS,correct=116
+2026-05-14 12:51:21.847,CORRECT_HIT,set=11 | block=1 | rtSec=3.444 | correct=116 | targetIndex=10
+2026-05-14 12:51:21.847,TRIAL_READY,set=11 | block=1 | conditionOrderIndex=3 | targetIndex=0 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:51:23.735,TRIAL_PROGRESS,correct=117
+2026-05-14 12:51:23.735,CORRECT_HIT,set=11 | block=1 | rtSec=1.888 | correct=117 | targetIndex=0
+2026-05-14 12:51:23.735,TRIAL_READY,set=11 | block=1 | conditionOrderIndex=3 | targetIndex=7 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:51:25.166,TRIAL_PROGRESS,correct=118
+2026-05-14 12:51:25.166,CORRECT_HIT,set=11 | block=1 | rtSec=1.430 | correct=118 | targetIndex=7
+2026-05-14 12:51:25.167,TRIAL_READY,set=11 | block=1 | conditionOrderIndex=3 | targetIndex=4 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:51:26.582,TRIAL_PROGRESS,correct=119
+2026-05-14 12:51:26.582,CORRECT_HIT,set=11 | block=1 | rtSec=1.417 | correct=119 | targetIndex=4
+2026-05-14 12:51:26.582,TRIAL_READY,set=11 | block=1 | conditionOrderIndex=3 | targetIndex=2 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:51:28.222,TRIAL_PROGRESS,correct=120
+2026-05-14 12:51:28.222,CORRECT_HIT,set=11 | block=1 | rtSec=1.639 | correct=120 | targetIndex=2
+2026-05-14 12:51:28.222,TRIAL_READY,set=11 | block=1 | conditionOrderIndex=3 | targetIndex=5 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:51:29.639,TRIAL_PROGRESS,correct=121
+2026-05-14 12:51:29.639,CORRECT_HIT,set=11 | block=1 | rtSec=1.417 | correct=121 | targetIndex=5
+2026-05-14 12:51:29.639,SET_START,set=12 | block=1
+2026-05-14 12:51:29.639,PHASE_SET,TASK_RUNNING
+2026-05-14 12:51:29.639,TRIAL_READY,set=12 | block=1 | conditionOrderIndex=3 | targetIndex=9 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:51:30.874,TRIAL_PROGRESS,correct=122
+2026-05-14 12:51:30.874,CORRECT_HIT,set=12 | block=1 | rtSec=1.236 | correct=122 | targetIndex=9
+2026-05-14 12:51:30.874,TRIAL_READY,set=12 | block=1 | conditionOrderIndex=3 | targetIndex=0 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:51:34.276,TRIAL_PROGRESS,correct=123
+2026-05-14 12:51:34.276,CORRECT_HIT,set=12 | block=1 | rtSec=3.403 | correct=123 | targetIndex=0
+2026-05-14 12:51:34.276,TRIAL_READY,set=12 | block=1 | conditionOrderIndex=3 | targetIndex=2 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:51:35.402,TRIAL_PROGRESS,correct=124
+2026-05-14 12:51:35.402,CORRECT_HIT,set=12 | block=1 | rtSec=1.125 | correct=124 | targetIndex=2
+2026-05-14 12:51:35.402,TRIAL_READY,set=12 | block=1 | conditionOrderIndex=3 | targetIndex=1 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:51:36.693,TRIAL_PROGRESS,correct=125
+2026-05-14 12:51:36.693,CORRECT_HIT,set=12 | block=1 | rtSec=1.291 | correct=125 | targetIndex=1
+2026-05-14 12:51:36.693,TRIAL_READY,set=12 | block=1 | conditionOrderIndex=3 | targetIndex=7 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:51:38.206,TRIAL_PROGRESS,correct=126
+2026-05-14 12:51:38.206,CORRECT_HIT,set=12 | block=1 | rtSec=1.514 | correct=126 | targetIndex=7
+2026-05-14 12:51:38.206,TRIAL_READY,set=12 | block=1 | conditionOrderIndex=3 | targetIndex=8 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:51:39.554,TRIAL_PROGRESS,correct=127
+2026-05-14 12:51:39.554,CORRECT_HIT,set=12 | block=1 | rtSec=1.347 | correct=127 | targetIndex=8
+2026-05-14 12:51:39.555,TRIAL_READY,set=12 | block=1 | conditionOrderIndex=3 | targetIndex=5 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:51:42.470,TRIAL_PROGRESS,correct=128
+2026-05-14 12:51:42.470,CORRECT_HIT,set=12 | block=1 | rtSec=2.916 | correct=128 | targetIndex=5
+2026-05-14 12:51:42.470,TRIAL_READY,set=12 | block=1 | conditionOrderIndex=3 | targetIndex=3 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:51:43.901,TRIAL_PROGRESS,correct=129
+2026-05-14 12:51:43.901,CORRECT_HIT,set=12 | block=1 | rtSec=1.430 | correct=129 | targetIndex=3
+2026-05-14 12:51:43.901,TRIAL_READY,set=12 | block=1 | conditionOrderIndex=3 | targetIndex=4 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:51:46.846,TRIAL_PROGRESS,correct=130
+2026-05-14 12:51:46.846,CORRECT_HIT,set=12 | block=1 | rtSec=2.945 | correct=130 | targetIndex=4
+2026-05-14 12:51:46.846,TRIAL_READY,set=12 | block=1 | conditionOrderIndex=3 | targetIndex=10 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:51:50.387,TRIAL_PROGRESS,correct=131
+2026-05-14 12:51:50.387,CORRECT_HIT,set=12 | block=1 | rtSec=3.541 | correct=131 | targetIndex=10
+2026-05-14 12:51:50.387,TRIAL_READY,set=12 | block=1 | conditionOrderIndex=3 | targetIndex=6 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:51:52.596,TRIAL_PROGRESS,correct=132
+2026-05-14 12:51:52.596,CORRECT_HIT,set=12 | block=1 | rtSec=2.208 | correct=132 | targetIndex=6
+2026-05-14 12:51:52.596,SET_START,set=13 | block=1
+2026-05-14 12:51:52.596,PHASE_SET,TASK_RUNNING
+2026-05-14 12:51:52.596,TRIAL_READY,set=13 | block=1 | conditionOrderIndex=3 | targetIndex=3 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:51:53.915,TRIAL_PROGRESS,correct=133
+2026-05-14 12:51:53.915,CORRECT_HIT,set=13 | block=1 | rtSec=1.319 | correct=133 | targetIndex=3
+2026-05-14 12:51:53.915,TRIAL_READY,set=13 | block=1 | conditionOrderIndex=3 | targetIndex=8 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:51:56.026,TRIAL_PROGRESS,correct=134
+2026-05-14 12:51:56.026,CORRECT_HIT,set=13 | block=1 | rtSec=2.111 | correct=134 | targetIndex=8
+2026-05-14 12:51:56.026,TRIAL_READY,set=13 | block=1 | conditionOrderIndex=3 | targetIndex=5 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:51:57.261,TRIAL_PROGRESS,correct=135
+2026-05-14 12:51:57.261,CORRECT_HIT,set=13 | block=1 | rtSec=1.235 | correct=135 | targetIndex=5
+2026-05-14 12:51:57.261,TRIAL_READY,set=13 | block=1 | conditionOrderIndex=3 | targetIndex=1 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:51:58.677,TRIAL_PROGRESS,correct=136
+2026-05-14 12:51:58.677,CORRECT_HIT,set=13 | block=1 | rtSec=1.417 | correct=136 | targetIndex=1
+2026-05-14 12:51:58.677,TRIAL_READY,set=13 | block=1 | conditionOrderIndex=3 | targetIndex=0 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:52:00.220,TRIAL_PROGRESS,correct=137
+2026-05-14 12:52:00.220,CORRECT_HIT,set=13 | block=1 | rtSec=1.541 | correct=137 | targetIndex=0
+2026-05-14 12:52:00.220,TRIAL_READY,set=13 | block=1 | conditionOrderIndex=3 | targetIndex=6 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:52:02.067,TRIAL_PROGRESS,correct=138
+2026-05-14 12:52:02.067,CORRECT_HIT,set=13 | block=1 | rtSec=1.848 | correct=138 | targetIndex=6
+2026-05-14 12:52:02.067,TRIAL_READY,set=13 | block=1 | conditionOrderIndex=3 | targetIndex=9 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:52:03.567,TRIAL_PROGRESS,correct=139
+2026-05-14 12:52:03.567,CORRECT_HIT,set=13 | block=1 | rtSec=1.500 | correct=139 | targetIndex=9
+2026-05-14 12:52:03.567,TRIAL_READY,set=13 | block=1 | conditionOrderIndex=3 | targetIndex=10 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:52:05.067,TRIAL_PROGRESS,correct=140
+2026-05-14 12:52:05.067,CORRECT_HIT,set=13 | block=1 | rtSec=1.500 | correct=140 | targetIndex=10
+2026-05-14 12:52:05.067,TRIAL_READY,set=13 | block=1 | conditionOrderIndex=3 | targetIndex=2 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:52:07.011,TRIAL_PROGRESS,correct=141
+2026-05-14 12:52:07.011,CORRECT_HIT,set=13 | block=1 | rtSec=1.944 | correct=141 | targetIndex=2
+2026-05-14 12:52:07.011,TRIAL_READY,set=13 | block=1 | conditionOrderIndex=3 | targetIndex=7 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:52:08.525,TRIAL_PROGRESS,correct=142
+2026-05-14 12:52:08.525,CORRECT_HIT,set=13 | block=1 | rtSec=1.514 | correct=142 | targetIndex=7
+2026-05-14 12:52:08.525,TRIAL_READY,set=13 | block=1 | conditionOrderIndex=3 | targetIndex=4 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:52:10.303,TRIAL_PROGRESS,correct=143
+2026-05-14 12:52:10.303,CORRECT_HIT,set=13 | block=1 | rtSec=1.778 | correct=143 | targetIndex=4
+2026-05-14 12:52:10.303,SET_START,set=14 | block=1
+2026-05-14 12:52:10.303,PHASE_SET,TASK_RUNNING
+2026-05-14 12:52:10.303,TRIAL_READY,set=14 | block=1 | conditionOrderIndex=3 | targetIndex=3 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:52:12.345,TRIAL_PROGRESS,correct=144
+2026-05-14 12:52:12.345,CORRECT_HIT,set=14 | block=1 | rtSec=2.042 | correct=144 | targetIndex=3
+2026-05-14 12:52:12.345,TRIAL_READY,set=14 | block=1 | conditionOrderIndex=3 | targetIndex=9 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:52:13.900,TRIAL_PROGRESS,correct=145
+2026-05-14 12:52:13.900,CORRECT_HIT,set=14 | block=1 | rtSec=1.555 | correct=145 | targetIndex=9
+2026-05-14 12:52:13.900,TRIAL_READY,set=14 | block=1 | conditionOrderIndex=3 | targetIndex=2 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:52:15.858,TRIAL_PROGRESS,correct=146
+2026-05-14 12:52:15.858,CORRECT_HIT,set=14 | block=1 | rtSec=1.958 | correct=146 | targetIndex=2
+2026-05-14 12:52:15.858,TRIAL_READY,set=14 | block=1 | conditionOrderIndex=3 | targetIndex=1 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:52:17.983,TRIAL_PROGRESS,correct=147
+2026-05-14 12:52:17.983,CORRECT_HIT,set=14 | block=1 | rtSec=2.125 | correct=147 | targetIndex=1
+2026-05-14 12:52:17.983,TRIAL_READY,set=14 | block=1 | conditionOrderIndex=3 | targetIndex=0 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:52:19.969,TRIAL_PROGRESS,correct=148
+2026-05-14 12:52:19.969,CORRECT_HIT,set=14 | block=1 | rtSec=1.986 | correct=148 | targetIndex=0
+2026-05-14 12:52:19.969,TRIAL_READY,set=14 | block=1 | conditionOrderIndex=3 | targetIndex=10 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:52:21.955,TRIAL_PROGRESS,correct=149
+2026-05-14 12:52:21.955,CORRECT_HIT,set=14 | block=1 | rtSec=1.986 | correct=149 | targetIndex=10
+2026-05-14 12:52:21.955,TRIAL_READY,set=14 | block=1 | conditionOrderIndex=3 | targetIndex=8 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:52:23.191,TRIAL_PROGRESS,correct=150
+2026-05-14 12:52:23.191,CORRECT_HIT,set=14 | block=1 | rtSec=1.236 | correct=150 | targetIndex=8
+2026-05-14 12:52:23.191,TRIAL_READY,set=14 | block=1 | conditionOrderIndex=3 | targetIndex=7 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:52:24.274,TRIAL_PROGRESS,correct=151
+2026-05-14 12:52:24.274,CORRECT_HIT,set=14 | block=1 | rtSec=1.083 | correct=151 | targetIndex=7
+2026-05-14 12:52:24.274,TRIAL_READY,set=14 | block=1 | conditionOrderIndex=3 | targetIndex=6 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:52:25.761,TRIAL_PROGRESS,correct=152
+2026-05-14 12:52:25.761,CORRECT_HIT,set=14 | block=1 | rtSec=1.486 | correct=152 | targetIndex=6
+2026-05-14 12:52:25.761,TRIAL_READY,set=14 | block=1 | conditionOrderIndex=3 | targetIndex=4 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:52:28.176,TRIAL_PROGRESS,correct=153
+2026-05-14 12:52:28.176,CORRECT_HIT,set=14 | block=1 | rtSec=2.416 | correct=153 | targetIndex=4
+2026-05-14 12:52:28.176,TRIAL_READY,set=14 | block=1 | conditionOrderIndex=3 | targetIndex=5 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:52:29.705,TRIAL_PROGRESS,correct=154
+2026-05-14 12:52:29.705,CORRECT_HIT,set=14 | block=1 | rtSec=1.528 | correct=154 | targetIndex=5
+2026-05-14 12:52:29.705,SET_START,set=15 | block=1
+2026-05-14 12:52:29.705,PHASE_SET,TASK_RUNNING
+2026-05-14 12:52:29.705,TRIAL_READY,set=15 | block=1 | conditionOrderIndex=3 | targetIndex=3 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:52:29.774,WRONG_HIT,set=15 | block=1 | ball=Ball_5 | correct=154
+2026-05-14 12:52:30.899,TRIAL_PROGRESS,correct=155
+2026-05-14 12:52:30.899,CORRECT_HIT,set=15 | block=1 | rtSec=1.194 | correct=155 | targetIndex=3
+2026-05-14 12:52:30.900,TRIAL_READY,set=15 | block=1 | conditionOrderIndex=3 | targetIndex=9 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:52:32.454,TRIAL_PROGRESS,correct=156
+2026-05-14 12:52:32.454,CORRECT_HIT,set=15 | block=1 | rtSec=1.555 | correct=156 | targetIndex=9
+2026-05-14 12:52:32.454,TRIAL_READY,set=15 | block=1 | conditionOrderIndex=3 | targetIndex=0 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:52:34.509,TRIAL_PROGRESS,correct=157
+2026-05-14 12:52:34.509,CORRECT_HIT,set=15 | block=1 | rtSec=2.056 | correct=157 | targetIndex=0
+2026-05-14 12:52:34.511,TRIAL_READY,set=15 | block=1 | conditionOrderIndex=3 | targetIndex=4 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:52:35.940,TRIAL_PROGRESS,correct=158
+2026-05-14 12:52:35.940,CORRECT_HIT,set=15 | block=1 | rtSec=1.430 | correct=158 | targetIndex=4
+2026-05-14 12:52:35.940,TRIAL_READY,set=15 | block=1 | conditionOrderIndex=3 | targetIndex=7 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:52:37.468,TRIAL_PROGRESS,correct=159
+2026-05-14 12:52:37.468,CORRECT_HIT,set=15 | block=1 | rtSec=1.528 | correct=159 | targetIndex=7
+2026-05-14 12:52:37.468,TRIAL_READY,set=15 | block=1 | conditionOrderIndex=3 | targetIndex=5 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:52:40.426,TRIAL_PROGRESS,correct=160
+2026-05-14 12:52:40.426,CORRECT_HIT,set=15 | block=1 | rtSec=2.958 | correct=160 | targetIndex=5
+2026-05-14 12:52:40.426,TRIAL_READY,set=15 | block=1 | conditionOrderIndex=3 | targetIndex=1 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:52:42.398,TRIAL_PROGRESS,correct=161
+2026-05-14 12:52:42.398,CORRECT_HIT,set=15 | block=1 | rtSec=1.972 | correct=161 | targetIndex=1
+2026-05-14 12:52:42.398,TRIAL_READY,set=15 | block=1 | conditionOrderIndex=3 | targetIndex=2 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:52:43.829,TRIAL_PROGRESS,correct=162
+2026-05-14 12:52:43.829,CORRECT_HIT,set=15 | block=1 | rtSec=1.431 | correct=162 | targetIndex=2
+2026-05-14 12:52:43.829,TRIAL_READY,set=15 | block=1 | conditionOrderIndex=3 | targetIndex=6 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:52:45.162,TRIAL_PROGRESS,correct=163
+2026-05-14 12:52:45.162,CORRECT_HIT,set=15 | block=1 | rtSec=1.333 | correct=163 | targetIndex=6
+2026-05-14 12:52:45.162,TRIAL_READY,set=15 | block=1 | conditionOrderIndex=3 | targetIndex=8 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:52:46.620,TRIAL_PROGRESS,correct=164
+2026-05-14 12:52:46.620,CORRECT_HIT,set=15 | block=1 | rtSec=1.458 | correct=164 | targetIndex=8
+2026-05-14 12:52:46.620,TRIAL_READY,set=15 | block=1 | conditionOrderIndex=3 | targetIndex=10 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:52:48.690,TRIAL_PROGRESS,correct=165
+2026-05-14 12:52:48.690,CORRECT_HIT,set=15 | block=1 | rtSec=2.069 | correct=165 | targetIndex=10
+2026-05-14 12:52:48.690,SET_START,set=16 | block=1
+2026-05-14 12:52:48.690,PHASE_SET,TASK_RUNNING
+2026-05-14 12:52:48.690,TRIAL_READY,set=16 | block=1 | conditionOrderIndex=3 | targetIndex=1 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:52:50.635,TRIAL_PROGRESS,correct=166
+2026-05-14 12:52:50.635,CORRECT_HIT,set=16 | block=1 | rtSec=1.944 | correct=166 | targetIndex=1
+2026-05-14 12:52:50.635,TRIAL_READY,set=16 | block=1 | conditionOrderIndex=3 | targetIndex=2 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:52:52.091,TRIAL_PROGRESS,correct=167
+2026-05-14 12:52:52.091,CORRECT_HIT,set=16 | block=1 | rtSec=1.458 | correct=167 | targetIndex=2
+2026-05-14 12:52:52.091,TRIAL_READY,set=16 | block=1 | conditionOrderIndex=3 | targetIndex=4 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:52:53.536,TRIAL_PROGRESS,correct=168
+2026-05-14 12:52:53.536,CORRECT_HIT,set=16 | block=1 | rtSec=1.445 | correct=168 | targetIndex=4
+2026-05-14 12:52:53.536,TRIAL_READY,set=16 | block=1 | conditionOrderIndex=3 | targetIndex=10 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:52:56.273,TRIAL_PROGRESS,correct=169
+2026-05-14 12:52:56.273,CORRECT_HIT,set=16 | block=1 | rtSec=2.736 | correct=169 | targetIndex=10
+2026-05-14 12:52:56.273,TRIAL_READY,set=16 | block=1 | conditionOrderIndex=3 | targetIndex=7 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:52:58.106,TRIAL_PROGRESS,correct=170
+2026-05-14 12:52:58.106,CORRECT_HIT,set=16 | block=1 | rtSec=1.833 | correct=170 | targetIndex=7
+2026-05-14 12:52:58.106,TRIAL_READY,set=16 | block=1 | conditionOrderIndex=3 | targetIndex=8 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:52:59.786,TRIAL_PROGRESS,correct=171
+2026-05-14 12:52:59.786,CORRECT_HIT,set=16 | block=1 | rtSec=1.680 | correct=171 | targetIndex=8
+2026-05-14 12:52:59.786,TRIAL_READY,set=16 | block=1 | conditionOrderIndex=3 | targetIndex=9 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:53:00.981,TRIAL_PROGRESS,correct=172
+2026-05-14 12:53:00.981,CORRECT_HIT,set=16 | block=1 | rtSec=1.195 | correct=172 | targetIndex=9
+2026-05-14 12:53:00.981,TRIAL_READY,set=16 | block=1 | conditionOrderIndex=3 | targetIndex=3 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:53:02.258,TRIAL_PROGRESS,correct=173
+2026-05-14 12:53:02.258,CORRECT_HIT,set=16 | block=1 | rtSec=1.277 | correct=173 | targetIndex=3
+2026-05-14 12:53:02.258,TRIAL_READY,set=16 | block=1 | conditionOrderIndex=3 | targetIndex=6 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:53:03.758,TRIAL_PROGRESS,correct=174
+2026-05-14 12:53:03.758,CORRECT_HIT,set=16 | block=1 | rtSec=1.500 | correct=174 | targetIndex=6
+2026-05-14 12:53:03.758,TRIAL_READY,set=16 | block=1 | conditionOrderIndex=3 | targetIndex=5 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:53:04.980,TRIAL_PROGRESS,correct=175
+2026-05-14 12:53:04.980,CORRECT_HIT,set=16 | block=1 | rtSec=1.223 | correct=175 | targetIndex=5
+2026-05-14 12:53:04.980,TRIAL_READY,set=16 | block=1 | conditionOrderIndex=3 | targetIndex=0 | baseColorIndex=2 | targetColor=white
+2026-05-14 12:53:06.314,TRIAL_PROGRESS,correct=176
+2026-05-14 12:53:06.314,CORRECT_HIT,set=16 | block=1 | rtSec=1.333 | correct=176 | targetIndex=0
+2026-05-14 12:53:06.314,PHASE_SET,TASK_END
+2026-05-14 12:53:06.314,TASK_END,
+2026-05-14 12:53:06.314,PROTOCOL_END,

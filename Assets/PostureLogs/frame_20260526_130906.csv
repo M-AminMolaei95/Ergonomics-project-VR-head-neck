@@ -1,0 +1,3 @@
+﻿timestamp,phase,condition,blockIndex,viewArc,viewArcSegment,blockInViewArc,blocksPerViewArc,conditionTotalBlocks,targetTemplateIndex,targetTemplateName,targetBallOneBased,patternIndex,patternName,trialInPattern,correctTarget,pitch,roll,isSlouching,slouchTimer,normalizedHeight,lateralScore,slouchScore,rulaScore,rulaReason
+2026-05-26 13:09:06.650,WAITING_BEFORE_BASELINE,None,0,0,0,0,0,0,0,None,0,0,None,0,0,0.000,0.000,0,0.000,0.000,0,0,0,not_calibrated
+2026-05-26 13:09:06.652,WAITING_BEFORE_BASELINE,sitting none,0,0,0,0,0,0,0,None,0,0,None,0,0,0.000,0.000,0,0.000,0.000,0,0,0,not_calibrated

@@ -2538,6 +2538,7 @@ MonoBehaviour:
   slouchMaxPitchForDisplay: 5
   showText: 1
   fadeDuration: 0.5
+  badPostureFeedbackDelaySeconds: 3
 --- !u!4 &175410469
 Transform:
   m_ObjectHideFlags: 0
@@ -5256,7 +5257,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -370}
+  m_AnchoredPosition: {x: 0, y: -300}
   m_SizeDelta: {x: 850, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &356331439
@@ -13116,7 +13117,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -150}
+  m_AnchoredPosition: {x: 0, y: 150}
   m_SizeDelta: {x: 1175, y: 872}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &929652502
@@ -27826,210 +27827,146 @@ MonoBehaviour:
   - conditionName: SitNF
     posture: 0
     presetSlot: 1
-    totalCorrectSelections: 99
+    totalCorrectSelections: 14
     heightOffset: 0
     heightScale: 1
     spreadScale: 1.6
   - conditionName: SitPF
     posture: 0
     presetSlot: 2
-    totalCorrectSelections: 99
+    totalCorrectSelections: 14
     heightOffset: 0
     heightScale: 1
     spreadScale: 1.6
   - conditionName: SitFF
     posture: 0
     presetSlot: 3
-    totalCorrectSelections: 99
+    totalCorrectSelections: 14
     heightOffset: 0
     heightScale: 1
     spreadScale: 1.6
   - conditionName: StndNF
     posture: 1
     presetSlot: 4
-    totalCorrectSelections: 99
+    totalCorrectSelections: 14
     heightOffset: 0
     heightScale: 1
     spreadScale: 1.6
   - conditionName: StndPF
     posture: 1
     presetSlot: 5
-    totalCorrectSelections: 99
+    totalCorrectSelections: 14
     heightOffset: 0
     heightScale: 1
     spreadScale: 1.6
   - conditionName: StndFF
     posture: 1
     presetSlot: 6
-    totalCorrectSelections: 99
+    totalCorrectSelections: 14
     heightOffset: 0
     heightScale: 1
     spreadScale: 1.6
-  conditionSequencePreset: 1
+  conditionSequencePreset: 3
   conditionSequencePart: 1
   patterns:
   - patternName: A
     localPositions:
-    - {x: 10, y: 1, z: 7}
-    - {x: 8, y: -1, z: 9}
-    - {x: 6, y: 1, z: 10}
-    - {x: 4, y: -1, z: 11}
-    - {x: 2, y: 1, z: 12}
-    - {x: 0, y: -1, z: 14}
-    - {x: -2, y: 1, z: 12}
-    - {x: -4, y: -1, z: 11}
-    - {x: -6, y: 1, z: 10}
-    - {x: -8, y: -1, z: 9}
-    - {x: -10, y: 1, z: 7}
+    - {x: 10, y: 0, z: 7}
+    - {x: 8, y: 0, z: 8}
+    - {x: 6, y: 0, z: 9}
+    - {x: 4, y: 0, z: 10}
+    - {x: 2, y: 0, z: 11}
+    - {x: 0, y: 0, z: 12}
+    - {x: -2, y: 0, z: 11}
+    - {x: -4, y: 0, z: 10}
+    - {x: -6, y: 0, z: 9}
+    - {x: -8, y: 0, z: 8}
+    - {x: -10, y: 0, z: 7}
   - patternName: B
     localPositions:
     - {x: 10, y: 2, z: 7}
-    - {x: 8, y: -2, z: 9}
-    - {x: 6, y: 2, z: 10}
-    - {x: 4, y: -2, z: 13}
-    - {x: 2, y: 2, z: 12}
-    - {x: 0, y: -2, z: 14}
-    - {x: -2, y: 2, z: 12}
-    - {x: -4, y: -2, z: 11}
-    - {x: -6, y: 2, z: 10}
-    - {x: -8, y: -2, z: 9}
+    - {x: 8, y: -2, z: 8}
+    - {x: 6, y: 2, z: 9}
+    - {x: 4, y: -2, z: 10}
+    - {x: 2, y: 2, z: 11}
+    - {x: 0, y: -2, z: 12}
+    - {x: -2, y: 2, z: 11}
+    - {x: -4, y: -2, z: 10}
+    - {x: -6, y: 2, z: 9}
+    - {x: -8, y: -2, z: 8}
     - {x: -10, y: 2, z: 7}
   - patternName: C
     localPositions:
     - {x: 10, y: 4, z: 7}
-    - {x: 8, y: -4, z: 9}
-    - {x: 6, y: 4, z: 10}
-    - {x: 4, y: -4, z: 11}
-    - {x: 2, y: 4, z: 12}
-    - {x: 0, y: -4, z: 14}
-    - {x: -2, y: 4, z: 12}
-    - {x: -4, y: -4, z: 11}
-    - {x: -6, y: 4, z: 10}
-    - {x: -8, y: -4, z: 9}
+    - {x: 8, y: -4, z: 8}
+    - {x: 6, y: 4, z: 9}
+    - {x: 4, y: -4, z: 10}
+    - {x: 2, y: 4, z: 11}
+    - {x: 0, y: -4, z: 12}
+    - {x: -2, y: 4, z: 11}
+    - {x: -4, y: -4, z: 10}
+    - {x: -6, y: 4, z: 9}
+    - {x: -8, y: -4, z: 8}
     - {x: -10, y: 4, z: 7}
   - patternName: D
     localPositions:
-    - {x: 10, y: 3, z: 7}
-    - {x: 8, y: -3, z: 9}
-    - {x: 6, y: 3, z: 10}
-    - {x: 4, y: -3, z: 11}
-    - {x: 2, y: 3, z: 12}
-    - {x: 0, y: -3, z: 14}
-    - {x: -2, y: 3, z: 12}
-    - {x: -4, y: -3, z: 11}
-    - {x: -6, y: 3, z: 10}
-    - {x: -8, y: -3, z: 9}
-    - {x: -10, y: 3, z: 7}
+    - {x: 10, y: 6, z: 7}
+    - {x: 8, y: -6, z: 8}
+    - {x: 6, y: 6, z: 9}
+    - {x: 4, y: -6, z: 10}
+    - {x: 2, y: 6, z: 11}
+    - {x: 0, y: -6, z: 12}
+    - {x: -2, y: 6, z: 11}
+    - {x: -4, y: -6, z: 10}
+    - {x: -6, y: 6, z: 9}
+    - {x: -8, y: -6, z: 8}
+    - {x: -10, y: 6, z: 7}
   - patternName: E
     localPositions:
-    - {x: 10, y: 6.25, z: 7}
-    - {x: 8, y: -6.25, z: 9}
-    - {x: 6, y: 6.25, z: 10}
-    - {x: 4, y: -6.25, z: 11}
-    - {x: 2, y: 6.25, z: 12}
-    - {x: 0, y: -6.25, z: 14}
-    - {x: -2, y: 6.25, z: 12}
-    - {x: -4, y: -6.25, z: 11}
-    - {x: -6, y: 6.25, z: 10}
-    - {x: -8, y: -6.25, z: 9}
-    - {x: -10, y: 6.25, z: 7}
+    - {x: 10, y: 7, z: 7}
+    - {x: 8, y: -7, z: 8}
+    - {x: 6, y: 7, z: 9}
+    - {x: 4, y: -7, z: 10}
+    - {x: 2, y: 7, z: 11}
+    - {x: 0, y: -7, z: 12}
+    - {x: -2, y: 7, z: 11}
+    - {x: -4, y: -7, z: 10}
+    - {x: -6, y: 7, z: 9}
+    - {x: -8, y: -7, z: 8}
+    - {x: -10, y: 7, z: 7}
   - patternName: F
     localPositions:
-    - {x: 10, y: 5, z: 7}
-    - {x: 8, y: -5, z: 9}
-    - {x: 6, y: 5, z: 10}
-    - {x: 4, y: -5, z: 11}
-    - {x: 2, y: 5, z: 12}
-    - {x: 0, y: -5, z: 14}
-    - {x: -2, y: 5, z: 12}
-    - {x: -4, y: -5, z: 11}
-    - {x: -6, y: 5, z: 10}
-    - {x: -8, y: -5, z: 9}
-    - {x: -10, y: 5, z: 7}
+    - {x: 10, y: 8, z: 7}
+    - {x: 8, y: -8, z: 8}
+    - {x: 6, y: 8, z: 9}
+    - {x: 4, y: -8, z: 10}
+    - {x: 2, y: 8, z: 11}
+    - {x: 0, y: -8, z: 12}
+    - {x: -2, y: 8, z: 11}
+    - {x: -4, y: -8, z: 10}
+    - {x: -6, y: 8, z: 9}
+    - {x: -8, y: -8, z: 8}
+    - {x: -10, y: 8, z: 7}
   - patternName: G
     localPositions:
-    - {x: 10, y: 6, z: 7}
-    - {x: 8, y: -6, z: 9}
-    - {x: 6, y: 6, z: 10}
-    - {x: 4, y: -6, z: 11}
-    - {x: 2, y: 6, z: 12}
-    - {x: 0, y: -6, z: 14}
-    - {x: -2, y: 6, z: 12}
-    - {x: -4, y: -6, z: 11}
-    - {x: -6, y: 6, z: 10}
-    - {x: -8, y: -6, z: 9}
-    - {x: -10, y: 6, z: 7}
-  - patternName: H
-    localPositions:
-    - {x: 10, y: 7, z: 7}
-    - {x: 8, y: -7, z: 9}
-    - {x: 6, y: 7, z: 10}
-    - {x: 4, y: -7, z: 11}
-    - {x: 2, y: 7, z: 12}
-    - {x: 0, y: -7, z: 14}
-    - {x: -2, y: 7, z: 12}
-    - {x: -4, y: -7, z: 11}
-    - {x: -6, y: 7, z: 10}
-    - {x: -8, y: -7, z: 9}
-    - {x: -10, y: 7, z: 7}
-  - patternName: I
-    localPositions:
-    - {x: 10, y: 2.5, z: 7}
-    - {x: 8, y: -2.5, z: 9}
-    - {x: 6, y: 2.5, z: 10}
-    - {x: 4, y: -2.5, z: 11}
-    - {x: 2, y: 2.5, z: 12}
-    - {x: 0, y: -2.5, z: 14}
-    - {x: -2, y: 2.5, z: 12}
-    - {x: -4, y: -2.5, z: 11}
-    - {x: -6, y: 2.5, z: 10}
-    - {x: -8, y: -2.5, z: 9}
-    - {x: -10, y: 2.5, z: 7}
-  - patternName: J
-    localPositions:
-    - {x: 10, y: 8, z: 7}
-    - {x: 8, y: -8, z: 9}
-    - {x: 6, y: 8, z: 10}
-    - {x: 4, y: -8, z: 11}
-    - {x: 2, y: 8, z: 12}
-    - {x: 0, y: -8, z: 14}
-    - {x: -2, y: 8, z: 12}
-    - {x: -4, y: -8, z: 11}
-    - {x: -6, y: 8, z: 10}
-    - {x: -8, y: -8, z: 9}
-    - {x: -10, y: 8, z: 7}
-  - patternName: L
-    localPositions:
-    - {x: 10, y: 7.5, z: 7}
-    - {x: 8, y: -7.5, z: 9}
-    - {x: 6, y: 7.5, z: 10}
-    - {x: 4, y: -7.5, z: 11}
-    - {x: 2, y: 7.5, z: 12}
-    - {x: 0, y: -7.5, z: 14}
-    - {x: -2, y: 7.5, z: 12}
-    - {x: -4, y: -7.5, z: 11}
-    - {x: -6, y: 7.5, z: 10}
-    - {x: -8, y: -7.5, z: 9}
-    - {x: -10, y: 7.5, z: 7}
+    - {x: 10, y: 10, z: 7}
+    - {x: 8, y: -10, z: 8}
+    - {x: 6, y: 10, z: 9}
+    - {x: 4, y: -10, z: 10}
+    - {x: 2, y: 10, z: 11}
+    - {x: 0, y: -10, z: 12}
+    - {x: -2, y: 10, z: 11}
+    - {x: -4, y: -10, z: 10}
+    - {x: -6, y: 10, z: 9}
+    - {x: -8, y: -10, z: 8}
+    - {x: -10, y: 10, z: 7}
   ballPrefab: {fileID: 4911597915127669553, guid: 77b9d2812f0ae5a4887be68162b85057, type: 3}
   ballsPerPattern: 11
-  patternsPerSet: 11
-  trialsPerPattern: 1
-  blocksPerSet: 3
+  patternsPerSet: 7
+  trialsPerPattern: 11
+  blocksPerSet: 2
   basePalette:
-  - {r: 1, g: 0, b: 0, a: 1}
-  - {r: 0.017799927, g: 0.754717, b: 0.017799927, a: 1}
-  - {r: 0, g: 0, b: 1, a: 1}
-  - {r: 0.5849056, g: 0.5382996, b: 0, a: 1}
-  - {r: 0.7924528, g: 0.39778027, b: 0, a: 1}
-  - {r: 0.040005345, g: 0.2924528, b: 0.18277168, a: 1}
-  - {r: 0, g: 0.41509432, b: 0.41509432, a: 1}
-  - {r: 0.36078432, g: 0, b: 1, a: 1}
-  - {r: 0.2811499, g: 0.509434, b: 0.2811499, a: 1}
-  - {r: 0.6886792, g: 0.55144984, b: 0.21764861, a: 1}
-  - {r: 0.6415094, g: 0.30562478, b: 0.33874023, a: 1}
-  - {r: 0.15682834, g: 0.12428801, b: 0.5377358, a: 1}
-  - {r: 0.7075472, g: 0.036712356, b: 0.45233816, a: 1}
+  - {r: 0.2216981, g: 0.2216981, b: 1, a: 1}
   targetBrightnessDelta: 0.95
   targetBrighterProbability: 1
   feedbackRoot: {fileID: 582216173}
@@ -28038,8 +27975,8 @@ MonoBehaviour:
   poseManager: {fileID: 2023386946}
   countdownGate: {fileID: 1995094036}
   baselineFixationTarget: {fileID: 1289783145}
-  lookAtSignMessageDuration: 12
-  baselineFixationDuration: 3
+  lookAtSignMessageDuration: 3
+  baselineFixationDuration: 1
   gateText: {fileID: 775698355}
   gateRoot: {fileID: 1009320411}
   conditionLabelText: {fileID: 1567113722}

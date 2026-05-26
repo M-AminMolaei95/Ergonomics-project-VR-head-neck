@@ -5,7 +5,7 @@ public class PoseManager1 : MonoBehaviour
 {
     [Header("References")]
     public Transform headTransform;
-    public HeadHeightTracker heightTracker; // required for height baseline pipeline
+    public HeadHeightTracker heightTracker; 
 
     [Header("Runtime Posture (relative to baseline)")]
     public float currentPitch;
@@ -18,9 +18,9 @@ public class PoseManager1 : MonoBehaviour
     public float normalizedRoll;
 
     [Header("Slouch Detection (simple fallback for logger)")]
-    public float slouchHeightThreshold = 0.03f;   // meters (height drop)
-    public float slouchPitchNeutralBand = 12f;    // degrees
-    public float slouchRollLimit = 10f;           // degrees
+    public float slouchHeightThreshold = 0.03f;   
+    public float slouchPitchNeutralBand = 12f;    
+    public float slouchRollLimit = 10f;           
 
     private float baselinePitch;
     private float baselineRoll;
@@ -71,13 +71,11 @@ public class PoseManager1 : MonoBehaviour
             Mathf.Abs(currentRoll) < slouchRollLimit;
     }
 
-    // Keep old call so SetManager or old code won't break
     public void CalibrateNow()
     {
         StartCoroutine(CalibrateBaselinePipeline(10f));
     }
 
-    // Clean single baseline pipeline: averages pitch/roll + height over 'seconds'
     public IEnumerator CalibrateBaselinePipeline(float seconds)
     {
         if (seconds <= 0f) seconds = 1f;
@@ -100,7 +98,6 @@ public class PoseManager1 : MonoBehaviour
         int count = 0;
         float t = 0f;
 
-        // ensure tracker has at least one update
         yield return null;
 
         while (t < seconds)
@@ -110,7 +107,7 @@ public class PoseManager1 : MonoBehaviour
             sumPitch += NormalizeAngle(localEuler.x);
             sumRoll += NormalizeAngle(localEuler.z);
 
-            sumH += heightTracker.currentHeight; // requires HeadHeightTracker update below
+            sumH += heightTracker.currentHeight; 
 
             count++;
             t += Time.deltaTime;

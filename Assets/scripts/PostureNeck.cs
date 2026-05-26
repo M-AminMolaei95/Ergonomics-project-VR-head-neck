@@ -11,6 +11,7 @@ public class PostureNeck : MonoBehaviour
         ForwardSlouchBackwardTilt
     }
 
+
     [Header("References")]
     public PoseManager1 poseManager;
     public Transform headTransform;
@@ -64,9 +65,16 @@ public class PostureNeck : MonoBehaviour
     [Header("Fade Settings")]
     public float fadeDuration = 0.15f;
 
+    [Header("Feedback Delay")]
+    public float badPostureFeedbackDelaySeconds = 3f;
+
     private Coroutine fadeTextCoroutine;
     private Coroutine fadeIconCoroutine;
     private bool feedbackVisible = false;
+
+    private string _currentBadPostureKey = null;
+    private float _badPostureStartTime = -1f;
+    private bool _badPostureFeedbackWasShown = false;
 
     private string _lastMessage = null;
     private Sprite _lastSprite = null;
@@ -80,6 +88,7 @@ public class PostureNeck : MonoBehaviour
 
     private bool _wasInPitchNeutral = false;
     private float _pitchNeutralUntil = 0f;
+    private bool _wasForwardOrSlouchBeforeNeutral = false;
 
     public void SetDisplayMode(FeedbackDisplayMode mode)
     {
@@ -89,8 +98,10 @@ public class PostureNeck : MonoBehaviour
         _lateralNeutralUntil = 0f;
         _wasInPitchNeutral = false;
         _pitchNeutralUntil = 0f;
+        _wasForwardOrSlouchBeforeNeutral = false;
         _wasCalibratedLastFrame = false;
         _hasBaselineHeadHeight = false;
+        ResetBadPostureDelay();
 
         HideFeedback();
     }
@@ -106,6 +117,8 @@ public class PostureNeck : MonoBehaviour
             _hasBaselineHeadHeight = false;
             _wasInPitchNeutral = false;
             _pitchNeutralUntil = 0f;
+            _wasForwardOrSlouchBeforeNeutral = false;
+            ResetBadPostureDelay();
             return;
         }
 
@@ -134,7 +147,7 @@ public class PostureNeck : MonoBehaviour
             Sprite lateralRight = GetLateralRightSprite();
             if (lateralRight != null)
             {
-                ShowIfChanged(lateralRight, showText ? "" : "");
+                ShowBadPostureIfDelayElapsed("LATERAL_RIGHT", lateralRight, showText ? "" : "");
                 return;
             }
         }
@@ -149,7 +162,7 @@ public class PostureNeck : MonoBehaviour
             Sprite lateralLeft = GetLateralLeftSprite();
             if (lateralLeft != null)
             {
-                ShowIfChanged(lateralLeft, showText ? "" : "");
+                ShowBadPostureIfDelayElapsed("LATERAL_LEFT", lateralLeft, showText ? "" : "");
                 return;
             }
         }
@@ -166,11 +179,12 @@ public class PostureNeck : MonoBehaviour
         {
             _wasInPitchNeutral = false;
             _pitchNeutralUntil = 0f;
+            _wasForwardOrSlouchBeforeNeutral = true;
 
             Sprite slouch = GetSlouchSprite();
             if (slouch != null)
             {
-                ShowIfChanged(slouch, showText ? "Slouching!!!" : "");
+                ShowBadPostureIfDelayElapsed("SLOUCH", slouch, showText ? "Slouching!" : "");
                 return;
             }
         }
@@ -192,10 +206,25 @@ public class PostureNeck : MonoBehaviour
 
         if (isPitchNeutral && !_wasInPitchNeutral)
         {
-            _pitchNeutralUntil = Time.time + Mathf.Max(0f, neutralHoldSeconds);
+            // Show the optimal/neutral icon only if the bad-posture feedback had actually appeared.
+            // If the user was non-optimal for less than the delay time, do NOT show neutral feedback.
+            if (_badPostureFeedbackWasShown && (modeHasTiltAndBackward || _wasForwardOrSlouchBeforeNeutral))
+                _pitchNeutralUntil = Time.time + Mathf.Max(0f, neutralHoldSeconds);
+            else
+                _pitchNeutralUntil = 0f;
         }
 
         _wasInPitchNeutral = isPitchNeutral;
+
+        if (isPitchNeutral)
+        {
+            _wasForwardOrSlouchBeforeNeutral = false;
+
+            // Once we enter neutral and decide whether to show the neutral icon,
+            // clear the delayed-bad-posture state so short future deviations start fresh.
+            if (_pitchNeutralUntil <= 0f)
+                ResetBadPostureDelay();
+        }
 
         Sprite sprite = null;
         string msg = "";
@@ -203,16 +232,19 @@ public class PostureNeck : MonoBehaviour
         if (pitch > forwardHighMin)
         {
             _pitchNeutralUntil = 0f;
+            _wasForwardOrSlouchBeforeNeutral = true;
             sprite = GetForwardHighSprite();
         }
         else if (pitch >= forwardMidMin)
         {
             _pitchNeutralUntil = 0f;
+            _wasForwardOrSlouchBeforeNeutral = true;
             sprite = GetForwardMidSprite();
         }
         else if (pitch >= forwardLowMin)
         {
             _pitchNeutralUntil = 0f;
+            _wasForwardOrSlouchBeforeNeutral = true;
             sprite = GetForwardLowSprite();
         }
         else if (pitch < neutralMin)
@@ -228,10 +260,39 @@ public class PostureNeck : MonoBehaviour
                 sprite = GetNeutralSprite();
         }
 
-        if (sprite != null || (feedbackText != null && showText))
+        bool isBadPitchPosture =
+            pitch > forwardHighMin ||
+            pitch >= forwardMidMin ||
+            pitch >= forwardLowMin ||
+            (modeHasTiltAndBackward && pitch < neutralMin);
+
+        if (sprite != null && isBadPitchPosture)
+        {
+            string key;
+
+            // Treat all forward leaning levels as ONE continuous bad-posture state.
+            // This means:
+            // - low/mid/high forward changes do NOT reset the 3-second timer.
+            // - once feedback appears, it stays visible while the user remains in any forward-leaning state.
+            // - feedback resets only after returning to the optimal/neutral range.
+            if (pitch >= forwardLowMin)
+                key = "FORWARD";
+            else
+                key = "BACKWARD";
+
+            ShowBadPostureIfDelayElapsed(key, sprite, msg);
+        }
+        else if (sprite != null)
+        {
+            // This is neutral/optimal feedback. It is only reached when _pitchNeutralUntil is active,
+            // which now only happens after delayed bad-posture feedback was actually shown.
             ShowIfChanged(sprite, msg);
+        }
         else
+        {
+            ResetBadPostureDelay();
             HideFeedback();
+        }
     }
 
     private Sprite GetForwardHighSprite()
@@ -322,6 +383,43 @@ public class PostureNeck : MonoBehaviour
         bool pitchStillNearNeutral = pitch <= slouchMaxPitchForDisplay;
 
         return enoughHeightDrop && pitchStillNearNeutral;
+    }
+
+    private void ShowBadPostureIfDelayElapsed(string postureKey, Sprite sprite, string message)
+    {
+        if (string.IsNullOrEmpty(postureKey) || sprite == null)
+        {
+            ResetBadPostureDelay();
+            HideFeedback();
+            return;
+        }
+
+        if (_currentBadPostureKey != postureKey)
+        {
+            _currentBadPostureKey = postureKey;
+            _badPostureStartTime = Time.time;
+            HideFeedback();
+            return;
+        }
+
+        float elapsed = Time.time - _badPostureStartTime;
+
+        if (elapsed >= Mathf.Max(0f, badPostureFeedbackDelaySeconds))
+        {
+            _badPostureFeedbackWasShown = true;
+            ShowIfChanged(sprite, message);
+        }
+        else
+        {
+            HideFeedback();
+        }
+    }
+
+    private void ResetBadPostureDelay()
+    {
+        _currentBadPostureKey = null;
+        _badPostureStartTime = -1f;
+        _badPostureFeedbackWasShown = false;
     }
 
     private void ShowIfChanged(Sprite sprite, string message)
@@ -419,3 +517,5 @@ public class PostureNeck : MonoBehaviour
         group.alpha = target;
     }
 }
+
+
