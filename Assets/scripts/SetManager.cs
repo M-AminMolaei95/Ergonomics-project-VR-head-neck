@@ -483,7 +483,6 @@ public class SetManager : MonoBehaviour
         state = TaskState.BaselineAndCountdown;
         var cond = conditions[currentGlobalConditionIndex];
 
-        // Clean screen before every condition's baseline flow.
         HideGate();
         HideConditionLabel();
 
@@ -507,8 +506,7 @@ public class SetManager : MonoBehaviour
         logger?.SetBlockIndex(0);
         logger?.SetPhase("WAITING_BEFORE_BASELINE");
 
-        // 1) Start of EVERY condition: show the look-at-sign instruction
-        // and the fixation target at the exact same time.
+
         HideConditionLabel();
 
         if (countdownGate != null)
@@ -525,19 +523,15 @@ public class SetManager : MonoBehaviour
 
         ShowGate("Please look at the sign (+)");
 
-        // Message duration is adjustable in Inspector.
         if (lookAtSignMessageDuration > 0f)
             yield return new WaitForSeconds(lookAtSignMessageDuration);
 
-        // 2) Hide only the message. Keep the fixation target visible.
         HideGate();
 
-        // Fixation-only duration is adjustable in Inspector.
         if (baselineFixationDuration > 0f)
             yield return new WaitForSeconds(baselineFixationDuration);
 
-        // 3) Show the posture-ready message while the fixation sign stays visible.
-        // Also show the optimal baseline posture guide BEFORE the baseline countdown starts.
+
         if (countdownGate != null)
             countdownGate.SetReadyPostureGuideVisible(true);
 
@@ -545,11 +539,9 @@ public class SetManager : MonoBehaviour
 
         logger?.PauseFrameLogging("WAITING_FOR_B_BEFORE_BASELINE");
 
-        // Prevent an older/held B press from skipping this message.
         while (TriggerIsHeld())
             yield return null;
 
-        // Wait for a fresh B press to start the actual baseline countdown.
         while (!TriggerPressedDown())
             yield return null;
 
@@ -557,8 +549,7 @@ public class SetManager : MonoBehaviour
 
         HideGate();
 
-        // 4) Start baseline exactly as before.
-        // The fixation target intentionally stays visible during the baseline countdown.
+
         logger?.SetPhase("BASELINE_START");
         logger?.ResumeFrameLogging("BASELINE_START");
 
@@ -579,8 +570,7 @@ public class SetManager : MonoBehaviour
 
         CaptureConditionAnchorFromBaseline();
 
-        // Hide the fixation target immediately when baseline ends,
-        // before the task-start instruction appears.
+
         if (baselineFixationTarget != null)
             baselineFixationTarget.SetActive(false);
 
@@ -711,9 +701,6 @@ public class SetManager : MonoBehaviour
         for (int i = 0; i < n; i++)
             shuffledPatternOrder.Add(i);
 
-        // No shuffle here:
-        // Pattern order is exactly the order defined in the Inspector.
-        // Every block repeats this same order.
     }
 
     private void StartPattern()
@@ -817,9 +804,7 @@ public class SetManager : MonoBehaviour
             conditionTargetPointer++;
         }
 
-        // Color is assigned by condition order, not by block.
-        // Condition 1 -> basePalette[0], Condition 2 -> basePalette[1], etc.
-        // Target is always white.
+
         int colorIndex = currentTaskPos % basePalette.Count;
         currentBaseColor = basePalette[colorIndex];
         currentTargetColor = Color.white;
@@ -977,8 +962,7 @@ public class SetManager : MonoBehaviour
         for (int i = 0; i < templateCount; i++)
             targetTemplateCycle.Add(i);
 
-        // Deterministic "random-looking" shuffle:
-        // same seed + same cycle number = same order for every participant and every Play.
+
         int seed = targetTemplateCycleSeed + targetTemplateCycleNumber * 7919;
         System.Random rng = new System.Random(seed);
         for (int i = targetTemplateCycle.Count - 1; i > 0; i--)
@@ -989,7 +973,6 @@ public class SetManager : MonoBehaviour
             targetTemplateCycle[j] = temp;
         }
 
-        // Avoid immediate repetition across cycle boundaries.
         if (targetTemplateCycle.Count > 1 && targetTemplateCycle[0] == lastTargetTemplateIndex)
         {
             int swapIndex = 1;
@@ -1030,8 +1013,7 @@ public class SetManager : MonoBehaviour
             result.Add(zeroBased);
         }
 
-        // A valid template should cover all currently active balls once.
-        // If it is partial or mismatched, fall back to the generated path.
+
         if (result.Count != ballCount)
             return new int[0];
 
@@ -1044,7 +1026,6 @@ public class SetManager : MonoBehaviour
         List<int> order = new List<int>();
         for (int i = 0; i < ballCount; i++) order.Add(i);
 
-        // Template 0 has the largest average jump. Later templates gradually reduce jump size.
         int seed = 3109 + templateIndex * 101 + ballCount * 17;
         System.Random rng = new System.Random(seed);
 
